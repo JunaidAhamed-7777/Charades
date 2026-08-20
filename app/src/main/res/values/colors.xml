@@ -1,0 +1,5 @@
+<resources>
+    <color name="dark_background">#121212</color>
+    <color name="dark_surface">#1E1E1E</color>
+    <color name="accent">#4DB6AC</color>
+</resources>
