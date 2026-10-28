@@ -34,6 +34,12 @@ The APK is `app/build/outputs/apk/debug/app-debug.apk`. You can also copy it to 
 
 On macOS/Linux, use `./gradlew assembleDebug` and `adb install -r app/build/outputs/apk/debug/app-debug.apk`. Developers need internet for initial SDK/Gradle setup; players do not need it after installation.
 
+## In the app
+
+<img src="docs/screenshots/library.png" alt="Charades picture-deck library on Android" width="280" />
+
+<img src="docs/screenshots/game.png" alt="Landscape gameplay showing a complete picture, manual guess counter, and Next" width="640" />
+
 ## How to play
 
 Choose **Animals, Movies, Famous People, Animes, Anime Characters, Countries, or Household Objects**. Open a section and start. The phone switches to landscape, counts down for three seconds, and reveals the image and word.
