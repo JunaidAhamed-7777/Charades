@@ -20,8 +20,14 @@ spacing:
   group: "16px"
 components:
   primary-button:
-    backgroundColor: "#244BE8"
+    backgroundColor: "{colors.primary}"
     textColor: "#FFFFFF"
+  guess-count:
+    textColor: "{colors.coral}"
+  body-text:
+    textColor: "{colors.foreground}"
+  supporting-text:
+    textColor: "{colors.muted}"
 ---
 
 # Charades visual identity

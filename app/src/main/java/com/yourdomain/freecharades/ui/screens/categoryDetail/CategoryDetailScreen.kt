@@ -26,7 +26,8 @@ fun CategoryDetailScreen(categoryId:String,onBack:()->Unit,onPlay:()->Unit,vm:Ca
    ScreenHeader(category?.title ?: "Your deck",onBack)
    if(catalog.isLoading) StatusContent("Opening the deck…",true)
    else if(category==null) StatusContent("This deck could not be opened.",onRetry=vm::retry)
-   else Column(Modifier.weight(1f).verticalScroll(rememberScrollState()).widthIn(max=640.dp).align(Alignment.CenterHorizontally).padding(24.dp)) {
+   else {
+    Column(Modifier.weight(1f).verticalScroll(rememberScrollState()).widthIn(max=640.dp).align(Alignment.CenterHorizontally).padding(24.dp)) {
     AsyncImage(category.imageUri,null,Modifier.fillMaxWidth().height(210.dp).clip(RoundedCornerShape(20.dp)),contentScale=ContentScale.Crop)
     Spacer(Modifier.height(24.dp))
     Text(category.title,style=MaterialTheme.typography.displaySmall)
@@ -38,8 +39,8 @@ fun CategoryDetailScreen(categoryId:String,onBack:()->Unit,onPlay:()->Unit,vm:Ca
     PlayRule("20 Questions","Let the group ask yes-or-no questions to find the answer.")
     Text("Keep the screen to yourself. Use + and − to count guesses, then Next for a new picture. Turn your phone sideways when play begins.",Modifier.padding(top=20.dp),style=MaterialTheme.typography.bodyMedium,color=MaterialTheme.colorScheme.onSurfaceVariant)
     Spacer(Modifier.height(28.dp))
-    PrimaryAction("Let's play",onPlay,Modifier.fillMaxWidth())
-    Spacer(Modifier.height(12.dp))
+   }
+    PrimaryAction("Let's play",onPlay,Modifier.fillMaxWidth().widthIn(max=640.dp).align(Alignment.CenterHorizontally).padding(horizontal=24.dp,vertical=16.dp))
    }
   }
  }
