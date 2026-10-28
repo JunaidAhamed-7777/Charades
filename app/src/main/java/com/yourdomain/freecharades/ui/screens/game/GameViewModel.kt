@@ -44,6 +44,7 @@ class GameViewModel(application: Application, private val savedStateHandle: Save
     private var engine: RoundEngine? = null
     private var loadJob: Job? = null
     private var tickerJob: Job? = null
+    private var pauseWhenReady = false
 
     fun prepare(categoryId: String) {
         if (savedStateHandle.get<String>("categoryId") == categoryId &&
@@ -72,17 +73,26 @@ class GameViewModel(application: Application, private val savedStateHandle: Save
 
     fun correct() { engine?.answer(true, now())?.let(::publish) }
     fun skip() { engine?.answer(false, now())?.let(::publish) }
-    fun pause() { engine?.pause(now())?.let(::publish) }
-    fun resume() { engine?.resume(now())?.let(::publish) }
+    fun pause() {
+        // onStop can arrive while the catalog is still loading on a first launch.
+        pauseWhenReady = true
+        engine?.pause(now())?.let(::publish)
+    }
+    fun resume() {
+        pauseWhenReady = false
+        engine?.resume(now())?.let(::publish)
+    }
     fun finish() { engine?.finish(now())?.let(::publish) }
 
     fun restart() {
         val category = mutableState.value.category ?: return
+        // An explicit replay begins immediately; a first load honors a background pause.
+        if (engine != null) pauseWhenReady = false
         tickerJob?.cancel()
         val duration = settings.value.durationSeconds
         mutableState.value = GameUiState(category = category, durationSeconds = duration, secondsRemaining = duration)
         engine = RoundEngine(category.words, duration, now())
-        publish(requireNotNull(engine).tick(now()))
+        publish(if (pauseWhenReady) requireNotNull(engine).pause(now()) else requireNotNull(engine).tick(now()))
         tickerJob = viewModelScope.launch {
             while (isActive && mutableState.value.phase != RoundPhase.FINISHED) {
                 delay(100)
