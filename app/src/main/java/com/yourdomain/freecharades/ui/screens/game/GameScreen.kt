@@ -21,10 +21,12 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
+import androidx.compose.ui.text.rememberTextMeasurer
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.Lifecycle
@@ -93,7 +95,7 @@ fun GameScreen(categoryId:String,sessionId:String,onBack:()->Unit,vm:GameViewMod
      }
      Column(Modifier.widthIn(min=110.dp,max=156.dp).fillMaxHeight(),horizontalAlignment=Alignment.CenterHorizontally) {
       FilledTonalIconButton({lastInteraction=android.os.SystemClock.elapsedRealtime();vm.incrementGuesses()},Modifier.size(48.dp).semantics {contentDescription="Add a guess"}) {AppIcon(Glyph.PLUS)}
-      Text(state.guessCount.toString(),Modifier.padding(vertical=4.dp),style=MaterialTheme.typography.displayMedium,color=PartyCoral)
+      GuessCount(state.guessCount)
       Text("guesses",style=MaterialTheme.typography.labelMedium,color=MaterialTheme.colorScheme.onSurfaceVariant)
       FilledTonalIconButton({lastInteraction=android.os.SystemClock.elapsedRealtime();vm.decrementGuesses()},Modifier.padding(top=4.dp).size(48.dp).semantics {contentDescription="Remove a guess"},enabled=state.guessCount>0){AppIcon(Glyph.MINUS)}
       Spacer(Modifier.weight(1f).heightIn(min=8.dp))
@@ -102,5 +104,20 @@ fun GameScreen(categoryId:String,sessionId:String,onBack:()->Unit,vm:GameViewMod
     }
    }
   }
+ }
+}
+
+@Composable
+private fun GuessCount(count:Int) {
+ val text=count.toString()
+ val style=MaterialTheme.typography.displayMedium
+ val measurer=rememberTextMeasurer()
+ val density=LocalDensity.current
+ BoxWithConstraints(Modifier.fillMaxWidth().height(56.dp),contentAlignment=Alignment.Center) {
+  val measured=measurer.measure(text,style=style,maxLines=1,softWrap=false)
+  val availableWidth=with(density){(maxWidth-8.dp).toPx()}
+  val availableHeight=with(density){maxHeight.toPx()}
+  val scale=minOf(1f,availableWidth/measured.size.width.coerceAtLeast(1),availableHeight/measured.size.height.coerceAtLeast(1))
+  Text(text,Modifier.semantics {contentDescription="$count guesses"},style=style.copy(fontSize=style.fontSize*scale,lineHeight=style.lineHeight*scale),color=PartyCoral,maxLines=1,softWrap=false)
  }
 }
