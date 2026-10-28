@@ -38,7 +38,7 @@
           "imagePath": "images/animals_giraffe.webp",
           "sourceTitle": "Giraffe_Mikumi_National_Park.jpg",
           "sourceUrl": "https://commons.wikimedia.org/wiki/File:Giraffe_Mikumi_National_Park.jpg",
-          "credit": "Muhammad Mahdi Karim Facebook\n\n\n\n\n\nThe making of this document was supported by Wikimedia CH. (Submit your project!)\nFor all the files concerned, please see the category Supported by Wikimedia CH.\n\n\nالعربية ∙ বাংলা ∙ čeština ∙ Deutsch ∙ English ∙ Esperanto ∙ español ∙ français ∙ galego ∙ हिन्दी ∙ magyar ∙ italiano ∙ 日本語 ∙ македонски ∙ Nederlands ∙ português do Brasil ∙ rumantsch ∙ русский ∙ sicilianu ∙ slovenščina ∙ தமிழ் ∙ українська ∙ 中文 ∙ +/−"
+          "credit": "Muhammad Mahdi Karim"
         },
         {
           "id": "animals_panda",
@@ -78,7 +78,7 @@
           "imagePath": "images/animals_kangaroo.webp",
           "sourceTitle": "Red_kangaroo_-_melbourne_zoo.jpg",
           "sourceUrl": "https://commons.wikimedia.org/wiki/File:Red_kangaroo_-_melbourne_zoo.jpg",
-          "credit": "fir0002  flagstaffotos [at] gmail.com\n\t\tCanon 20D + Canon 70-200mm f/2.8 L"
+          "credit": "Fir0002/Flagstaffotos"
         },
         {
           "id": "animals_peacock",
@@ -143,7 +143,7 @@
           "imagePath": "images/movies_sholay.webp",
           "sourceTitle": "Sholay-poster.jpg",
           "sourceUrl": "https://en.wikipedia.org/wiki/File:Sholay-poster.jpg",
-          "credit": "May be found at the following website: http://londonhollywood.wordpress.com/2013/11/16/london-bollywood-indian-film-through-vintage-posters/ and http://media-cache-ak0.pinimg.com/736x/f4/a5/fe/f4a5fecdaa14e0fc106614e5d9cf3794.jpg"
+          "credit": "Source: London Hollywood; poster artist not identified"
         },
         {
           "id": "movies_dilwale_dulhania_le_jayenge",
@@ -483,7 +483,7 @@
           "imagePath": "images/countries_france.webp",
           "sourceTitle": "Flag of France.svg",
           "sourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_France.svg",
-          "credit": "Original: Unknown Vector:  SKopp"
+          "credit": "Original: Unknown Vector: SKopp"
         },
         {
           "id": "countries_brazil",
@@ -499,7 +499,7 @@
           "imagePath": "images/countries_australia.webp",
           "sourceTitle": "Flag of Australia.svg",
           "sourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Australia.svg",
-          "credit": "Original: Ivor Evans, Leslie John Hawkins, Egbert John Nuttall, Annie Dorrington and William Stevens Vector:  Ian Fieggen"
+          "credit": "Original: Ivor Evans, Leslie John Hawkins, Egbert John Nuttall, Annie Dorrington and William Stevens Vector: Ian Fieggen"
         },
         {
           "id": "countries_egypt",
@@ -523,7 +523,7 @@
           "imagePath": "images/countries_south_korea.webp",
           "sourceTitle": "Flag of South Korea.svg",
           "sourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_South_Korea.svg",
-          "credit": "Original: Government of the Republic of Korea Vector:  Great Brightstar and others"
+          "credit": "Original: Government of the Republic of Korea Vector: Great Brightstar and others"
         },
         {
           "id": "countries_canada",
@@ -531,7 +531,7 @@
           "imagePath": "images/countries_canada.webp",
           "sourceTitle": "Flag of Canada.svg",
           "sourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Canada.svg",
-          "credit": "Created by George F. G. Stanley /  E Pluribus Anthony / User:Mzajac"
+          "credit": "Created by George F. G. Stanley / E Pluribus Anthony / User:Mzajac"
         }
       ]
     },
@@ -556,7 +556,7 @@
           "imagePath": "images/household_objects_guitar.webp",
           "sourceTitle": "GuitareClassique5.png",
           "sourceUrl": "https://commons.wikimedia.org/wiki/File:GuitareClassique5.png",
-          "credit": "User:Martin Möller Talk"
+          "credit": "Martin Möller"
         },
         {
           "id": "household_objects_umbrella",
