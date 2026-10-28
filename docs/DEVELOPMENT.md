@@ -60,3 +60,7 @@ Record device/API, outcomes, and skipped checks. A build or unit-test result is 
 `assembleDebug` produces an installable local debug APK. Keep release signing keys outside the repository. Configure signing privately before generating a distribution APK.
 
 Distribute one signed APK with all sections/media. Do not introduce asset packs or remote first-run setup. Retain a stable signing identity, increment `versionCode`, and retain its matching source version. Add a README download link only after the artifact exists at that URL.
+
+## Verify the actual installable package
+
+After building, run `python scripts/verify_apk.py`. This checks the APK itself for the current catalog, every photo, bundled legal documents, local fonts, and the absence of network permissions. `scripts/install.ps1` runs this before ADB installation. CI also checks the built package before saving it as an artifact.

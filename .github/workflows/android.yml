@@ -29,6 +29,7 @@ jobs:
         run: |
           chmod +x gradlew
           ./gradlew testDebugUnitTest lintDebug assembleDebug
+          python scripts/verify_apk.py
       - name: Save the complete installable APK
         uses: actions/upload-artifact@v4
         with:

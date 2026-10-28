@@ -28,6 +28,9 @@ try {
     $apkPath = Join-Path $projectRoot 'app\build\outputs\apk\debug\app-debug.apk'
     if (-not (Test-Path -LiteralPath $apkPath)) { throw "APK missing: $apkPath" }
 
+    & python (Join-Path $PSScriptRoot 'verify_apk.py') $apkPath
+    if ($LASTEXITCODE -ne 0) { throw 'The APK does not contain the complete current offline content.' }
+
     $connected = @(& $adbPath devices | Select-Object -Skip 1 | Where-Object { $_ -match '^\S+\s+device$' } | ForEach-Object { ($_ -split '\s+')[0] })
     if ($Serial) {
         if ($connected -notcontains $Serial) { throw "Device $Serial is not connected and authorized." }
