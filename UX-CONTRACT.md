@@ -3,6 +3,7 @@
 Product truth is maintained in [PRODUCT.md](PRODUCT.md); visual intent in [DESIGN.md](DESIGN.md). The stage-zero draft is background, not an immutable UI specification.
 
 - The entire catalog loads from APK assets on IO. No network requests, database gate, account, entitlement, or subsequent downloads. Loading, error, and retry states are explicit.
+- Browsing and legal screens stay portrait; gameplay requests landscape and restores portrait on exit.
 - Library → category → three-second countdown → picture reveal. The same deck supports human-led Charades and 20 Questions; there is no unnecessary mode selector because the app's controls are identical.
 - A new category encounter starts a fresh shuffled deck. Pictures proceed in that order. Saved navigation/game state preserves that order, index, manual counter, and countdown deadline through supported Android recreation.
 - Reveal controls: leave game, increment/decrement the manual guess count, and Next. Counter clamps at zero and resets for the next picture. No auto-timer, auto-skip, automatic scoring, or sound controls. Next always starts a fresh countdown.
