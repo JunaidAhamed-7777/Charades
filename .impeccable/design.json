@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "platform": "android",
+  "mode": "operate",
+  "name": "Charades",
+  "sourceOfTruth": "app/src/main/java/com/yourdomain/freecharades/ui/theme",
+  "designContext": "DESIGN.md",
+  "identity": {
+    "palette": "cobalt blue, coral, rich midnight",
+    "displayFont": "Fredoka",
+    "bodyFont": "Nunito Sans",
+    "signature": "overlapping picture cards and tactile game-night artwork"
+  },
+  "motion": {
+    "countdown": "Crossfade follows system animation scale",
+    "other": "native Material interactions"
+  },
+  "insets": "safeDrawingPadding; landscape gameplay; system Back",
+  "assets": {
+    "mark": "docs/branding/charades-mark.svg",
+    "hero": "app/src/main/res/drawable-nodpi/game_night.png"
+  }
+}
