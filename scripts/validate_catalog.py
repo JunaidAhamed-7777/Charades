@@ -9,6 +9,15 @@ import sys
 
 ROOT = Path(__file__).resolve().parents[1]
 ASSETS = ROOT / "app/src/main/assets"
+EXPECTED_CATEGORIES = {
+    "animals": "Animals",
+    "movies": "Movies",
+    "famous_people": "Famous People",
+    "animes": "Animes",
+    "anime_characters": "Anime Characters",
+    "countries": "Countries",
+    "household_objects": "Household Objects",
+}
 
 
 def validate() -> list[str]:
@@ -36,13 +45,15 @@ def validate() -> list[str]:
     for category in categories:
         category_id = category["id"]
         category_ids.append(category_id)
+        if category.get("title") != EXPECTED_CATEGORIES.get(category_id):
+            errors.append(f"{category_id}: category name must match the fixed seven-category product catalog")
         for key in ("title", "description", "accent"):
             if not category.get(key):
                 errors.append(f"{category_id}: missing {key}")
         check_image(category.get("imagePath", ""), category_id)
         words = category.get("words", [])
-        if len(words) < 8:
-            errors.append(f"{category_id}: expected at least 8 playable prompts")
+        if len(words) < 10:
+            errors.append(f"{category_id}: expected at least 10 playable prompts")
         for word in words:
             word_id = word["id"]
             word_ids.append(word_id)
@@ -67,6 +78,8 @@ def validate() -> list[str]:
 
     for kind, ids in (("category", category_ids), ("word", word_ids)):
         errors.extend(f"Duplicate {kind} id: {item}" for item, count in Counter(ids).items() if count > 1)
+    if set(category_ids) != set(EXPECTED_CATEGORIES):
+        errors.append("Catalog must contain exactly the seven original categories")
     orphaned = {str(path.relative_to(ASSETS)).replace("\\", "/") for path in (ASSETS / "images").glob("*")} - used_paths
     if orphaned:
         errors.append("Unused image files: " + ", ".join(sorted(orphaned)))

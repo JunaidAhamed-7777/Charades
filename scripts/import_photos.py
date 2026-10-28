@@ -1,4 +1,4 @@
-"""Developer-only photo importer. The Android app never calls this script.
+"""Developer-only picture importer. The Android app never calls this script.
 
 Uses each subject's Wikipedia lead image and preserves the source file's
 description page and author metadata. Run from the repository root.
@@ -15,6 +15,7 @@ import json
 from pathlib import Path
 import re
 import time
+import unicodedata
 from urllib.parse import quote
 
 from PIL import Image, ImageOps
@@ -27,58 +28,63 @@ UA = "CharadesContentBuilder/1.0 (personal offline game; https://github.com/Juna
 
 # Exact Wikipedia articles avoid ambiguous or unrelated image-search matches.
 CATEGORIES = [
-    ("animals", "Wild things", "Big cats, tiny waddles, and everything in between.", "#E97451", [
+    ("animals", "Animals", "Big cats, tiny waddles, and everything in between.", "#E97451", [
         ("Lion", "Lion"), ("Tiger", "Tiger"), ("Elephant", "African bush elephant"),
         ("Giraffe", "Giraffe"), ("Panda", "Giant panda"), ("Penguin", "Emperor penguin"),
         ("Dolphin", "Common bottlenose dolphin"), ("Zebra", "Plains zebra"),
         ("Kangaroo", "Red kangaroo"), ("Peacock", "Indian peafowl")]),
-    ("landmarks", "Around the world", "Iconic places. No passport required.", "#4E8BA7", [
-        ("Taj Mahal", "Taj Mahal"), ("Eiffel Tower", "Eiffel Tower"),
-        ("Great Wall of China", "Great Wall of China"), ("Statue of Liberty", "Statue of Liberty"),
-        ("Colosseum", "Colosseum"), ("Great Pyramid of Giza", "Great Pyramid of Giza"),
-        ("Big Ben", "Big Ben"), ("Sydney Opera House", "Sydney Opera House"),
-        ("Mount Fuji", "Mount Fuji"), ("Burj Khalifa", "Burj Khalifa")]),
-    ("food", "Good taste", "A deliciously difficult round of food favorites.", "#DDA343", [
-        ("Pizza", "Pizza"), ("Burger", "Hamburger"), ("Sushi", "Sushi"),
-        ("Ice cream", "Ice cream"), ("Samosa", "Samosa"), ("Dosa", "Dosa (food)"),
-        ("Biryani", "Biryani"), ("Croissant", "Croissant"),
-        ("Doughnut", "Doughnut"), ("Pancakes", "Pancake")]),
-    ("sports", "Game on", "Serve, swing, swim. Get your whole body into it.", "#678F68", [
-        ("Football", "Association football"), ("Cricket", "Cricket"),
-        ("Basketball", "Basketball"), ("Tennis", "Tennis"), ("Badminton", "Badminton"),
-        ("Swimming", "Swimming (sport)"), ("Boxing", "Boxing"), ("Surfing", "Surfing"),
-        ("Skiing", "Alpine skiing"), ("Yoga", "Yoga as exercise")]),
-    ("famous_faces", "Famous faces", "The stars, legends, and icons everyone knows.", "#9E76AB", [
-        ("Shah Rukh Khan", "Shah Rukh Khan"), ("Virat Kohli", "Virat Kohli"),
-        ("MS Dhoni", "MS Dhoni"), ("A. P. J. Abdul Kalam", "A. P. J. Abdul Kalam"),
-        ("Sachin Tendulkar", "Sachin Tendulkar"), ("Taylor Swift", "Taylor Swift"),
-        ("Lionel Messi", "Lionel Messi"), ("Cristiano Ronaldo", "Cristiano Ronaldo"),
-        ("Albert Einstein", "Albert Einstein"), ("Charlie Chaplin", "Charlie Chaplin")]),
-    ("movies", "Movie night", "Big-screen favorites, one unforgettable clue at a time.", "#BC687C", [
+    ("movies", "Movies", "Big-screen favorites, one unforgettable clue at a time.", "#BC687C", [
         ("Jurassic Park", "Jurassic Park"), ("Titanic", "Titanic (1997 film)"),
         ("The Lion King", "The Lion King"), ("Finding Nemo", "Finding Nemo"),
         ("Avatar", "Avatar (2009 film)"), ("Sholay", "Sholay"),
         ("Dilwale Dulhania Le Jayenge", "Dilwale Dulhania Le Jayenge"),
         ("3 Idiots", "3 Idiots"), ("The Dark Knight", "The Dark Knight"),
         ("Home Alone", "Home Alone")]),
-    ("everyday", "Everyday magic", "Ordinary things. Extraordinary acting.", "#C98D65", [
-        ("Bicycle", "Bicycle"), ("Guitar", "Guitar"), ("Umbrella", "Umbrella"),
-        ("Camera", "Camera"), ("Sunglasses", "Sunglasses"), ("Backpack", "Backpack"),
+    ("famous_people", "Famous People", "The stars, legends, and icons everyone knows.", "#9E76AB", [
+        ("Shah Rukh Khan", "Shah Rukh Khan"), ("Virat Kohli", "Virat Kohli"),
+        ("MS Dhoni", "MS Dhoni"), ("A. P. J. Abdul Kalam", "A. P. J. Abdul Kalam"),
+        ("Sachin Tendulkar", "Sachin Tendulkar"), ("Taylor Swift", "Taylor Swift"),
+        ("Lionel Messi", "Lionel Messi"), ("Cristiano Ronaldo", "Cristiano Ronaldo"),
+        ("Albert Einstein", "Albert Einstein"), ("Charlie Chaplin", "Charlie Chaplin")]),
+    ("animes", "Animes", "Beloved series and films from the world of anime.", "#DDA343", [
+        ("Naruto", "Naruto season 1"), ("One Piece", "One Piece season 1"),
+        ("Dragon Ball Z", "Dragon Ball Z season 1"), ("Cowboy Bebop", "Cowboy Bebop"),
+        ("Bleach", "Bleach season 1"),
+        ("Demon Slayer", "Demon Slayer: Kimetsu no Yaiba season 1"),
+        ("My Hero Academia", "My Hero Academia season 1"),
+        ("Pokémon", "Pokémon: Indigo League"),
+        ("Fullmetal Alchemist: Brotherhood", "List of Fullmetal Alchemist: Brotherhood episodes"),
+        ("Spirited Away", "Spirited Away")]),
+    ("anime_characters", "Anime Characters", "Heroes, rivals, and a few very familiar faces.", "#458E8A", [
+        ("Naruto Uzumaki", "Naruto Uzumaki"), ("Monkey D. Luffy", "Monkey D. Luffy"),
+        ("Goku", "Goku"), ("Pikachu", "Pikachu"), ("Eren Yeager", "Eren Yeager"),
+        ("Light Yagami", "Light Yagami"), ("Levi Ackerman", "Levi Ackerman"),
+        ("Tanjiro Kamado", "Tanjiro Kamado"), ("Sailor Moon", "Sailor Moon (character)"),
+        ("Doraemon", "Doraemon (character)")]),
+    ("countries", "Countries", "Recognize countries from their national flags.", "#4E8BA7", [
+        ("India", "India"), ("Japan", "Japan"), ("United States", "United States"),
+        ("France", "France"), ("Brazil", "Brazil"), ("Australia", "Australia"),
+        ("Egypt", "Egypt"), ("Italy", "Italy"), ("South Korea", "South Korea"),
+        ("Canada", "Canada")]),
+    ("household_objects", "Household Objects", "Familiar things, found right at home.", "#C98D65", [
+        ("Chair", "Chair"), ("Guitar", "Guitar"), ("Umbrella", "Umbrella"),
+        ("Camera", "Camera"), ("Scissors", "Scissors"), ("Mug", "Mug"),
         ("Alarm clock", "Alarm clock"), ("Toothbrush", "Toothbrush"),
         ("Headphones", "Headphones"), ("Piano", "Piano")]),
-    ("nature", "Great outdoors", "Natural wonders that are larger than life.", "#458E8A", [
-        ("Volcano", "Volcano"), ("Waterfall", "Waterfall"), ("Rainbow", "Rainbow"),
-        ("Desert", "Desert"), ("Iceberg", "Iceberg"), ("Sunflower", "Sunflower"),
-        ("Palm tree", "Coconut"), ("Coral reef", "Coral reef"),
-        ("Northern lights", "Aurora"), ("Full moon", "Full moon")]),
 ]
 
-# Lead images can be logos, diagrams, or pictograms. These exact file choices
-# were visually checked to keep all non-film clues photographic.
+# Exact official character art and national flags avoid unrelated lead images.
+# Values are (Wikimedia host, filename). All are visually checked after import.
 FILE_OVERRIDES = {
-    "landmarks_eiffel_tower": "Eiffel Tower in 2022 02.jpg",
-    "sports_skiing": "Airforce skiing at keystone colorado.jpg",
-    "nature_palm_tree": "Coconut palms. Cambodia.jpg",
+    "anime_characters_eren_yeager": ("en.wikipedia.org", "ErenYeagerIsayama.png"),
+    "anime_characters_levi_ackerman": ("en.wikipedia.org", "Leviackerman.png"),
+    **{"countries_" + country: ("commons.wikimedia.org", filename) for country, filename in [
+        ("india", "Flag of India.svg"), ("japan", "Flag of Japan.svg"),
+        ("united_states", "Flag of the United States.svg"), ("france", "Flag of France.svg"),
+        ("brazil", "Flag of Brazil.svg"), ("australia", "Flag of Australia.svg"),
+        ("egypt", "Flag of Egypt.svg"), ("italy", "Flag of Italy.svg"),
+        ("south_korea", "Flag of South Korea.svg"), ("canada", "Flag of Canada.svg")
+    ]},
 }
 
 
@@ -104,7 +110,8 @@ def plain(value: str) -> str:
 
 
 def slug(value: str) -> str:
-    return re.sub(r"[^a-z0-9]+", "_", value.lower()).strip("_")
+    ascii_value = unicodedata.normalize("NFKD", value).encode("ascii", "ignore").decode("ascii")
+    return re.sub(r"[^a-z0-9]+", "_", ascii_value.lower()).strip("_")
 
 
 def fetch_word(category_id: str, label: str, article: str, cached: dict, refresh: bool):
@@ -112,16 +119,16 @@ def fetch_word(category_id: str, label: str, article: str, cached: dict, refresh
     local_path = f"images/{word_id}.webp"
     destination = ASSETS / local_path
     override = FILE_OVERRIDES.get(word_id)
-    if not refresh and word_id in cached and destination.is_file() and (not override or cached[word_id]["sourceTitle"] == override) and hashlib.sha256(destination.read_bytes()).hexdigest() == cached[word_id]["sha256"]:
+    if not refresh and word_id in cached and destination.is_file() and (not override or cached[word_id]["sourceTitle"] == override[1]) and hashlib.sha256(destination.read_bytes()).hexdigest() == cached[word_id]["sha256"]:
         return cached[word_id]
 
     data = api("en.wikipedia.org", titles=article, redirects=1, prop="pageimages",
                piprop="thumbnail|name|original", pithumbsize=960, pilicense="any")
     page = next(iter(data["query"]["pages"].values()))
-    if not page.get("pageimage"):
+    if not override and not page.get("pageimage"):
         raise RuntimeError(f"No verified lead image for {article}")
-    image_title = "File:" + (override or page["pageimage"])
-    image_host = "en.wikipedia.org" if not override and "/wikipedia/en/" in page["original"]["source"] else "commons.wikimedia.org"
+    image_title = "File:" + (override[1] if override else page["pageimage"])
+    image_host = override[0] if override else ("en.wikipedia.org" if "/wikipedia/en/" in page["original"]["source"] else "commons.wikimedia.org")
     image_data = api(image_host, titles=image_title, prop="imageinfo", iiprop="url|extmetadata", iiurlwidth=960)
     info = next(iter(image_data["query"]["pages"].values()))["imageinfo"][0]
     metadata = info.get("extmetadata", {})
@@ -153,6 +160,7 @@ def fetch_word(category_id: str, label: str, article: str, cached: dict, refresh
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--refresh", action="store_true", help="Refresh previously imported photos")
+    parser.add_argument("--prune", action="store_true", help="Remove retired pictures after the complete catalog is written")
     args = parser.parse_args()
     cached = {}
     if MANIFEST.exists():
@@ -185,6 +193,15 @@ def main():
     catalog = ASSETS / "categories/bundled_categories.json"
     catalog.parent.mkdir(parents=True, exist_ok=True)
     catalog.write_text(json.dumps({"version": 1, "categories": categories}, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    if args.prune:
+        retained = {photo["imagePath"] for photo in results.values()}
+        image_directory = (ASSETS / "images").resolve()
+        for path in image_directory.glob("*.webp"):
+            if path.resolve().parent != image_directory:
+                raise RuntimeError(f"Refusing to remove a picture outside the image directory: {path}")
+            if "images/" + path.name not in retained:
+                path.unlink()
+                print(f"Removed retired image {path.name}", flush=True)
     print(f"Imported {len(results)} photos in {len(categories)} sections; {sum(p['bytes'] for p in results.values()) / 1048576:.2f} MiB")
 
 

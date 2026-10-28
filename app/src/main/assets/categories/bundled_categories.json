@@ -3,7 +3,7 @@
   "categories": [
     {
       "id": "animals",
-      "title": "Wild things",
+      "title": "Animals",
       "description": "Big cats, tiny waddles, and everything in between.",
       "imagePath": "images/animals_lion.webp",
       "accent": "#E97451",
@@ -91,364 +91,8 @@
       ]
     },
     {
-      "id": "landmarks",
-      "title": "Around the world",
-      "description": "Iconic places. No passport required.",
-      "imagePath": "images/landmarks_taj_mahal.webp",
-      "accent": "#4E8BA7",
-      "words": [
-        {
-          "id": "landmarks_taj_mahal",
-          "text": "Taj Mahal",
-          "imagePath": "images/landmarks_taj_mahal.webp",
-          "sourceTitle": "Taj_Mahal_(Edited).jpeg",
-          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Taj_Mahal_(Edited).jpeg",
-          "credit": "Yann; edited by Jim Carter"
-        },
-        {
-          "id": "landmarks_eiffel_tower",
-          "text": "Eiffel Tower",
-          "imagePath": "images/landmarks_eiffel_tower.webp",
-          "sourceTitle": "Eiffel Tower in 2022 02.jpg",
-          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Eiffel_Tower_in_2022_02.jpg",
-          "credit": "Maksim Sokolov (maxergon.com)"
-        },
-        {
-          "id": "landmarks_great_wall_of_china",
-          "text": "Great Wall of China",
-          "imagePath": "images/landmarks_great_wall_of_china.webp",
-          "sourceTitle": "The_Great_Wall_of_China_at_Jinshanling-edit.jpg",
-          "sourceUrl": "https://commons.wikimedia.org/wiki/File:The_Great_Wall_of_China_at_Jinshanling-edit.jpg",
-          "credit": "Severin.stalder"
-        },
-        {
-          "id": "landmarks_statue_of_liberty",
-          "text": "Statue of Liberty",
-          "imagePath": "images/landmarks_statue_of_liberty.webp",
-          "sourceTitle": "Front_view_of_Statue_of_Liberty_(cropped).jpg",
-          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Front_view_of_Statue_of_Liberty_(cropped).jpg",
-          "credit": "AskALotl"
-        },
-        {
-          "id": "landmarks_colosseum",
-          "text": "Colosseum",
-          "imagePath": "images/landmarks_colosseum.webp",
-          "sourceTitle": "Colosseo_2020.jpg",
-          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Colosseo_2020.jpg",
-          "credit": "FeaturedPics"
-        },
-        {
-          "id": "landmarks_great_pyramid_of_giza",
-          "text": "Great Pyramid of Giza",
-          "imagePath": "images/landmarks_great_pyramid_of_giza.webp",
-          "sourceTitle": "Great_Pyramid_of_Giza_-_Pyramid_of_Khufu.jpg",
-          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Great_Pyramid_of_Giza_-_Pyramid_of_Khufu.jpg",
-          "credit": "Douwe C. van der Zee"
-        },
-        {
-          "id": "landmarks_big_ben",
-          "text": "Big Ben",
-          "imagePath": "images/landmarks_big_ben.webp",
-          "sourceTitle": "Elizabeth_Tower_and_the_north_front_of_the_Palace_of_Westminster,_London.jpg",
-          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Elizabeth_Tower_and_the_north_front_of_the_Palace_of_Westminster,_London.jpg",
-          "credit": "Christian David"
-        },
-        {
-          "id": "landmarks_sydney_opera_house",
-          "text": "Sydney Opera House",
-          "imagePath": "images/landmarks_sydney_opera_house.webp",
-          "sourceTitle": "Sydney_Opera_House_2026.jpg",
-          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sydney_Opera_House_2026.jpg",
-          "credit": "BAVhah"
-        },
-        {
-          "id": "landmarks_mount_fuji",
-          "text": "Mount Fuji",
-          "imagePath": "images/landmarks_mount_fuji.webp",
-          "sourceTitle": "View_of_Mount_Fuji_from_Ōwakudani_20211202.jpg",
-          "sourceUrl": "https://commons.wikimedia.org/wiki/File:View_of_Mount_Fuji_from_%C5%8Cwakudani_20211202.jpg",
-          "credit": "Suicasmo"
-        },
-        {
-          "id": "landmarks_burj_khalifa",
-          "text": "Burj Khalifa",
-          "imagePath": "images/landmarks_burj_khalifa.webp",
-          "sourceTitle": "Burj_Khalifa_(worlds_tallest_building)_and_the_Dubai_skyline_(25781049892).jpg",
-          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Burj_Khalifa_(worlds_tallest_building)_and_the_Dubai_skyline_(25781049892).jpg",
-          "credit": "imran shahabuddin"
-        }
-      ]
-    },
-    {
-      "id": "food",
-      "title": "Good taste",
-      "description": "A deliciously difficult round of food favorites.",
-      "imagePath": "images/food_pizza.webp",
-      "accent": "#DDA343",
-      "words": [
-        {
-          "id": "food_pizza",
-          "text": "Pizza",
-          "imagePath": "images/food_pizza.webp",
-          "sourceTitle": "Pizza-3007395.jpg",
-          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Pizza-3007395.jpg",
-          "credit": "igorovsyannykov"
-        },
-        {
-          "id": "food_burger",
-          "text": "Burger",
-          "imagePath": "images/food_burger.webp",
-          "sourceTitle": "RedDot_Burger.jpg",
-          "sourceUrl": "https://commons.wikimedia.org/wiki/File:RedDot_Burger.jpg",
-          "credit": "Hongreddotbrewhouse"
-        },
-        {
-          "id": "food_sushi",
-          "text": "Sushi",
-          "imagePath": "images/food_sushi.webp",
-          "sourceTitle": "Sushi_platter.jpg",
-          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sushi_platter.jpg",
-          "credit": "chidorian from Japan"
-        },
-        {
-          "id": "food_ice_cream",
-          "text": "Ice cream",
-          "imagePath": "images/food_ice_cream.webp",
-          "sourceTitle": "Vanilla_Ice_Cream_Cone_at_Camp_Manitoulin.jpg",
-          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Vanilla_Ice_Cream_Cone_at_Camp_Manitoulin.jpg",
-          "credit": "Steven Depolo"
-        },
-        {
-          "id": "food_samosa",
-          "text": "Samosa",
-          "imagePath": "images/food_samosa.webp",
-          "sourceTitle": "Samosas,_snack_food_at_Wikipedia's_16th_Birthday_celebration_in_Chittagong_(01).jpg",
-          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Samosas,_snack_food_at_Wikipedia%27s_16th_Birthday_celebration_in_Chittagong_(01).jpg",
-          "credit": "Moheen Reeyad"
-        },
-        {
-          "id": "food_dosa",
-          "text": "Dosa",
-          "imagePath": "images/food_dosa.webp",
-          "sourceTitle": "Dosa_at_Sri_Ganesha_Restauran,_Bangkok_(44570742744).jpg",
-          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Dosa_at_Sri_Ganesha_Restauran,_Bangkok_(44570742744).jpg",
-          "credit": "Vee Satayamas from Bangkok, Thailand"
-        },
-        {
-          "id": "food_biryani",
-          "text": "Biryani",
-          "imagePath": "images/food_biryani.webp",
-          "sourceTitle": "\"Hyderabadi_Dum_Biryani\".jpg",
-          "sourceUrl": "https://commons.wikimedia.org/wiki/File:%22Hyderabadi_Dum_Biryani%22.jpg",
-          "credit": "Mahi Tatavarty"
-        },
-        {
-          "id": "food_croissant",
-          "text": "Croissant",
-          "imagePath": "images/food_croissant.webp",
-          "sourceTitle": "Croissant-Petr_Kratochvil.jpg",
-          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Croissant-Petr_Kratochvil.jpg",
-          "credit": "Petr Kratochvil"
-        },
-        {
-          "id": "food_doughnut",
-          "text": "Doughnut",
-          "imagePath": "images/food_doughnut.webp",
-          "sourceTitle": "Glazed-Donut.jpg",
-          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Glazed-Donut.jpg",
-          "credit": "Evan-Amos"
-        },
-        {
-          "id": "food_pancakes",
-          "text": "Pancakes",
-          "imagePath": "images/food_pancakes.webp",
-          "sourceTitle": "Foodiesfeed.com_pouring-honey-on-pancakes-with-walnuts.jpg",
-          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Foodiesfeed.com_pouring-honey-on-pancakes-with-walnuts.jpg",
-          "credit": "Mae Mu"
-        }
-      ]
-    },
-    {
-      "id": "sports",
-      "title": "Game on",
-      "description": "Serve, swing, swim. Get your whole body into it.",
-      "imagePath": "images/sports_football.webp",
-      "accent": "#678F68",
-      "words": [
-        {
-          "id": "sports_football",
-          "text": "Football",
-          "imagePath": "images/sports_football.webp",
-          "sourceTitle": "Football_in_Bloomington,_Indiana,_1995.jpg",
-          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Football_in_Bloomington,_Indiana,_1995.jpg",
-          "credit": "Rick Dikeman"
-        },
-        {
-          "id": "sports_cricket",
-          "text": "Cricket",
-          "imagePath": "images/sports_cricket.webp",
-          "sourceTitle": "Pollock_to_Hussey.jpg",
-          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Pollock_to_Hussey.jpg",
-          "credit": "Prescott Pym on Flickr"
-        },
-        {
-          "id": "sports_basketball",
-          "text": "Basketball",
-          "imagePath": "images/sports_basketball.webp",
-          "sourceTitle": "USA_vs._China_Mens_Basketball_-_Beijing_2008_Olympic_Games_(2751923597).jpg",
-          "sourceUrl": "https://commons.wikimedia.org/wiki/File:USA_vs._China_Mens_Basketball_-_Beijing_2008_Olympic_Games_(2751923597).jpg",
-          "credit": "kris krüg from Vancouver, Canada"
-        },
-        {
-          "id": "sports_tennis",
-          "text": "Tennis",
-          "imagePath": "images/sports_tennis.webp",
-          "sourceTitle": "2013_Australian_Open_-_Guillaume_Rufin.jpg",
-          "sourceUrl": "https://commons.wikimedia.org/wiki/File:2013_Australian_Open_-_Guillaume_Rufin.jpg",
-          "credit": "Brendan Dennis"
-        },
-        {
-          "id": "sports_badminton",
-          "text": "Badminton",
-          "imagePath": "images/sports_badminton.webp",
-          "sourceTitle": "Olympics_2012_Mixed_Doubles_Final.jpg",
-          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Olympics_2012_Mixed_Doubles_Final.jpg",
-          "credit": "Peter"
-        },
-        {
-          "id": "sports_swimming",
-          "text": "Swimming",
-          "imagePath": "images/sports_swimming.webp",
-          "sourceTitle": "Depart4x100.jpg",
-          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Depart4x100.jpg",
-          "credit": "Jmex60"
-        },
-        {
-          "id": "sports_boxing",
-          "text": "Boxing",
-          "imagePath": "images/sports_boxing.webp",
-          "sourceTitle": "Boxing_Tournament_in_Aid_of_King_George's_Fund_For_Sailors_at_the_Royal_Naval_Air_Station,_Henstridge,_Somerset,_July_1945_A29806.jpg",
-          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Boxing_Tournament_in_Aid_of_King_George%27s_Fund_For_Sailors_at_the_Royal_Naval_Air_Station,_Henstridge,_Somerset,_July_1945_A29806.jpg",
-          "credit": "Royal Navy official photographer"
-        },
-        {
-          "id": "sports_surfing",
-          "text": "Surfing",
-          "imagePath": "images/sports_surfing.webp",
-          "sourceTitle": "Mavericks_Surf_Contest_2010b.jpg",
-          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mavericks_Surf_Contest_2010b.jpg",
-          "credit": "Shalom Jacobovitz"
-        },
-        {
-          "id": "sports_skiing",
-          "text": "Skiing",
-          "imagePath": "images/sports_skiing.webp",
-          "sourceTitle": "Airforce skiing at keystone colorado.jpg",
-          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Airforce_skiing_at_keystone_colorado.jpg",
-          "credit": "http://www-p.afsv.af.mil/NWVW/February04/Art77.htm"
-        },
-        {
-          "id": "sports_yoga",
-          "text": "Yoga",
-          "imagePath": "images/sports_yoga.webp",
-          "sourceTitle": "Yoga4Love_Freedom_Gratitude.jpg",
-          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Yoga4Love_Freedom_Gratitude.jpg",
-          "credit": "Yoga4love"
-        }
-      ]
-    },
-    {
-      "id": "famous_faces",
-      "title": "Famous faces",
-      "description": "The stars, legends, and icons everyone knows.",
-      "imagePath": "images/famous_faces_shah_rukh_khan.webp",
-      "accent": "#9E76AB",
-      "words": [
-        {
-          "id": "famous_faces_shah_rukh_khan",
-          "text": "Shah Rukh Khan",
-          "imagePath": "images/famous_faces_shah_rukh_khan.webp",
-          "sourceTitle": "Shah_Rukh_Khan_graces_the_launch_of_the_new_Santro.jpg",
-          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Shah_Rukh_Khan_graces_the_launch_of_the_new_Santro.jpg",
-          "credit": "Bollywood Hungama"
-        },
-        {
-          "id": "famous_faces_virat_kohli",
-          "text": "Virat Kohli",
-          "imagePath": "images/famous_faces_virat_kohli.webp",
-          "sourceTitle": "Virat_Kohli_during_the_India_vs_Aus_4th_Test_match_at_Narendra_Modi_Stadium_on_09_March_2023.jpg",
-          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Virat_Kohli_during_the_India_vs_Aus_4th_Test_match_at_Narendra_Modi_Stadium_on_09_March_2023.jpg",
-          "credit": "Prime Minister's Office"
-        },
-        {
-          "id": "famous_faces_ms_dhoni",
-          "text": "MS Dhoni",
-          "imagePath": "images/famous_faces_ms_dhoni.webp",
-          "sourceTitle": "MS_Dhoni_(Prabhav_'23_-_RiGI_2023).jpg",
-          "sourceUrl": "https://commons.wikimedia.org/wiki/File:MS_Dhoni_(Prabhav_%2723_-_RiGI_2023).jpg",
-          "credit": "RIGI"
-        },
-        {
-          "id": "famous_faces_a_p_j_abdul_kalam",
-          "text": "A. P. J. Abdul Kalam",
-          "imagePath": "images/famous_faces_a_p_j_abdul_kalam.webp",
-          "sourceTitle": "A._P._J._Abdul_Kalam.jpg",
-          "sourceUrl": "https://commons.wikimedia.org/wiki/File:A._P._J._Abdul_Kalam.jpg",
-          "credit": "Government of India"
-        },
-        {
-          "id": "famous_faces_sachin_tendulkar",
-          "text": "Sachin Tendulkar",
-          "imagePath": "images/famous_faces_sachin_tendulkar.webp",
-          "sourceTitle": "The_cricket_legend_Sachin_Tendulkar_at_the_Oval_Maidan_in_Mumbai_During_the_Duke_and_Duchess_of_Cambridge_Visit(26271019082).jpg",
-          "sourceUrl": "https://commons.wikimedia.org/wiki/File:The_cricket_legend_Sachin_Tendulkar_at_the_Oval_Maidan_in_Mumbai_During_the_Duke_and_Duchess_of_Cambridge_Visit(26271019082).jpg",
-          "credit": "British High Commission, New Delhi"
-        },
-        {
-          "id": "famous_faces_taylor_swift",
-          "text": "Taylor Swift",
-          "imagePath": "images/famous_faces_taylor_swift.webp",
-          "sourceTitle": "Taylor_Swift_at_the_2023_MTV_Video_Music_Awards_(3).png",
-          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Taylor_Swift_at_the_2023_MTV_Video_Music_Awards_(3).png",
-          "credit": "iHeartRadioCA"
-        },
-        {
-          "id": "famous_faces_lionel_messi",
-          "text": "Lionel Messi",
-          "imagePath": "images/famous_faces_lionel_messi.webp",
-          "sourceTitle": "Leo_Messi_Argentina_v_Egypt_7_July_2026-1.jpg",
-          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Leo_Messi_Argentina_v_Egypt_7_July_2026-1.jpg",
-          "credit": "Bryan Berlin"
-        },
-        {
-          "id": "famous_faces_cristiano_ronaldo",
-          "text": "Cristiano Ronaldo",
-          "imagePath": "images/famous_faces_cristiano_ronaldo.webp",
-          "sourceTitle": "Cristiano_Ronaldo_Croatia_v_Portugal_2_July_2026-075_(cropped).jpg",
-          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cristiano_Ronaldo_Croatia_v_Portugal_2_July_2026-075_(cropped).jpg",
-          "credit": "Bryan Berlin"
-        },
-        {
-          "id": "famous_faces_albert_einstein",
-          "text": "Albert Einstein",
-          "imagePath": "images/famous_faces_albert_einstein.webp",
-          "sourceTitle": "Albert_Einstein_Head_cleaned.jpg",
-          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Albert_Einstein_Head_cleaned.jpg",
-          "credit": "Oren Jack Turner"
-        },
-        {
-          "id": "famous_faces_charlie_chaplin",
-          "text": "Charlie Chaplin",
-          "imagePath": "images/famous_faces_charlie_chaplin.webp",
-          "sourceTitle": "Charlie_Chaplin_portrait_Getty_1739411952.jpg",
-          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Charlie_Chaplin_portrait_Getty_1739411952.jpg",
-          "credit": "Strauss-Peyton Studio"
-        }
-      ]
-    },
-    {
       "id": "movies",
-      "title": "Movie night",
+      "title": "Movies",
       "description": "Big-screen favorites, one unforgettable clue at a time.",
       "imagePath": "images/movies_jurassic_park.webp",
       "accent": "#BC687C",
@@ -536,180 +180,447 @@
       ]
     },
     {
-      "id": "everyday",
-      "title": "Everyday magic",
-      "description": "Ordinary things. Extraordinary acting.",
-      "imagePath": "images/everyday_bicycle.webp",
+      "id": "famous_people",
+      "title": "Famous People",
+      "description": "The stars, legends, and icons everyone knows.",
+      "imagePath": "images/famous_people_shah_rukh_khan.webp",
+      "accent": "#9E76AB",
+      "words": [
+        {
+          "id": "famous_people_shah_rukh_khan",
+          "text": "Shah Rukh Khan",
+          "imagePath": "images/famous_people_shah_rukh_khan.webp",
+          "sourceTitle": "Shah_Rukh_Khan_graces_the_launch_of_the_new_Santro.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Shah_Rukh_Khan_graces_the_launch_of_the_new_Santro.jpg",
+          "credit": "Bollywood Hungama"
+        },
+        {
+          "id": "famous_people_virat_kohli",
+          "text": "Virat Kohli",
+          "imagePath": "images/famous_people_virat_kohli.webp",
+          "sourceTitle": "Virat_Kohli_during_the_India_vs_Aus_4th_Test_match_at_Narendra_Modi_Stadium_on_09_March_2023.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Virat_Kohli_during_the_India_vs_Aus_4th_Test_match_at_Narendra_Modi_Stadium_on_09_March_2023.jpg",
+          "credit": "Prime Minister's Office"
+        },
+        {
+          "id": "famous_people_ms_dhoni",
+          "text": "MS Dhoni",
+          "imagePath": "images/famous_people_ms_dhoni.webp",
+          "sourceTitle": "MS_Dhoni_(Prabhav_'23_-_RiGI_2023).jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:MS_Dhoni_(Prabhav_%2723_-_RiGI_2023).jpg",
+          "credit": "RIGI"
+        },
+        {
+          "id": "famous_people_a_p_j_abdul_kalam",
+          "text": "A. P. J. Abdul Kalam",
+          "imagePath": "images/famous_people_a_p_j_abdul_kalam.webp",
+          "sourceTitle": "A._P._J._Abdul_Kalam.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:A._P._J._Abdul_Kalam.jpg",
+          "credit": "Government of India"
+        },
+        {
+          "id": "famous_people_sachin_tendulkar",
+          "text": "Sachin Tendulkar",
+          "imagePath": "images/famous_people_sachin_tendulkar.webp",
+          "sourceTitle": "The_cricket_legend_Sachin_Tendulkar_at_the_Oval_Maidan_in_Mumbai_During_the_Duke_and_Duchess_of_Cambridge_Visit(26271019082).jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:The_cricket_legend_Sachin_Tendulkar_at_the_Oval_Maidan_in_Mumbai_During_the_Duke_and_Duchess_of_Cambridge_Visit(26271019082).jpg",
+          "credit": "British High Commission, New Delhi"
+        },
+        {
+          "id": "famous_people_taylor_swift",
+          "text": "Taylor Swift",
+          "imagePath": "images/famous_people_taylor_swift.webp",
+          "sourceTitle": "Taylor_Swift_at_the_2023_MTV_Video_Music_Awards_(3).png",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Taylor_Swift_at_the_2023_MTV_Video_Music_Awards_(3).png",
+          "credit": "iHeartRadioCA"
+        },
+        {
+          "id": "famous_people_lionel_messi",
+          "text": "Lionel Messi",
+          "imagePath": "images/famous_people_lionel_messi.webp",
+          "sourceTitle": "Leo_Messi_Argentina_v_Egypt_7_July_2026-1.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Leo_Messi_Argentina_v_Egypt_7_July_2026-1.jpg",
+          "credit": "Bryan Berlin"
+        },
+        {
+          "id": "famous_people_cristiano_ronaldo",
+          "text": "Cristiano Ronaldo",
+          "imagePath": "images/famous_people_cristiano_ronaldo.webp",
+          "sourceTitle": "Cristiano_Ronaldo_Croatia_v_Portugal_2_July_2026-075_(cropped).jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cristiano_Ronaldo_Croatia_v_Portugal_2_July_2026-075_(cropped).jpg",
+          "credit": "Bryan Berlin"
+        },
+        {
+          "id": "famous_people_albert_einstein",
+          "text": "Albert Einstein",
+          "imagePath": "images/famous_people_albert_einstein.webp",
+          "sourceTitle": "Albert_Einstein_Head_cleaned.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Albert_Einstein_Head_cleaned.jpg",
+          "credit": "Oren Jack Turner"
+        },
+        {
+          "id": "famous_people_charlie_chaplin",
+          "text": "Charlie Chaplin",
+          "imagePath": "images/famous_people_charlie_chaplin.webp",
+          "sourceTitle": "Charlie_Chaplin_portrait_Getty_1739411952.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Charlie_Chaplin_portrait_Getty_1739411952.jpg",
+          "credit": "Strauss-Peyton Studio"
+        }
+      ]
+    },
+    {
+      "id": "animes",
+      "title": "Animes",
+      "description": "Beloved series and films from the world of anime.",
+      "imagePath": "images/animes_naruto.webp",
+      "accent": "#DDA343",
+      "words": [
+        {
+          "id": "animes_naruto",
+          "text": "Naruto",
+          "imagePath": "images/animes_naruto.webp",
+          "sourceTitle": "1ststagenaruto.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/File:1ststagenaruto.jpg",
+          "credit": "May be found at the following website: https://www.amazon.co.jp/dp/B00007DXTF/"
+        },
+        {
+          "id": "animes_one_piece",
+          "text": "One Piece",
+          "imagePath": "images/animes_one_piece.webp",
+          "sourceTitle": "One_Piece_Eternal_Log_-_East_Blue.png",
+          "sourceUrl": "https://en.wikipedia.org/wiki/File:One_Piece_Eternal_Log_-_East_Blue.png",
+          "credit": "Toei Animation, Avex Pictures, Shueisha & Eiichiro Oda"
+        },
+        {
+          "id": "animes_dragon_ball_z",
+          "text": "Dragon Ball Z",
+          "imagePath": "images/animes_dragon_ball_z.webp",
+          "sourceTitle": "Dragon_Ball_Z_season_1_poster.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/File:Dragon_Ball_Z_season_1_poster.jpg",
+          "credit": "https://www.mightyape.co.nz/product/dragon-ball-z-season-1-dvd/1544583"
+        },
+        {
+          "id": "animes_cowboy_bebop",
+          "text": "Cowboy Bebop",
+          "imagePath": "images/animes_cowboy_bebop.webp",
+          "sourceTitle": "Cowboy_Bebop_key_visual.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/File:Cowboy_Bebop_key_visual.jpg",
+          "credit": "SUNRISE"
+        },
+        {
+          "id": "animes_bleach",
+          "text": "Bleach",
+          "imagePath": "images/animes_bleach.webp",
+          "sourceTitle": "Bleach_01_-_The_Substitute.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/File:Bleach_01_-_The_Substitute.jpg",
+          "credit": "Bleach_01_-_The_Substitute.jpg — source file page"
+        },
+        {
+          "id": "animes_demon_slayer",
+          "text": "Demon Slayer",
+          "imagePath": "images/animes_demon_slayer.webp",
+          "sourceTitle": "Demon_Slayer_Kimetsu_no_Yaiba_URA_Vol_1.png",
+          "sourceUrl": "https://en.wikipedia.org/wiki/File:Demon_Slayer_Kimetsu_no_Yaiba_URA_Vol_1.png",
+          "credit": "Ufotable, Aniplex, Shueisha & Koyoharu Gotouge"
+        },
+        {
+          "id": "animes_my_hero_academia",
+          "text": "My Hero Academia",
+          "imagePath": "images/animes_my_hero_academia.webp",
+          "sourceTitle": "My_Hero_Academia_Season_1_Blu-Ray.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/File:My_Hero_Academia_Season_1_Blu-Ray.jpg",
+          "credit": "https://www.amazon.co.jp/dp/B01DPAFRUO/"
+        },
+        {
+          "id": "animes_pokemon",
+          "text": "Pokémon",
+          "imagePath": "images/animes_pokemon.webp",
+          "sourceTitle": "Pokemonseason1DVDBoxSet.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/File:Pokemonseason1DVDBoxSet.jpg",
+          "credit": "[1]"
+        },
+        {
+          "id": "animes_fullmetal_alchemist_brotherhood",
+          "text": "Fullmetal Alchemist: Brotherhood",
+          "imagePath": "images/animes_fullmetal_alchemist_brotherhood.webp",
+          "sourceTitle": "Fullmetal_Alchemist_Brotherhood_key_visual.png",
+          "sourceUrl": "https://en.wikipedia.org/wiki/File:Fullmetal_Alchemist_Brotherhood_key_visual.png",
+          "credit": "Aniplex, Bones"
+        },
+        {
+          "id": "animes_spirited_away",
+          "text": "Spirited Away",
+          "imagePath": "images/animes_spirited_away.webp",
+          "sourceTitle": "Spirited_Away_Japanese_poster.png",
+          "sourceUrl": "https://en.wikipedia.org/wiki/File:Spirited_Away_Japanese_poster.png",
+          "credit": "IMDb"
+        }
+      ]
+    },
+    {
+      "id": "anime_characters",
+      "title": "Anime Characters",
+      "description": "Heroes, rivals, and a few very familiar faces.",
+      "imagePath": "images/anime_characters_naruto_uzumaki.webp",
+      "accent": "#458E8A",
+      "words": [
+        {
+          "id": "anime_characters_naruto_uzumaki",
+          "text": "Naruto Uzumaki",
+          "imagePath": "images/anime_characters_naruto_uzumaki.webp",
+          "sourceTitle": "NarutoUzumaki.png",
+          "sourceUrl": "https://en.wikipedia.org/wiki/File:NarutoUzumaki.png",
+          "credit": "https://naruto-official.com/en/special/20th"
+        },
+        {
+          "id": "anime_characters_monkey_d_luffy",
+          "text": "Monkey D. Luffy",
+          "imagePath": "images/anime_characters_monkey_d_luffy.webp",
+          "sourceTitle": "Monkey_D_Luffy.png",
+          "sourceUrl": "https://en.wikipedia.org/wiki/File:Monkey_D_Luffy.png",
+          "credit": "One Piece manga"
+        },
+        {
+          "id": "anime_characters_goku",
+          "text": "Goku",
+          "imagePath": "images/anime_characters_goku.webp",
+          "sourceTitle": "GokumangaToriyama.png",
+          "sourceUrl": "https://en.wikipedia.org/wiki/File:GokumangaToriyama.png",
+          "credit": "Shueisha; Akira Toriyama"
+        },
+        {
+          "id": "anime_characters_pikachu",
+          "text": "Pikachu",
+          "imagePath": "images/anime_characters_pikachu.webp",
+          "sourceTitle": "Pokémon_Pikachu_art.png",
+          "sourceUrl": "https://en.wikipedia.org/wiki/File:Pok%C3%A9mon_Pikachu_art.png",
+          "credit": "Game Freak"
+        },
+        {
+          "id": "anime_characters_eren_yeager",
+          "text": "Eren Yeager",
+          "imagePath": "images/anime_characters_eren_yeager.webp",
+          "sourceTitle": "ErenYeagerIsayama.png",
+          "sourceUrl": "https://en.wikipedia.org/wiki/File:ErenYeagerIsayama.png",
+          "credit": "Kodansha; Hajime Isayama"
+        },
+        {
+          "id": "anime_characters_light_yagami",
+          "text": "Light Yagami",
+          "imagePath": "images/anime_characters_light_yagami.webp",
+          "sourceTitle": "Light_from_Death_Note.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/File:Light_from_Death_Note.jpg",
+          "credit": "Death Note chapter 1 title page"
+        },
+        {
+          "id": "anime_characters_levi_ackerman",
+          "text": "Levi Ackerman",
+          "imagePath": "images/anime_characters_levi_ackerman.webp",
+          "sourceTitle": "Leviackerman.png",
+          "sourceUrl": "https://en.wikipedia.org/wiki/File:Leviackerman.png",
+          "credit": "Isayama, Hajime"
+        },
+        {
+          "id": "anime_characters_tanjiro_kamado",
+          "text": "Tanjiro Kamado",
+          "imagePath": "images/anime_characters_tanjiro_kamado.webp",
+          "sourceTitle": "Tanjirou_manga.png",
+          "sourceUrl": "https://en.wikipedia.org/wiki/File:Tanjirou_manga.png",
+          "credit": "It is believed that this and similar images can or could be obtained from the publisher/the author. This copy was obtained from [1]."
+        },
+        {
+          "id": "anime_characters_sailor_moon",
+          "text": "Sailor Moon",
+          "imagePath": "images/anime_characters_sailor_moon.webp",
+          "sourceTitle": "Sailor_Moon_01.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/File:Sailor_Moon_01.jpg",
+          "credit": "A promotional calendar for the Sailor Moon SuperS season."
+        },
+        {
+          "id": "anime_characters_doraemon",
+          "text": "Doraemon",
+          "imagePath": "images/anime_characters_doraemon.webp",
+          "sourceTitle": "Doraemon_character.png",
+          "sourceUrl": "https://en.wikipedia.org/wiki/File:Doraemon_character.png",
+          "credit": "Fujiko Fujio"
+        }
+      ]
+    },
+    {
+      "id": "countries",
+      "title": "Countries",
+      "description": "Recognize countries from their national flags.",
+      "imagePath": "images/countries_india.webp",
+      "accent": "#4E8BA7",
+      "words": [
+        {
+          "id": "countries_india",
+          "text": "India",
+          "imagePath": "images/countries_india.webp",
+          "sourceTitle": "Flag of India.svg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_India.svg",
+          "credit": "Government of India"
+        },
+        {
+          "id": "countries_japan",
+          "text": "Japan",
+          "imagePath": "images/countries_japan.webp",
+          "sourceTitle": "Flag of Japan.svg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Japan.svg",
+          "credit": "Various"
+        },
+        {
+          "id": "countries_united_states",
+          "text": "United States",
+          "imagePath": "images/countries_united_states.webp",
+          "sourceTitle": "Flag of the United States.svg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_the_United_States.svg",
+          "credit": "Uploaded by Dbenbenn; edited by users such as Zscout370, Jacobolus, Indolences, and Technion."
+        },
+        {
+          "id": "countries_france",
+          "text": "France",
+          "imagePath": "images/countries_france.webp",
+          "sourceTitle": "Flag of France.svg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_France.svg",
+          "credit": "Original: Unknown Vector:  SKopp"
+        },
+        {
+          "id": "countries_brazil",
+          "text": "Brazil",
+          "imagePath": "images/countries_brazil.webp",
+          "sourceTitle": "Flag of Brazil.svg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Brazil.svg",
+          "credit": "Raimundo Teixeira Mendes"
+        },
+        {
+          "id": "countries_australia",
+          "text": "Australia",
+          "imagePath": "images/countries_australia.webp",
+          "sourceTitle": "Flag of Australia.svg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Australia.svg",
+          "credit": "Original: Ivor Evans, Leslie John Hawkins, Egbert John Nuttall, Annie Dorrington and William Stevens Vector:  Ian Fieggen"
+        },
+        {
+          "id": "countries_egypt",
+          "text": "Egypt",
+          "imagePath": "images/countries_egypt.webp",
+          "sourceTitle": "Flag of Egypt.svg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Egypt.svg",
+          "credit": "See File history below for details."
+        },
+        {
+          "id": "countries_italy",
+          "text": "Italy",
+          "imagePath": "images/countries_italy.webp",
+          "sourceTitle": "Flag of Italy.svg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Italy.svg",
+          "credit": "See below."
+        },
+        {
+          "id": "countries_south_korea",
+          "text": "South Korea",
+          "imagePath": "images/countries_south_korea.webp",
+          "sourceTitle": "Flag of South Korea.svg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_South_Korea.svg",
+          "credit": "Original: Government of the Republic of Korea Vector:  Great Brightstar and others"
+        },
+        {
+          "id": "countries_canada",
+          "text": "Canada",
+          "imagePath": "images/countries_canada.webp",
+          "sourceTitle": "Flag of Canada.svg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Canada.svg",
+          "credit": "Created by George F. G. Stanley /  E Pluribus Anthony / User:Mzajac"
+        }
+      ]
+    },
+    {
+      "id": "household_objects",
+      "title": "Household Objects",
+      "description": "Familiar things, found right at home.",
+      "imagePath": "images/household_objects_chair.webp",
       "accent": "#C98D65",
       "words": [
         {
-          "id": "everyday_bicycle",
-          "text": "Bicycle",
-          "imagePath": "images/everyday_bicycle.webp",
-          "sourceTitle": "Left_side_of_Flying_Pigeon.jpg",
-          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Left_side_of_Flying_Pigeon.jpg",
-          "credit": "齐健 from Peking, People's Republic of China"
+          "id": "household_objects_chair",
+          "text": "Chair",
+          "imagePath": "images/household_objects_chair.webp",
+          "sourceTitle": "Set_of_fourteen_side_chairs_MET_DP110780.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Set_of_fourteen_side_chairs_MET_DP110780.jpg",
+          "credit": "Thomas Chippendale"
         },
         {
-          "id": "everyday_guitar",
+          "id": "household_objects_guitar",
           "text": "Guitar",
-          "imagePath": "images/everyday_guitar.webp",
+          "imagePath": "images/household_objects_guitar.webp",
           "sourceTitle": "GuitareClassique5.png",
           "sourceUrl": "https://commons.wikimedia.org/wiki/File:GuitareClassique5.png",
           "credit": "User:Martin Möller Talk"
         },
         {
-          "id": "everyday_umbrella",
+          "id": "household_objects_umbrella",
           "text": "Umbrella",
-          "imagePath": "images/everyday_umbrella.webp",
+          "imagePath": "images/household_objects_umbrella.webp",
           "sourceTitle": "M0354_000727-005_1.jpg",
           "sourceUrl": "https://commons.wikimedia.org/wiki/File:M0354_000727-005_1.jpg",
           "credit": "MONNIN Jacques"
         },
         {
-          "id": "everyday_camera",
+          "id": "household_objects_camera",
           "text": "Camera",
-          "imagePath": "images/everyday_camera.webp",
+          "imagePath": "images/household_objects_camera.webp",
           "sourceTitle": "LEI0440_Leica_IIIf_chrom_-_Sn._580566_1951-52-M39_Blitzsynchron_front_view-6531_hf-.jpg",
           "sourceUrl": "https://commons.wikimedia.org/wiki/File:LEI0440_Leica_IIIf_chrom_-_Sn._580566_1951-52-M39_Blitzsynchron_front_view-6531_hf-.jpg",
           "credit": "Kameraprojekt Graz 2015"
         },
         {
-          "id": "everyday_sunglasses",
-          "text": "Sunglasses",
-          "imagePath": "images/everyday_sunglasses.webp",
-          "sourceTitle": "Allef_Vinicius_2016-10-20_(Unsplash)_(cropped).jpg",
-          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Allef_Vinicius_2016-10-20_(Unsplash)_(cropped).jpg",
-          "credit": "Allef Vinicius seteales"
+          "id": "household_objects_scissors",
+          "text": "Scissors",
+          "imagePath": "images/household_objects_scissors.webp",
+          "sourceTitle": "Standard_household_scissors.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Standard_household_scissors.jpg",
+          "credit": "Doggerelblogger"
         },
         {
-          "id": "everyday_backpack",
-          "text": "Backpack",
-          "imagePath": "images/everyday_backpack.webp",
-          "sourceTitle": "Rucksack1.jpg",
-          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Rucksack1.jpg",
-          "credit": "de:Benutzer:sjr"
+          "id": "household_objects_mug",
+          "text": "Mug",
+          "imagePath": "images/household_objects_mug.webp",
+          "sourceTitle": "Mug_of_Tea.JPG",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mug_of_Tea.JPG",
+          "credit": "Factorylad"
         },
         {
-          "id": "everyday_alarm_clock",
+          "id": "household_objects_alarm_clock",
           "text": "Alarm clock",
-          "imagePath": "images/everyday_alarm_clock.webp",
+          "imagePath": "images/household_objects_alarm_clock.webp",
           "sourceTitle": "2010-07-20_Black_windup_alarm_clock_face.jpg",
           "sourceUrl": "https://commons.wikimedia.org/wiki/File:2010-07-20_Black_windup_alarm_clock_face.jpg",
           "credit": "Sun Ladder"
         },
         {
-          "id": "everyday_toothbrush",
+          "id": "household_objects_toothbrush",
           "text": "Toothbrush",
-          "imagePath": "images/everyday_toothbrush.webp",
+          "imagePath": "images/household_objects_toothbrush.webp",
           "sourceTitle": "Toothbrush_20050716_004.jpg",
           "sourceUrl": "https://commons.wikimedia.org/wiki/File:Toothbrush_20050716_004.jpg",
           "credit": "Jonas Bergsten"
         },
         {
-          "id": "everyday_headphones",
+          "id": "household_objects_headphones",
           "text": "Headphones",
-          "imagePath": "images/everyday_headphones.webp",
+          "imagePath": "images/household_objects_headphones.webp",
           "sourceTitle": "Słuchawki_referencyjne_K-701_firmy_AKG.jpg",
           "sourceUrl": "https://commons.wikimedia.org/wiki/File:S%C5%82uchawki_referencyjne_K-701_firmy_AKG.jpg",
           "credit": "http://muzyczny.pl"
         },
         {
-          "id": "everyday_piano",
+          "id": "household_objects_piano",
           "text": "Piano",
-          "imagePath": "images/everyday_piano.webp",
+          "imagePath": "images/household_objects_piano.webp",
           "sourceTitle": "Steinway_Vienna_002.JPG",
           "sourceUrl": "https://commons.wikimedia.org/wiki/File:Steinway_Vienna_002.JPG",
           "credit": "Gryffindor"
-        }
-      ]
-    },
-    {
-      "id": "nature",
-      "title": "Great outdoors",
-      "description": "Natural wonders that are larger than life.",
-      "imagePath": "images/nature_volcano.webp",
-      "accent": "#458E8A",
-      "words": [
-        {
-          "id": "nature_volcano",
-          "text": "Volcano",
-          "imagePath": "images/nature_volcano.webp",
-          "sourceTitle": "Augustine_volcano_Jan_24_2006_-_Cyrus_Read.jpg",
-          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Augustine_volcano_Jan_24_2006_-_Cyrus_Read.jpg",
-          "credit": "Cyrus Read\nGeophysicist\nUSGS, Alaska Volcano Observatory\n\ncread@usgs.gov"
-        },
-        {
-          "id": "nature_waterfall",
-          "text": "Waterfall",
-          "imagePath": "images/nature_waterfall.webp",
-          "sourceTitle": "Cascada_Dynjandi,_Vestfirðir,_Islandia,_2014-08-14,_DD_136-138_HDR.JPG",
-          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cascada_Dynjandi,_Vestfir%C3%B0ir,_Islandia,_2014-08-14,_DD_136-138_HDR.JPG",
-          "credit": "Diego Delso"
-        },
-        {
-          "id": "nature_rainbow",
-          "text": "Rainbow",
-          "imagePath": "images/nature_rainbow.webp",
-          "sourceTitle": "Double-alaskan-rainbow.jpg",
-          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Double-alaskan-rainbow.jpg",
-          "credit": "Eric Rolph at English Wikipedia"
-        },
-        {
-          "id": "nature_desert",
-          "text": "Desert",
-          "imagePath": "images/nature_desert.webp",
-          "sourceTitle": "Rub_al_Khali_002.JPG",
-          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Rub_al_Khali_002.JPG",
-          "credit": "Nepenthes"
-        },
-        {
-          "id": "nature_iceberg",
-          "text": "Iceberg",
-          "imagePath": "images/nature_iceberg.webp",
-          "sourceTitle": "Iceberg_in_the_Arctic_with_its_underside_exposed.jpg",
-          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Iceberg_in_the_Arctic_with_its_underside_exposed.jpg",
-          "credit": "AWeith"
-        },
-        {
-          "id": "nature_sunflower",
-          "text": "Sunflower",
-          "imagePath": "images/nature_sunflower.webp",
-          "sourceTitle": "Sunflower_sky_backdrop.jpg",
-          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sunflower_sky_backdrop.jpg",
-          "credit": "Fir0002"
-        },
-        {
-          "id": "nature_palm_tree",
-          "text": "Palm tree",
-          "imagePath": "images/nature_palm_tree.webp",
-          "sourceTitle": "Coconut palms. Cambodia.jpg",
-          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Coconut_palms._Cambodia.jpg",
-          "credit": "Dmitry Makeev"
-        },
-        {
-          "id": "nature_coral_reef",
-          "text": "Coral reef",
-          "imagePath": "images/nature_coral_reef.webp",
-          "sourceTitle": "Blue_Linckia_Starfish.JPG",
-          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Blue_Linckia_Starfish.JPG",
-          "credit": "Richard Ling <wikipedia@rling.com>"
-        },
-        {
-          "id": "nature_northern_lights",
-          "text": "Northern lights",
-          "imagePath": "images/nature_northern_lights.webp",
-          "sourceTitle": "Aurora_borealis_over_Eielson_Air_Force_Base,_Alaska.jpg",
-          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Aurora_borealis_over_Eielson_Air_Force_Base,_Alaska.jpg",
-          "credit": "United States Air Force photo by Senior Airman Joshua Strang"
-        },
-        {
-          "id": "nature_full_moon",
-          "text": "Full moon",
-          "imagePath": "images/nature_full_moon.webp",
-          "sourceTitle": "Pournami.jpg",
-          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Pournami.jpg",
-          "credit": "Sudora"
         }
       ]
     }
