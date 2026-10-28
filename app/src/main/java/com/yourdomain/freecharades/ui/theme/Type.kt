@@ -1,13 +1,21 @@
 package com.yourdomain.freecharades.ui.theme
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.ExperimentalTextApi
+import androidx.compose.ui.text.font.FontVariation
 import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
 import com.yourdomain.freecharades.R
-val PlayfulFont = FontFamily(Font(R.font.fredoka), Font(R.font.fredoka, FontWeight.Bold))
-val BodyFont = FontFamily(Font(R.font.nunito_sans), Font(R.font.nunito_sans, FontWeight.Bold))
+@OptIn(ExperimentalTextApi::class)
+val PlayfulFont = FontFamily(
+ Font(R.font.fredoka, weight=FontWeight.Normal, variationSettings=FontVariation.Settings(FontVariation.weight(600))),
+ Font(R.font.fredoka, weight=FontWeight.Bold, variationSettings=FontVariation.Settings(FontVariation.weight(700))))
+@OptIn(ExperimentalTextApi::class)
+val BodyFont = FontFamily(
+ Font(R.font.nunito_sans, weight=FontWeight.Normal, variationSettings=FontVariation.Settings(FontVariation.weight(400))),
+ Font(R.font.nunito_sans, weight=FontWeight.Bold, variationSettings=FontVariation.Settings(FontVariation.weight(700))))
 val Typography = Typography(
  displayLarge = TextStyle(fontFamily=PlayfulFont, fontWeight=FontWeight.Bold, fontSize=56.sp, lineHeight = 58.sp),
  displayMedium = TextStyle(fontFamily=PlayfulFont, fontWeight=FontWeight.Bold, fontSize=44.sp, lineHeight = 48.sp),

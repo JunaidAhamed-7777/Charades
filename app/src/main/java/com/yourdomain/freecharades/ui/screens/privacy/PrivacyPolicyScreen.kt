@@ -16,8 +16,8 @@ import kotlinx.coroutines.withContext
 @Composable
 fun PrivacyPolicyScreen(onBack:()->Unit,document:String="privacy") {
  val context=LocalContext.current
- val file=when(document){"terms"->"terms_of_service.txt";"license"->"license.txt";else->"privacy_policy.txt"}
- val title=when(document){"terms"->"Terms of service";"license"->"Open-source license";else->"Privacy policy"}
+ val file=when(document){"terms"->"terms_of_service.txt";"license"->"license.txt";"fonts"->"font_licenses.txt";else->"privacy_policy.txt"}
+ val title=when(document){"terms"->"Terms of service";"license"->"Open-source license";"fonts"->"Font licenses";else->"Privacy policy"}
  var text by remember(file) {mutableStateOf<String?>(null)}
  LaunchedEffect(file) {
   text=withContext(Dispatchers.IO) {

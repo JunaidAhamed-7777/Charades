@@ -90,16 +90,23 @@ fun GameScreen(categoryId:String,sessionId:String,onBack:()->Unit,vm:GameViewMod
     }
     Row(Modifier.weight(1f).fillMaxWidth().padding(bottom=12.dp),horizontalArrangement=Arrangement.spacedBy(20.dp)) {
      Column(Modifier.weight(1f)) {
-      AsyncImage(state.word?.imageUri,state.word?.text,Modifier.weight(1f).fillMaxWidth().clip(RoundedCornerShape(16.dp)).background(MaterialTheme.colorScheme.surfaceVariant),contentScale=ContentScale.Crop)
+      AsyncImage(state.word?.imageUri,state.word?.text,Modifier.weight(1f).fillMaxWidth().clip(RoundedCornerShape(16.dp)).background(MaterialTheme.colorScheme.surfaceVariant),contentScale=ContentScale.Fit)
       Text(state.word?.text.orEmpty(),Modifier.padding(top=8.dp),style=MaterialTheme.typography.headlineLarge,maxLines=2,overflow=TextOverflow.Ellipsis)
      }
-     Column(Modifier.widthIn(min=110.dp,max=156.dp).fillMaxHeight(),horizontalAlignment=Alignment.CenterHorizontally) {
-      FilledTonalIconButton({lastInteraction=android.os.SystemClock.elapsedRealtime();vm.incrementGuesses()},Modifier.size(48.dp).semantics {contentDescription="Add a guess"}) {AppIcon(Glyph.PLUS)}
-      GuessCount(state.guessCount)
-      Text("guesses",style=MaterialTheme.typography.labelMedium,color=MaterialTheme.colorScheme.onSurfaceVariant)
-      FilledTonalIconButton({lastInteraction=android.os.SystemClock.elapsedRealtime();vm.decrementGuesses()},Modifier.padding(top=4.dp).size(48.dp).semantics {contentDescription="Remove a guess"},enabled=state.guessCount>0){AppIcon(Glyph.MINUS)}
-      Spacer(Modifier.weight(1f).heightIn(min=8.dp))
-      PrimaryAction("Next",{lastInteraction=android.os.SystemClock.elapsedRealtime();vm.next()},Modifier.fillMaxWidth())
+     BoxWithConstraints(Modifier.widthIn(min=110.dp,max=156.dp).fillMaxHeight()) {
+      val compact=maxHeight<260.dp
+      val addGuess={lastInteraction=android.os.SystemClock.elapsedRealtime();vm.incrementGuesses()}
+      val removeGuess={lastInteraction=android.os.SystemClock.elapsedRealtime();vm.decrementGuesses()}
+      Column(Modifier.fillMaxSize(),horizontalAlignment=Alignment.CenterHorizontally) {
+       if(!compact) GuessButton(true,true,addGuess)
+       GuessCount(state.guessCount)
+       if(!compact) Text("guesses",style=MaterialTheme.typography.labelMedium,color=MaterialTheme.colorScheme.onSurfaceVariant)
+       if(compact) Row(horizontalArrangement=Arrangement.spacedBy(8.dp)) {
+        GuessButton(false,state.guessCount>0,removeGuess);GuessButton(true,true,addGuess)
+       } else GuessButton(false,state.guessCount>0,removeGuess)
+       Spacer(Modifier.weight(1f).heightIn(min=8.dp))
+       PrimaryAction("Next",{lastInteraction=android.os.SystemClock.elapsedRealtime();vm.next()},Modifier.fillMaxWidth())
+      }
      }
     }
    }
@@ -119,5 +126,12 @@ private fun GuessCount(count:Int) {
   val availableHeight=with(density){maxHeight.toPx()}
   val scale=minOf(1f,availableWidth/measured.size.width.coerceAtLeast(1),availableHeight/measured.size.height.coerceAtLeast(1))
   Text(text,Modifier.semantics {contentDescription="$count guesses"},style=style.copy(fontSize=style.fontSize*scale,lineHeight=style.lineHeight*scale),color=PartyCoral,maxLines=1,softWrap=false)
+ }
+}
+
+@Composable
+private fun GuessButton(add:Boolean,enabled:Boolean,onClick:()->Unit) {
+ FilledTonalIconButton(onClick,Modifier.size(48.dp).semantics {contentDescription=if(add)"Add a guess" else "Remove a guess"},enabled=enabled) {
+  AppIcon(if(add)Glyph.PLUS else Glyph.MINUS)
  }
 }
