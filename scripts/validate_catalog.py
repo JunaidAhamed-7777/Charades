@@ -63,10 +63,15 @@ def validate() -> list[str]:
                     errors.append(f"{word_id}: missing {key}")
             if not word.get("sourceUrl", "").startswith("https://"):
                 errors.append(f"{word_id}: sourceUrl must identify its HTTPS source page")
+            credit = word.get("credit", "")
+            if credit != " ".join(credit.split()) or len(credit) > 180:
+                errors.append(f"{word_id}: credit must be a concise single line without page navigation")
             photo = photos.get(word_id)
             if not photo:
                 errors.append(f"{word_id}: missing source manifest entry")
                 continue
+            if photo.get("credit") != credit:
+                errors.append(f"{word_id}: displayed credit differs from its source manifest")
             target = ASSETS / word["imagePath"]
             if target.is_file():
                 if hashlib.sha256(target.read_bytes()).hexdigest() != photo["sha256"]:

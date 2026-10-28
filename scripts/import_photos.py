@@ -10,6 +10,7 @@ import argparse
 from concurrent.futures import ThreadPoolExecutor, as_completed
 import hashlib
 from html import unescape
+from html.parser import HTMLParser
 from io import BytesIO
 import json
 from pathlib import Path
@@ -87,6 +88,15 @@ FILE_OVERRIDES = {
     ]},
 }
 
+# Verified against the original file-description pages, not inferred authors.
+# Some Commons author templates include contact details and sponsor navigation.
+CREDIT_OVERRIDES = {
+    "Giraffe Mikumi National Park.jpg": "Muhammad Mahdi Karim",
+    "Red kangaroo - melbourne zoo.jpg": "Fir0002/Flagstaffotos",
+    "Sholay-poster.jpg": "Source: London Hollywood; poster artist not identified",
+    "GuitareClassique5.png": "Martin Möller",
+}
+
 
 def get(url: str, **kwargs):
     last = None
@@ -106,7 +116,70 @@ def api(host: str, **params):
 
 
 def plain(value: str) -> str:
-    return unescape(re.sub(r"<[^>]+>", "", value)).strip()
+    return " ".join(unescape(re.sub(r"<[^>]+>", "", value)).split())
+
+
+class ArtistHTMLParser(HTMLParser):
+    """Find creator identity links inside expanded Commons author templates."""
+
+    def __init__(self):
+        super().__init__(convert_charrefs=True)
+        self.has_table = False
+        self.active_author: list[str] | None = None
+        self.authors: list[str] = []
+        self.text: list[str] = []
+        self.skip_link = False
+
+    def handle_starttag(self, tag, attrs):
+        attributes = dict(attrs)
+        if tag == "table":
+            self.has_table = True
+        if tag in ("br", "p", "div", "li"):
+            self.text.append(" ")
+        if tag == "a":
+            href = attributes.get("href") or ""
+            self.skip_link = any(marker in href for marker in ("/wiki/User_talk:", "/wiki/Special:"))
+            if any(marker in href for marker in ("/wiki/User:", "/wiki/Creator:")):
+                self.active_author = []
+
+    def handle_data(self, data):
+        if not self.skip_link:
+            self.text.append(data)
+        if not self.skip_link and self.active_author is not None:
+            self.active_author.append(data)
+
+    def handle_endtag(self, tag):
+        if tag == "a" and self.active_author is not None:
+            author = " ".join("".join(self.active_author).split())
+            if author and author not in self.authors:
+                self.authors.append(author)
+            self.active_author = None
+        if tag == "a":
+            self.skip_link = False
+        if tag in ("p", "div", "li"):
+            self.text.append(" ")
+
+
+def credit_from_metadata(metadata: dict, source_title: str) -> str:
+    override = CREDIT_OVERRIDES.get(source_title.replace("_", " "))
+    if override:
+        return override
+    raw_artist = metadata.get("Artist", {}).get("value", "")
+    artist = plain(raw_artist)
+    if raw_artist:
+        parser = ArtistHTMLParser()
+        parser.feed(raw_artist)
+        artist = " ".join("".join(parser.text).split())
+        if parser.has_table and parser.authors:
+            artist = "; ".join(parser.authors)
+        # Do not truncate a real institutional/multiple-author attribution. A
+        # complex template without extractable identity requires human review.
+        if len(artist) > 180:
+            raise RuntimeError(f"Review the expanded author template for {source_title}")
+    source_credit = plain(metadata.get("Credit", {}).get("value", ""))
+    if not artist and len(source_credit) > 180:
+        return "Source: Wikipedia file page; creator not identified"
+    return artist or source_credit or f"{source_title} — source file page"
 
 
 def slug(value: str) -> str:
@@ -132,10 +205,9 @@ def fetch_word(category_id: str, label: str, article: str, cached: dict, refresh
     image_data = api(image_host, titles=image_title, prop="imageinfo", iiprop="url|extmetadata", iiurlwidth=960)
     info = next(iter(image_data["query"]["pages"].values()))["imageinfo"][0]
     metadata = info.get("extmetadata", {})
-    artist = plain(metadata.get("Artist", {}).get("value", ""))
     license_name = plain(metadata.get("LicenseShortName", {}).get("value", ""))
     description = plain(metadata.get("ImageDescription", {}).get("value", ""))
-    credit = artist or plain(metadata.get("Credit", {}).get("value", "")) or f"{image_title.removeprefix('File:')} — source file page"
+    credit = credit_from_metadata(metadata, image_title.removeprefix("File:"))
     # Wikipedia gives correctly scaled server thumbnails; preserve complete image.
     download_url = info.get("thumburl", info["url"]) if override else page.get("thumbnail", page["original"])["source"]
     raw = get(download_url).content
@@ -151,6 +223,7 @@ def fetch_word(category_id: str, label: str, article: str, cached: dict, refresh
         "id": word_id, "text": label, "imagePath": local_path,
         "sourceTitle": image_title.removeprefix("File:"), "sourceUrl": info["descriptionurl"],
         "credit": credit, "articleUrl": "https://en.wikipedia.org/wiki/" + quote(page["title"].replace(" ", "_")),
+        "rawAttribution": {key: metadata[key]["value"] for key in ("Artist", "Credit") if key in metadata},
         "downloadUrl": download_url, "license": license_name, "description": description[:1000],
         "width": width, "height": height, "bytes": destination.stat().st_size,
         "sha256": hashlib.sha256(destination.read_bytes()).hexdigest(),
