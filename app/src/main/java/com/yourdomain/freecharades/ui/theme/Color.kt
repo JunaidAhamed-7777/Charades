@@ -1,11 +1,11 @@
 package com.yourdomain.freecharades.ui.theme
-
 import androidx.compose.ui.graphics.Color
-
-val DarkBackground = Color(0xFF121212)
-val DarkSurface = Color(0xFF1E1E1E)
-val DarkSurfaceElevated = Color(0xFF252525)
-val AccentTeal = Color(0xFF4DB6AC)
-val SoftIndigo = Color(0xFF7986CB)
-val TextPrimary = Color(0xFFEDEDED)
-val TextSecondary = Color(0xFFB0B0B0)
+// Canonical palette; documented in DESIGN.md.
+val PartyBlue = Color(0xFF244BE8)
+val PartyCoral = Color(0xFFFF806E)
+val Paper = Color(0xFFF7F8FC)
+val Ink = Color(0xFF17244A)
+val MutedInk = Color(0xFF596681)
+val Success = Color(0xFF19734E)
+val Night = Color(0xFF10182D)
+val NightSurface = Color(0xFF1B2742)
