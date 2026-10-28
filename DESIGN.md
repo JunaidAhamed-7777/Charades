@@ -21,7 +21,7 @@ spacing:
 components:
   primary-button:
     backgroundColor: "#244BE8"
-    color: "#FFFFFF"
+    textColor: "#FFFFFF"
 ---
 
 # Charades visual identity
