@@ -17,5 +17,5 @@ private val DarkColors = darkColorScheme(
  tertiary=Color(0xFF8DD6B3), background=Night, onBackground=Color(0xFFF0F2FC), surface=NightSurface, onSurface=Color(0xFFF0F2FC),
  surfaceVariant=Color(0xFF25324D), onSurfaceVariant=Color(0xFFB6C1D7), outline=Color(0xFF8693AC), outlineVariant=Color(0xFF37445E))
 @Composable fun FreeCharadesTheme(content: @Composable () -> Unit) {
- MaterialTheme(colorScheme=if(isSystemInDarkTheme()) DarkColors else LightColors,typography=Typography,shapes=Shapes,content=content)
+ MaterialTheme(colorScheme=DarkColors,typography=Typography,shapes=Shapes,content=content)
 }
