@@ -1,0 +1,43 @@
+Charades terms of service
+
+Effective date: 28 October 2026
+
+The app
+
+Charades is a free, independently maintained personal Android party game provided through https://github.com/JunaidAhamed-7777/Charades. These terms describe use of the app. It has no subscription, account service, advertising, or developer-operated online game service.
+
+All sections and clue images are included in the APK. Install once to play offline. The group leads its own 20 Questions or Charades game; the app does not judge answers or provide automatic competitive scoring. Future versions may change the app or its content. The project does not promise ongoing maintenance, support, or new releases.
+
+Play responsibly
+
+Use the app lawfully and respect other players. Choose suitable clues for your group. Play in a safe location, keep the device secure, and do not use it while driving or when your attention is needed for safety. Children should use the app with appropriate parent or guardian supervision.
+
+Clues and images are entertainment content. They are not professional advice or a guarantee that every description, identity, or depiction is complete or current. Report inaccurate content through the project issue tracker.
+
+Software license and content
+
+The source code is provided under the GNU General Public License, version 3, as included in the repository's LICENSE file and the app's bundled license document. Your rights to run, study, modify, and redistribute the covered software are governed by that license. These terms do not remove or limit rights granted by the license.
+
+Image credits and source references identify material used for clues. Naming a person, work, product, or place in the game does not imply affiliation, sponsorship, or endorsement by that subject.
+
+Source code and license: https://github.com/JunaidAhamed-7777/Charades
+
+Privacy and device state
+
+The privacy policy explains local transient session/navigation state and external links. The app does not create a player profile, store permanent gameplay history, process in-app payments, or send gameplay to the developer. You can stop playing or uninstall at any time. Clearing app storage or uninstalling removes app-managed local state.
+
+Optional donations and external websites
+
+A donation action is optional and appears only when a real destination is configured. It opens an external website in your browser. Any donation is handled by that external service under its own terms and privacy policy. Charades does not process the payment or receive payment details in the app. A donation is not required to use any section or feature.
+
+Availability, warranty, and liability
+
+The app is provided as available, without a promise of uninterrupted operation, suitability for a particular purpose, error-free content, or compatibility with every device. The warranty and liability provisions in the GNU General Public License apply to the covered software.
+
+To the extent permitted by applicable law, the maintainer is not responsible for losses or damage arising from use of the app. Nothing in these terms excludes or limits rights, warranties, remedies, or liability that cannot lawfully be excluded or limited.
+
+Changes and contact
+
+An updated app may include updated terms with a new effective date. The terms packaged with a version describe that version. If any provision is unenforceable, the remaining provisions continue to apply to the extent permitted by law.
+
+For questions or bug reports, use https://github.com/JunaidAhamed-7777/Charades/issues. Do not include private information in public issue reports.
