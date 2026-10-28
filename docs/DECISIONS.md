@@ -22,7 +22,7 @@ The temporary eight-deck catalog with food, sports, landmarks, everyday, and nat
 
 ## Navigation, reveal, and wake
 
-Landscape gameplay presents a center-cropped image, word/name, and source text. X/system Back pop normally without confirmation. Shuffle on a section-detail encounter; preserve that session's order.
+Landscape gameplay presents a complete image, word/name, and source text. X/system Back pop normally without confirmation. Shuffle on a section-detail encounter; preserve that session's order.
 
 Countdown deadlines continue through lock/backgrounding. Keep an active clue awake, releasing the flag after three minutes without interaction. Three minutes is an idle wake policy, not a round timer.
 

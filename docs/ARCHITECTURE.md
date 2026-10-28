@@ -28,7 +28,7 @@ Interaction refreshes the idle deadline. Exit clears the wake flag. Countdown co
 
 `MainActivity` hosts Compose. `ui/navigation/` owns the library/detail/game and local legal/source routes. Use standard back-stack behavior.
 
-`ui/theme/` and `ui/components/` own shared design. [DESIGN](../DESIGN.md) and [UX-CONTRACT](../UX-CONTRACT.md) record the approved dark blue/coral identity and interaction rules. Present center-cropped clues intentionally while preserving readable type and reachable controls on small landscape screens.
+`ui/theme/` and `ui/components/` own shared design. [DESIGN](../DESIGN.md) and [UX-CONTRACT](../UX-CONTRACT.md) record the approved dark blue/coral identity and interaction rules. Present fully visible clues intentionally while preserving readable type and reachable controls on small landscape screens.
 
 ## Privacy boundary
 

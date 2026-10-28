@@ -43,7 +43,7 @@ An APK signed by another key cannot upgrade an installed build. Preserve the sig
 Use a fresh emulator profile or clear Android app storage for first-launch verification. Clearing storage intentionally removes local state.
 
 1. Enable airplane mode before first launch. Open Animals, Movies, Famous People, Animes, Anime Characters, Countries, and Household Objects. Every clue image must be ready without another download or content-check prompt.
-2. Start gameplay. Confirm landscape, three-second countdown, correct center-cropped image, word/name, and source text.
+2. Start gameplay. Confirm landscape, three-second countdown, correct complete image, word/name, and source text.
 3. Press + repeatedly and − past zero. The manual count must stay nonnegative; it must not become a score or enforce an automatic 20-guess limit.
 4. Press Next. Confirm count reset and a new three-second countdown. Check that the session walks the shuffled section-detail order.
 5. Exit through X, then system Back. Both pop normally without a dialog. Re-enter section detail for a fresh shuffle and start with count zero.

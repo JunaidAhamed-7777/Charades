@@ -39,10 +39,10 @@ A box of picture cards brought to a shared phone: vivid blue, warm coral, rich m
 Runtime ownership (Model B): `ui/theme/Color.kt` owns palette constants; `Theme.kt` maps semantic Material roles; shared components and screens consume those roles. This file mirrors the accepted values and rationale. Primary actions use cobalt with white. Coral carries playful accents and the manual count against navy. Body text is near white; secondary text is a legible pale blue-grey. The app currently uses one deliberate dark scheme; avoid introducing an automatic light theme as an incidental library default.
 
 ## Typography
-`Type.kt` owns the complete Material type scale. Bundled Fredoka expresses the brand in display/headline roles; Nunito Sans keeps body text, controls, and credits readable. All sizes are sp. Longer answers wrap; utility copy remains quieter. Fonts and licenses ship with the project; no runtime font service.
+`Type.kt` owns the complete Material type scale. Bundled Fredoka expresses the brand in display/headline roles; Explicit variable font axes use 600/700 for Fredoka and 400/700 for Nunito Sans; defaults must not silently render at the minimum axis weight. Nunito Sans keeps body text, controls, and credits readable. All sizes are sp. Longer answers wrap; utility copy remains quieter. Fonts and licenses ship with the project; no runtime font service.
 
 ## Layout
-Phone-first library: 24dp margins, 14dp photo-grid gutters, adaptive columns with a 155dp minimum card width. Reading screens cap content width at 640–720dp. Game switches to landscape and gives the image the largest region; the answer anchors it below while a narrow rail carries the manual counter and Next. System bars and cutouts receive safe insets.
+Phone-first library: 24dp margins, 14dp photo-grid gutters, adaptive columns with a 155dp minimum card width. Reading screens cap content width at 640–720dp. Game switches to landscape and gives the image the largest region; the answer anchors it below while a narrow rail carries the manual counter and Next. Gameplay uses Fit to preserve the entire clue, including portraits, posters, and flags; cover thumbnails may crop. On short landscape screens the counter buttons sit side by side. System bars and cutouts receive safe insets.
 
 ## Elevation & Depth
 Quiet flat native surfaces support the photographs. A bottom image scrim makes library titles readable. Material depth lives in the authored game-night illustration; avoid duplicating it through arbitrary UI shadows or ornamental glass.

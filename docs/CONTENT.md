@@ -41,7 +41,7 @@ Current category IDs are `animals`, `movies`, `famous_people`, `animes`, `anime_
 
 1. Pick a specific, recognizable subject appropriate to its section.
 2. Find an accurate source image. Verify the named person, work, character, animal, country/flag, or object against the source page. Do not substitute generated identities, cosplay for the fictional character, or unrelated stock imagery.
-3. Prepare the image under `app/src/main/assets/images/`, optimizing resolution and WebP size. Preserve proportions and check landscape center-crop framing.
+3. Prepare the image under `app/src/main/assets/images/`, optimizing resolution and WebP size. Preserve proportions and check landscape Fit framing.
 4. Update the catalog and source title/URL/credit. Keep `docs/photo_sources.json` aligned with the original download URL and optimized-file hash.
 5. Run `python scripts/validate_catalog.py`, visually review the image, rebuild, and verify the cover/reveal in airplane mode.
 

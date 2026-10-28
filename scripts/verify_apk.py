@@ -36,7 +36,7 @@ def main() -> None:
             asset_path = f"assets/{path}"
             if asset_path not in names or apk.read(asset_path) != (source_assets / path).read_bytes():
                 raise SystemExit(f"FAIL: Missing or stale photo in APK: {path}")
-        for name in ("privacy_policy.txt", "terms_of_service.txt", "license.txt"):
+        for name in ("privacy_policy.txt", "terms_of_service.txt", "license.txt", "font_licenses.txt"):
             if apk.read(f"assets/{name}") != (source_assets / name).read_bytes():
                 raise SystemExit(f"FAIL: Bundled document is stale: {name}")
         for font in ("fredoka.ttf", "nunito_sans.ttf"):

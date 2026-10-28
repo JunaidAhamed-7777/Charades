@@ -46,7 +46,7 @@ Gameplay uses landscape orientation. X and system Back perform a normal pop with
 
 Show a three-second countdown before the first reveal and after Next. Next resets the count before revealing the next clue.
 
-A reveal shows a center-cropped image, word/name, and source text. Keep image recognition, typography, and accessible controls clear on small landscape screens.
+A reveal shows a complete image, word/name, and source text. Keep image recognition, typography, and accessible controls clear on small landscape screens.
 
 + increments the manual count. − clamps at zero. There is no automatic 20-guess cap, correctness judging, or conversion of guesses to points.
 

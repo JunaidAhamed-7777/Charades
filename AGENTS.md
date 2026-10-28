@@ -35,7 +35,7 @@ Load/validate the catalog off the main thread. Check local paths and stable IDs,
 
 Use local Android saved state for transient session/navigation restoration, not a preference/history service. Update the privacy policy for any new data handling.
 
-Prioritize coherent visual design and readable images. Support small landscape screens, large text, system insets, contrast, meaningful accessibility labels, and 48 dp touch targets. Apply intentional center-crop imagery without clipping the controls.
+Prioritize coherent visual design and readable images. Support small landscape screens, large text, system insets, contrast, meaningful accessibility labels, and 48 dp touch targets. Apply intentional Fit imagery without clipping the controls.
 
 ## Verification
 
