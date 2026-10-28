@@ -1,7 +1,10 @@
 <resources>
-    <style name="Theme.FreeCharades" parent="android:Theme.Material.NoActionBar">
-        <item name="android:windowBackground">@color/dark_background</item>
-        <item name="android:statusBarColor">@color/dark_background</item>
-        <item name="android:navigationBarColor">@color/dark_background</item>
-    </style>
+ <style name="Theme.FreeCharades" parent="android:Theme.Material.NoActionBar">
+  <item name="android:windowBackground">@color/dark_background</item>
+  <item name="android:statusBarColor">@color/dark_background</item>
+  <item name="android:navigationBarColor">@color/dark_background</item>
+  <item name="android:windowLightStatusBar">false</item>
+  <item name="android:windowLightNavigationBar">false</item>
+  <item name="android:fontFamily">sans</item>
+ </style>
 </resources>

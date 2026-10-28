@@ -17,6 +17,8 @@ import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.graphics.drawscope.rotate
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.semantics.semantics
+import androidx.compose.ui.semantics.contentDescription
 import com.yourdomain.freecharades.ui.theme.PartyBlue
 import com.yourdomain.freecharades.ui.theme.PartyCoral
 
@@ -57,7 +59,7 @@ fun BrandMark(modifier: Modifier = Modifier) {
 @Composable
 fun ScreenHeader(title: String, onBack: () -> Unit, trailing: @Composable RowScope.() -> Unit = {}) {
     Row(Modifier.fillMaxWidth().padding(start=12.dp,end=20.dp,top=8.dp,bottom=8.dp),verticalAlignment=Alignment.CenterVertically) {
-        IconButton(onClick=onBack) {AppIcon(Glyph.BACK)}
+        IconButton(onClick=onBack,modifier=Modifier.semantics {contentDescription="Back"}) {AppIcon(Glyph.BACK)}
         Text(title,Modifier.weight(1f).padding(start=8.dp),style=MaterialTheme.typography.titleLarge)
         trailing()
     }
