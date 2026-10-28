@@ -8,59 +8,26 @@ import com.yourdomain.freecharades.ui.screens.categoryDetail.CategoryDetailScree
 import com.yourdomain.freecharades.ui.screens.game.GameScreen
 import com.yourdomain.freecharades.ui.screens.menu.MenuScreen
 import com.yourdomain.freecharades.ui.screens.privacy.PrivacyPolicyScreen
+import com.yourdomain.freecharades.ui.screens.privacy.CreditsScreen
 import com.yourdomain.freecharades.ui.screens.settings.SettingsScreen
+import java.util.UUID
 
 @Composable
-fun AppNavHost(
-    navController: NavHostController
-) {
-    NavHost(
-        navController = navController,
-        startDestination = Routes.MENU
-    ) {
-        composable(Routes.MENU) {
-            MenuScreen(
-                onCategoryClick = { categoryId ->
-                    navController.navigate(Routes.categoryDetail(categoryId))
-                },
-                onSettingsClick = {
-                    navController.navigate(Routes.SETTINGS)
-                },
-                onPrivacyClick = {
-                    navController.navigate(Routes.PRIVACY)
-                }
-            )
-        }
-
-        composable(Routes.CATEGORY_DETAIL) { backStackEntry ->
-            val categoryId = backStackEntry.arguments?.getString("categoryId") ?: ""
-            CategoryDetailScreen(
-                categoryId = categoryId,
-                onBack = { navController.popBackStack() },
-                onPlay = {
-                    navController.navigate(Routes.game(categoryId))
-                }
-            )
-        }
-
-        composable(Routes.GAME) { backStackEntry ->
-            val categoryId = backStackEntry.arguments?.getString("categoryId") ?: ""
-            GameScreen(
-                categoryId = categoryId,
-                onBack = { navController.popBackStack() }
-            )
-        }
-
-        composable(Routes.SETTINGS) {
-            SettingsScreen(
-                onBack = { navController.popBackStack() }
-            )
-        }
-
-        composable(Routes.PRIVACY) {
-            PrivacyPolicyScreen(
-                onBack = { navController.popBackStack() }
-            )
-        }
-    }
+fun AppNavHost(navController:NavHostController) {
+ NavHost(navController,startDestination=Routes.MENU) {
+  composable(Routes.MENU) {
+   MenuScreen({navController.navigate(Routes.categoryDetail(it))},{navController.navigate(Routes.SETTINGS)},{navController.navigate(Routes.PRIVACY)})
+  }
+  composable(Routes.CATEGORY_DETAIL) {entry ->
+   val id=entry.arguments?.getString("categoryId").orEmpty()
+   CategoryDetailScreen(id,{navController.popBackStack()},{navController.navigate(Routes.game(id,UUID.randomUUID().toString()))})
+  }
+  composable(Routes.GAME) {entry ->
+   GameScreen(entry.arguments?.getString("categoryId").orEmpty(),entry.arguments?.getString("sessionId").orEmpty(),{navController.popBackStack()})
+  }
+  composable(Routes.SETTINGS) {SettingsScreen({navController.popBackStack()},{navController.navigate("document/$it")},{navController.navigate(Routes.CREDITS)})}
+  composable(Routes.PRIVACY) {PrivacyPolicyScreen({navController.popBackStack()})}
+  composable(Routes.DOCUMENT) {entry ->PrivacyPolicyScreen({navController.popBackStack()},entry.arguments?.getString("document").orEmpty())}
+  composable(Routes.CREDITS) {CreditsScreen({navController.popBackStack()})}
+ }
 }
