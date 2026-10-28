@@ -44,7 +44,9 @@ fun MenuScreen(onCategoryClick:(String)->Unit,onSettingsClick:()->Unit,onPrivacy
     Column(Modifier.fillMaxWidth().padding(bottom=6.dp)) {
      Text("Good company.\nGreat guesses.",style=MaterialTheme.typography.displayMedium)
      Text("The offline game of 20 Questions & Charades.",Modifier.padding(top=10.dp),style=MaterialTheme.typography.bodyLarge,color=MaterialTheme.colorScheme.onSurfaceVariant)
-     Image(painterResource(R.drawable.game_night),null,Modifier.padding(top=22.dp).fillMaxWidth().heightIn(max=230.dp).aspectRatio(1.9f).clip(RoundedCornerShape(20.dp)),contentScale=ContentScale.Crop)
+     BoxWithConstraints(Modifier.padding(top=22.dp).fillMaxWidth()) {
+      Image(painterResource(R.drawable.game_night),null,Modifier.fillMaxWidth().height(minOf(maxWidth/1.9f,230.dp)).clip(RoundedCornerShape(20.dp)),contentScale=ContentScale.Crop)
+     }
     }
    }
    item(span={GridItemSpan(maxLineSpan)}) {
