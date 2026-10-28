@@ -62,7 +62,7 @@ python scripts\sync_policies.py --check
 ```
 
 - [Product context](PRODUCT.md) and [agent instructions](AGENTS.md).
-- [Architecture](docs/ARCHITECTURE.md), [development/testing](docs/DEVELOPMENT.md), and [content guide](docs/CONTENT.md).
+- [Architecture](docs/ARCHITECTURE.md), [development/testing](docs/DEVELOPMENT.md), [verification results](docs/VERIFICATION.md), and [content guide](docs/CONTENT.md).
 - [Decisions](docs/DECISIONS.md) and [spec reconciliation](docs/SPEC_RECONCILIATION.md).
 - [Design direction](DESIGN.md) and [interaction contract](UX-CONTRACT.md).
 
