@@ -6,11 +6,10 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.viewModelScope
 import com.yourdomain.freecharades.data.repository.CategoryRepository
-import com.yourdomain.freecharades.data.repository.SettingsRepository
-import com.yourdomain.freecharades.domain.game.RoundEngine
-import com.yourdomain.freecharades.domain.game.RoundPhase
-import com.yourdomain.freecharades.domain.game.RoundResult
-import com.yourdomain.freecharades.domain.game.RoundSnapshot
+import com.yourdomain.freecharades.domain.game.DeckEngine
+import com.yourdomain.freecharades.domain.game.DeckSessionState
+import com.yourdomain.freecharades.domain.game.DeckSnapshot
+import com.yourdomain.freecharades.domain.game.GamePhase
 import com.yourdomain.freecharades.domain.model.Category
 import com.yourdomain.freecharades.domain.model.Word
 import kotlinx.coroutines.CancellationException
@@ -20,36 +19,34 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.isActive
 import kotlinx.coroutines.launch
+import kotlin.random.Random
 
 data class GameUiState(
-    val phase: RoundPhase = RoundPhase.LOADING,
+    val phase: GamePhase = GamePhase.LOADING,
     val category: Category? = null,
     val word: Word? = null,
-    val secondsRemaining: Int = 60,
-    val durationSeconds: Int = 60,
     val countdown: Int = 3,
-    val correct: Int = 0,
-    val skipped: Int = 0,
+    val guessCount: Int = 0,
+    val index: Int = 0,
     val totalWords: Int = 0,
-    val results: List<RoundResult> = emptyList(),
     val error: String? = null
 )
 
 class GameViewModel(application: Application, private val savedStateHandle: SavedStateHandle) : AndroidViewModel(application) {
     private val categories = CategoryRepository.get(application)
-    private val settingsRepository = SettingsRepository.get(application)
-    val settings = settingsRepository.settings
     private val mutableState = MutableStateFlow(GameUiState())
     val state = mutableState.asStateFlow()
-    private var engine: RoundEngine? = null
+    private var engine: DeckEngine? = null
     private var loadJob: Job? = null
     private var tickerJob: Job? = null
-    private var pauseWhenReady = false
 
-    fun prepare(categoryId: String) {
-        if (savedStateHandle.get<String>("categoryId") == categoryId &&
-            (engine != null || loadJob?.isActive == true)) return
-        savedStateHandle["categoryId"] = categoryId
+    fun prepare(categoryId: String, sessionId: String) {
+        val sameSession = savedStateHandle.get<String>(CATEGORY_KEY) == categoryId &&
+            savedStateHandle.get<String>(SESSION_KEY) == sessionId
+        if (sameSession && (engine != null || loadJob?.isActive == true)) return
+        val restored = if (sameSession) restoreSession() else null
+        savedStateHandle[CATEGORY_KEY] = categoryId
+        savedStateHandle[SESSION_KEY] = sessionId
         loadJob?.cancel()
         tickerJob?.cancel()
         engine = null
@@ -58,61 +55,80 @@ class GameViewModel(application: Application, private val savedStateHandle: Save
             try {
                 val category = categories.load().firstOrNull { it.id == categoryId }
                 if (category == null) {
-                    mutableState.value = GameUiState(phase = RoundPhase.ERROR, error = "This deck could not be found. Choose another deck.")
+                    mutableState.value = GameUiState(phase = GamePhase.ERROR, error = "This category could not be found. Choose another category.")
                 } else {
                     mutableState.value = GameUiState(category = category)
-                    restart()
+                    // The detail encounter's navigation key also reproduces its shuffle before
+                    // Android has had a chance to save the complete ordered list.
+                    engine = DeckEngine(category.words, now(), restored, Random(sessionId.hashCode()))
+                    refresh()
+                    runCountdown()
                 }
             } catch (cancelled: CancellationException) {
                 throw cancelled
             } catch (_: Exception) {
-                mutableState.value = GameUiState(phase = RoundPhase.ERROR, error = "The photo library could not be opened. Reinstall the complete APK.")
+                mutableState.value = GameUiState(phase = GamePhase.ERROR, error = "The photo library could not be opened. Reinstall the complete APK.")
             }
         }
     }
 
-    fun correct() { engine?.answer(true, now())?.let(::publish) }
-    fun skip() { engine?.answer(false, now())?.let(::publish) }
-    fun pause() {
-        // onStop can arrive while the catalog is still loading on a first launch.
-        pauseWhenReady = true
-        engine?.pause(now())?.let(::publish)
+    fun next() {
+        engine?.next(now())?.let(::publish)
+        runCountdown()
     }
-    fun resume() {
-        pauseWhenReady = false
-        engine?.resume(now())?.let(::publish)
-    }
-    fun finish() { engine?.finish(now())?.let(::publish) }
 
-    fun restart() {
-        val category = mutableState.value.category ?: return
-        // An explicit replay begins immediately; a first load honors a background pause.
-        if (engine != null) pauseWhenReady = false
+    fun incrementGuesses() { engine?.incrementGuesses(now())?.let(::publish) }
+    fun decrementGuesses() { engine?.decrementGuesses(now())?.let(::publish) }
+
+    /** Recompute from elapsed time on resume; locking the screen never pauses the countdown. */
+    fun refresh() { engine?.snapshot(now())?.let(::publish) }
+
+    private fun runCountdown() {
         tickerJob?.cancel()
-        val duration = settings.value.durationSeconds
-        mutableState.value = GameUiState(category = category, durationSeconds = duration, secondsRemaining = duration)
-        engine = RoundEngine(category.words, duration, now())
-        publish(if (pauseWhenReady) requireNotNull(engine).pause(now()) else requireNotNull(engine).tick(now()))
+        if (mutableState.value.phase != GamePhase.COUNTDOWN) return
         tickerJob = viewModelScope.launch {
-            while (isActive && mutableState.value.phase != RoundPhase.FINISHED) {
-                delay(100)
-                engine?.tick(now())?.let(::publish)
+            while (isActive && mutableState.value.phase == GamePhase.COUNTDOWN) {
+                delay(50)
+                refresh()
             }
         }
     }
 
-    private fun publish(snapshot: RoundSnapshot) {
+    private fun publish(snapshot: DeckSnapshot) {
         mutableState.value = mutableState.value.copy(
             phase = snapshot.phase,
             word = snapshot.word,
-            secondsRemaining = snapshot.secondsRemaining,
             countdown = snapshot.countdown,
-            correct = snapshot.correct,
-            skipped = snapshot.skipped,
-            totalWords = snapshot.totalWords,
-            results = snapshot.results
+            guessCount = snapshot.guessCount,
+            index = snapshot.index,
+            totalWords = snapshot.totalWords
+        )
+        engine?.save()?.let { saved ->
+            savedStateHandle[ORDER_KEY] = ArrayList(saved.order)
+            savedStateHandle[INDEX_KEY] = saved.index
+            savedStateHandle[GUESSES_KEY] = saved.guessCount
+            savedStateHandle[DEADLINE_KEY] = saved.countdownDeadlineMs
+        }
+    }
+
+    private fun restoreSession(): DeckSessionState? {
+        val order = savedStateHandle.get<ArrayList<String>>(ORDER_KEY) ?: return null
+        return DeckSessionState(
+            order = order.toList(),
+            index = savedStateHandle[INDEX_KEY] ?: 0,
+            guessCount = savedStateHandle[GUESSES_KEY] ?: 0,
+            countdownDeadlineMs = savedStateHandle[DEADLINE_KEY] ?: 0L
         )
     }
 
     private fun now() = SystemClock.elapsedRealtime()
+
+    private companion object {
+        const val CATEGORY_KEY = "deck_category"
+        const val SESSION_KEY = "deck_session"
+        const val ORDER_KEY = "deck_order"
+        const val INDEX_KEY = "deck_index"
+        const val GUESSES_KEY = "deck_guesses"
+        const val DEADLINE_KEY = "deck_deadline"
+    }
 }
