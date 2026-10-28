@@ -18,7 +18,13 @@ fun PrivacyPolicyScreen(onBack:()->Unit,document:String="privacy") {
  val context=LocalContext.current
  val file=when(document){"terms"->"terms_of_service.txt";"license"->"license.txt";else->"privacy_policy.txt"}
  val title=when(document){"terms"->"Terms of service";"license"->"Open-source license";else->"Privacy policy"}
- val text by produceState<String?>(null,file) {value=withContext(Dispatchers.IO){runCatching {context.assets.open(file).bufferedReader().use {it.readText()}}.getOrElse {"This document could not be opened. Please reinstall the complete APK."}}}
+ var text by remember(file) {mutableStateOf<String?>(null)}
+ LaunchedEffect(file) {
+  text=withContext(Dispatchers.IO) {
+   runCatching {context.assets.open(file).bufferedReader().use {it.readText()}}
+    .getOrElse {"This document could not be opened. Please reinstall the complete APK."}
+  }
+ }
  Surface(Modifier.fillMaxSize(),color=MaterialTheme.colorScheme.background) {
   Column(Modifier.safeDrawingPadding()) {
    ScreenHeader(title,onBack)
