@@ -1,4 +1,28 @@
-# Verification record — 3 November 2026
+# Verification record — 3 November 2026 (landing and icon follow-up)
+
+## Current APK
+
+`app/build/outputs/apk/debug/app-debug.apk`, 21,255,160 bytes (20.27 MiB). Runtime checkpoint: `39137ab`.
+
+SHA-256: `925a9500ad023ea9cbc25e31824ea4fff3f84359fa8fca059b103cb59c2f44d1`.
+
+The landing page now uses Space Grotesk headings and Manrope body/labels, with a stronger “Choose a deck” hierarchy, a quiet “Made By Junaid” credit, and a compact privacy action. Font scale increases the grid minimum so large text gets wider cards. The launcher uses an upright card/C monogram with shared legacy, adaptive, round, and monochrome geometry. Game logic, deck models, and content are unchanged.
+
+## Verification
+
+- Full `testDebugUnitTest lintDebug assembleDebug` passed: 13 tests, no failures/errors. The final resource cleanup also passed lint/assembly. No lint errors; the missing monochrome-icon and unused launcher-color warnings are resolved.
+- Catalog validation, policy synchronization, and APK verification passed: all six decks, 300 clues, 251 images, full sources/legal text, and both new bundled fonts; no network permissions.
+- DESIGN lint and the premium strict static audit passed without findings/errors.
+- Android 17/API 37 emulator: normal landing shows all six cards and exact creator credit. At 200% text size, the grid uses wider cards, labels remain legible, and the creator/privacy footer is reachable. Privacy opened offline. Font scale restored to 1.0.
+- A landscape clue reveal with the new fonts kept the image, answer, count, and Next visible; Back returned normally.
+- Android's App info screen rendered the new adaptive launcher icon correctly. Themed-icon metadata is present; themed-color rendering was not separately toggled on a launcher.
+- New captures: `docs/screenshots/library.png`, `library-large-text.png`, `library-large-text-footer.png`, `game.png`, and `icon-system.png`. `docs/branding/launcher-icon-preview.png` is a geometric source preview; it is not an Android screenshot.
+
+No physical phone was connected. Earlier lock/idle/TalkBack and older-device limitations still apply. The APK is debug-signed; no public release was published.
+
+---
+
+# Earlier verification — 3 November 2026
 
 ## Current artifact
 
