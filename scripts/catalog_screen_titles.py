@@ -115,12 +115,43 @@ ANIMES = [
 SCREEN_FILE_OVERRIDES = {
     "animes_beyblade": ("en.wikipedia.org", "BeybladeGRVol1.jpg"),
     "animes_doraemon": ("en.wikipedia.org", "Doraemon characters (1979).png"),
-    "animes_yu_yu_hakusho": ("en.wikipedia.org", "YuYu Hakusho DVD season 1.gif"),
 }
 
 # Published key art on the anime's own site, used instead of unrelated
 # adaptation art or a manga cover. Copyright ownership is not a reuse license.
 SCREEN_DIRECT_SOURCES = {
+    "animes_neon_genesis_evangelion": {
+        "sourceTitle": "Neon Genesis Evangelion — official volume-one artwork",
+        "sourceUrl": "https://www.evangelion.jp/ng.html",
+        "credit": "Khara / Project Eva.",
+        "downloadUrl": "https://www.evangelion.jp/images/ng/single_img_bd_v01.jpg",
+        "license": "Copyrighted promotional artwork; no reuse license stated",
+        "description": "Flat cover artwork for the original TV anime's first Blu-ray volume, published on its official Neon Genesis product page and referenced by ng_03.css.",
+    },
+    "animes_jojo_s_bizarre_adventure": {
+        "sourceTitle": "JoJo's Bizarre Adventure — official Battle Tendency key visual",
+        "sourceUrl": "https://jojo-animation.com/fb_bt/",
+        "credit": "Hirohiko Araki / Shueisha / JoJo's Bizarre Adventure Production Committee",
+        "downloadUrl": "https://jojo-animation.com/fb_bt/img/2/main_c1_ver2.jpg",
+        "license": "Copyrighted promotional artwork; no reuse license stated",
+        "description": "Main character artwork for the original 2012 anime's Battle Tendency arc, published on its official site and referenced by base.css.",
+    },
+    "animes_sailor_moon": {
+        "sourceTitle": "Sailor Moon — official Crystal anime key visual",
+        "sourceUrl": "https://sailormoon-official.com/animation/news/crystal_226.php",
+        "credit": "Naoko Takeuchi / PNP / Kodansha / Toei Animation",
+        "downloadUrl": "https://sailormoon-official.com/upload/tvkvkai_670.jpg",
+        "license": "Copyrighted promotional artwork; no reuse license stated",
+        "description": "Sailor Moon Crystal anime key visual announced by the official Sailor Moon project on 20 February 2015.",
+    },
+    "animes_yu_yu_hakusho": {
+        "sourceTitle": "Yu Yu Hakusho — official anime anniversary illustration",
+        "sourceUrl": "https://pierrot.jp/yuhaku25/",
+        "credit": "Yoshihiro Togashi 1990–1994 / Pierrot / Shueisha",
+        "downloadUrl": "https://pierrot.jp/yuhaku25/images/yuhaku20th_mv.jpg",
+        "license": "Copyrighted promotional artwork; no reuse license stated",
+        "description": "Flat published anime illustration of Yusuke, Kuwabara, Hiei and Kurama on Studio Pierrot's official Yu Yu Hakusho anniversary page.",
+    },
     "animes_attack_on_titan": {
         "sourceTitle": "Attack on Titan — official season-one key visual",
         "sourceUrl": "https://shingeki.tv/season1/",
