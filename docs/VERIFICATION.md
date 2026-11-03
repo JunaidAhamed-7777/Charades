@@ -1,4 +1,42 @@
-# Verification record — 28 October 2026
+# Verification record — 3 November 2026
+
+## Current artifact
+
+Minimal near-black Compose UI with six decks of 50 clues, Hollywood-only Movies, name-only Famous People, and no Anime Characters. Shared theme/type/spacing/shape/component owners replace screen-local styling. Generated landing art and the unused playful font are removed. The domain models, game engine, ViewModels, and navigation code are unchanged.
+
+Built and installed the complete debug APK on an Android 17/API 37 emulator. APK: `app/build/outputs/apk/debug/app-debug.apk`, 20,836,846 bytes (19.87 MiB). Runtime/content checkpoint: `3092bee`.
+
+SHA-256: `7e9e76ce0d665c75d865165c940cc0ae3660bebc36fcf59d1dbb3da53f950e72`.
+
+## Automated verification
+
+- `validate_catalog.py`: PASS, six decks, 300 unique clues, 251 WebP images, 8.98 MiB. Local paths, actual WebP dimensions (maximum 720px long edge), source records, byte counts, and hashes match.
+- `sync_policies.py --check`: PASS; legal text remains synchronized.
+- `gradlew.bat testDebugUnitTest lintDebug assembleDebug`: PASS; 13 unit tests, no failures/errors; lint has no errors, with dependency/platform advisories remaining.
+- `verify_apk.py`: PASS; actual APK contains the current catalog, all referenced media, complete source manifest, legal text, and bundled font. No Internet/network-state permissions.
+- All pictured clues and the cover were visually reviewed against their source identities. Weak object/cover/anime images were corrected.
+- Offline re-encoding was checked with network access disabled at the helper boundary; compliant files remain unchanged and unsafe paths are rejected. Validator rejection of a missing image was also checked.
+- `designmd lint DESIGN.md`: zero errors/warnings. Premium strict static audit: zero findings. Source inspection confirms color literals only in `Theme.kt`, font sizes only in `Typography.kt`, dp spacing literals only in the six shared scale tokens, and a single fixed-4:3 Crop image renderer.
+
+## Emulator verification
+
+- Fresh app storage, airplane mode enabled, Wi-Fi/data disabled: first launch and all six decks open and reveal clues offline.
+- Famous People reveals a name with no photograph; Anime Characters is absent and all deck counts show 50.
+- Counter increments/decrements, clamps at zero, and resets on Next. Backgrounding after Next for longer than three seconds returns to the revealed clue with count zero.
+- X and system Back pop normally; portrait browsing returns after landscape gameplay.
+- Default rendering and compact 320dp landscape height at 540dpi/font scale 1.3: image, title, manual controls, and Next remain accessible. Density/font scale restored afterward.
+- Local privacy and source pages open. The neutral microphone cover shows its actual creator, license, and source URL offline. No crash entries appeared in the inspected crash buffer.
+- Actual app captures are in `docs/screenshots/`; the README uses the new library/game images. The app was left at the library.
+
+## Limits
+
+No physical phone was connected during this session. Hardware lock/unlock, full three-minute idle wake release, TalkBack navigation, older Android versions, tablets, and every possible long-clue/font-scale combination were not tested end to end. The unchanged engine tests cover deadline/session rules; this emulator pass is not a physical-device test. No release was published and no signing identity or donation destination was invented.
+
+The optional Impeccable design sidecar predates the redesign; runtime tokens and maintained design/product docs are current.
+
+---
+
+# Historical verification — 28 October 2026
 
 ## Delivered artifact
 

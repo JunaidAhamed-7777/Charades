@@ -1,6 +1,6 @@
 # App screenshots
 
-Captured from the final minimal-UI debug APK on an Android 17/API 37 emulator on 3 November 2026. These are actual app renders, not mockups.
+Captured from the minimal-UI debug app on an Android 17/API 37 emulator on 3 November 2026. These are actual app renders, not mockups.
 
 - `library.png`: all six decks, one hero image per fixed 4:3 card, default font scale/density.
 - `game.png`: landscape reveal with manual guess controls and Next.
