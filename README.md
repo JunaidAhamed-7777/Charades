@@ -6,7 +6,7 @@ A free Android game for friends and family. All sections, clues, and images ship
 
 ## How to install
 
-Requires **Android 8.0 or newer**. Install the complete APK once. All seven current sections and their photos are included, with no content setup after installation.
+Requires **Android 8.0 or newer**. Install the complete APK once. All six current decks and their 300 clues are included, with no content setup after installation.
 
 ### Build and install with ADB
 
@@ -42,7 +42,7 @@ On macOS/Linux, use `./gradlew assembleDebug` and `adb install -r app/build/outp
 
 ## How to play
 
-Choose **Animals, Movies, Famous People, Animes, Anime Characters, Countries, or Household Objects**. Open a section and start. The phone switches to landscape, counts down for three seconds, and reveals the image and word.
+Choose **Animals, Movies, Famous People, Animes, Countries, or Household Objects**. Each deck contains 50 clues. Movies includes Hollywood films only; Famous People mixes historical and current public figures as name-only clues. Open a deck and start. The phone switches to landscape, counts down for three seconds, and reveals the clue, with an image for the illustrated decks.
 
 - **20 Questions:** the player who cannot see the screen asks yes/no questions. Use + and − to track guesses manually.
 - **Charades:** act out the clue for the other players, using your group's rules.
@@ -55,11 +55,24 @@ No timed rounds, scores, sounds, or account setup. The interface stays dark. Cou
 
 Kotlin, Jetpack Compose, Material 3, and a bundled JSON catalog. No server, runtime updater, Room database, analytics, or advertising.
 
+The UI uses a near-black theme, one accent, four text styles, two font weights, one radius, and shared spacing/components. Deck covers show one hero image each. Images are local WebP files with a maximum 720px long edge; smaller sources are not enlarged.
+
 ```powershell
 python scripts\validate_catalog.py
 python scripts\sync_policies.py --check
 .\gradlew.bat testDebugUnitTest lintDebug assembleDebug
+python scripts\verify_apk.py
 ```
+
+To re-encode existing images offline and refresh their recorded dimensions/checksums:
+
+```powershell
+python -m pip install -r scripts\requirements-content.txt
+python scripts\import_photos.py --reencode-only
+python scripts\validate_catalog.py
+```
+
+The re-encoder preserves proportions, caps the long edge at 720px, and saves WebP at quality 84. Review subject framing before shipping; the app uses fixed 4:3 cropped images. Network acquisition is a separate developer task, described in the [content guide](docs/CONTENT.md).
 
 - [Product context](PRODUCT.md) and [agent instructions](AGENTS.md).
 - [Architecture](docs/ARCHITECTURE.md), [development/testing](docs/DEVELOPMENT.md), [verification results](docs/VERIFICATION.md), and [content guide](docs/CONTENT.md).
