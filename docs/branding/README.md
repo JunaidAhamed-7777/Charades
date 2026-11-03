@@ -1,6 +1,8 @@
 # Charades artwork
 
-The card/play mark is a native vector: `charades-mark.svg` for source/reuse and `res/drawable/ic_launcher_foreground.xml` for Android. Launcher icons use the same mark, near-black background, neutral rear card, and restrained blue accent.
+The launcher mark is one upright clue card with a geometric **C**: a thin muted-blue outline and white monogram on near-black. The 48×60 card uses a 12-unit corner radius and a 3-unit outline on a 108×108 canvas. It replaces the rotated card fan and play triangle with a quieter, more recognizable initial.
+
+`res/drawable/ic_launcher_foreground.xml` owns the Android geometry; `charades-mark.svg` mirrors it for reuse. Legacy and adaptive launcher resources share that foreground, so normal/round versions do not maintain separate paths. The adaptive mark sits within the central safe zone, and its same alpha shape supplies Android's themed monochrome layer. See the [Android adaptive icon guide](https://developer.android.com/develop/ui/compose/system/icon_design_adaptive) for layer and safe-zone rules. The operating system supplies the launcher mask; no shadows, gradients, or generated raster artwork are used.
 
 The generated game-night landing illustration was removed in the 3 November redesign. The home screen presents only the game title, brief instructions, and deck covers.
 
