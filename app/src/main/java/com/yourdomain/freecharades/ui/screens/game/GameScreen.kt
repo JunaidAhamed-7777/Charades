@@ -23,6 +23,7 @@ import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.rememberTextMeasurer
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
+import androidx.compose.ui.unit.Constraints
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleEventObserver
 import androidx.lifecycle.compose.LocalLifecycleOwner
@@ -98,23 +99,38 @@ fun GameScreen(categoryId: String, sessionId: String, onBack: () -> Unit,
                 }
             }
                 .padding(bottom = AppSpacing.md), horizontalArrangement = Arrangement.spacedBy(AppSpacing.xl)) {
-                Column(Modifier.weight(1f)) {
+                BoxWithConstraints(Modifier.weight(1f).fillMaxHeight()) {
+                    val measurer = rememberTextMeasurer()
+                    val density = LocalDensity.current
+                    val answer = state.word?.text.orEmpty()
+                    val credit = state.word?.credit.orEmpty()
+                    val textWidth = with(density) { maxWidth.roundToPx() }.coerceAtLeast(1)
+                    val answerHeight = measurer.measure(answer, style = AppType.title,
+                        constraints = Constraints(maxWidth = textWidth)).size.height
+                    val creditHeight = measurer.measure(credit, style = AppType.label, maxLines = 2,
+                        constraints = Constraints(maxWidth = textWidth)).size.height
+                    val imageHeight = maxHeight - with(density) { (answerHeight + creditHeight).toDp() } - AppSpacing.md
+                    val needsScroll = state.word?.imagePath?.isNotBlank() == true && imageHeight < AppGeometry.touchTarget * 2
+                    val clueScroll = if (needsScroll) Modifier.verticalScroll(rememberScrollState()) else Modifier
+                    Column(Modifier.fillMaxSize().then(clueScroll)) {
                     if (state.word?.imagePath?.isNotBlank() == true) {
-                        BoxWithConstraints(Modifier.weight(1f).fillMaxWidth(), contentAlignment = Alignment.Center) {
+                        val boundedHeight = if (needsScroll) maxHeight else imageHeight
+                        Box(Modifier.fillMaxWidth(), contentAlignment = Alignment.Center) {
                             // Both bounds participate: a fixed-ratio image never pushes controls off-screen.
                             AppImage(state.word?.imageUri, state.word?.text,
-                                Modifier.width(minOf(maxWidth, maxHeight * AppGeometry.imageAspectRatio)))
+                                Modifier.width(minOf(maxWidth, boundedHeight * AppGeometry.imageAspectRatio)))
                         }
-                        Text(state.word?.text.orEmpty(), Modifier.padding(top = AppSpacing.sm), style = AppType.title)
+                        Text(answer, Modifier.padding(top = AppSpacing.sm), style = AppType.title)
                     } else {
                         Box(Modifier.weight(1f).fillMaxWidth().verticalScroll(rememberScrollState()),
                             contentAlignment = Alignment.Center) {
-                            Text(state.word?.text.orEmpty(), style = AppType.display, textAlign = TextAlign.Center)
+                            Text(answer, style = AppType.display, textAlign = TextAlign.Center)
                         }
                     }
-                    Text(state.word?.credit.orEmpty(), Modifier.padding(top = AppSpacing.xs),
+                    Text(credit, Modifier.padding(top = AppSpacing.xs),
                         style = AppType.label, color = MaterialTheme.colorScheme.onSurfaceVariant,
                         maxLines = 2, overflow = TextOverflow.Ellipsis)
+                    }
                 }
                 Column(Modifier.width(AppGeometry.controlRailWidth).fillMaxHeight(),
                     horizontalAlignment = Alignment.CenterHorizontally) {

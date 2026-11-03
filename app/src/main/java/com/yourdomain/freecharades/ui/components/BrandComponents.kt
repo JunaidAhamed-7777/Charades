@@ -132,8 +132,11 @@ fun SecondaryAction(text: String, onClick: () -> Unit, modifier: Modifier = Modi
 @Composable
 fun AppIconAction(glyph: Glyph, description: String, onClick: () -> Unit,
                   modifier: Modifier = Modifier, enabled: Boolean = true) {
-    IconButton(onClick, modifier.size(AppGeometry.touchTarget).clip(AppShape)
-        .semantics { contentDescription = description }, enabled = enabled) { AppIcon(glyph) }
+    Box(modifier.size(AppGeometry.touchTarget).clip(AppShape)
+        .clickable(enabled = enabled, role = Role.Button, onClick = onClick)
+        .semantics { contentDescription = description }, contentAlignment = Alignment.Center) {
+        AppIcon(glyph, tint = if (enabled) MaterialTheme.colorScheme.onSurface else MaterialTheme.colorScheme.outline)
+    }
 }
 
 @Composable
