@@ -15,7 +15,7 @@ object AppSpacing {
 object AppGeometry {
     val touchTarget = AppSpacing.xl * 2
     val contentWidth = AppSpacing.xxl * 20
-    val deckMinWidth = AppSpacing.xxl * 5
+    val deckMinWidth = AppSpacing.xxl * 4
     val controlRailWidth = AppSpacing.xxl * 5
     val compactGameHeight = AppSpacing.xxl * 8
     val borderWidth = AppSpacing.xs / 4
