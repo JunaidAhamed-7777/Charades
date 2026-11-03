@@ -11,22 +11,28 @@ import androidx.compose.ui.unit.sp
 import com.yourdomain.freecharades.R
 
 @OptIn(ExperimentalTextApi::class)
-private val AppFont = FontFamily(
-    Font(R.font.nunito_sans, weight = FontWeight.Normal,
+private val DisplayFont = FontFamily(
+    Font(R.font.space_grotesk, weight = FontWeight.SemiBold,
+        variationSettings = FontVariation.Settings(FontVariation.weight(600)))
+)
+
+@OptIn(ExperimentalTextApi::class)
+private val BodyFont = FontFamily(
+    Font(R.font.manrope, weight = FontWeight.Normal,
         variationSettings = FontVariation.Settings(FontVariation.weight(400))),
-    Font(R.font.nunito_sans, weight = FontWeight.SemiBold,
+    Font(R.font.manrope, weight = FontWeight.SemiBold,
         variationSettings = FontVariation.Settings(FontVariation.weight(600)))
 )
 
 /** Four styles, two weights. Material names are aliases, never separate type scales. */
 object AppType {
-    val display = TextStyle(fontFamily = AppFont, fontWeight = FontWeight.SemiBold,
+    val display = TextStyle(fontFamily = DisplayFont, fontWeight = FontWeight.SemiBold,
         fontSize = 40.sp, lineHeight = 48.sp)
-    val title = TextStyle(fontFamily = AppFont, fontWeight = FontWeight.SemiBold,
+    val title = TextStyle(fontFamily = DisplayFont, fontWeight = FontWeight.SemiBold,
         fontSize = 24.sp, lineHeight = 32.sp)
-    val body = TextStyle(fontFamily = AppFont, fontWeight = FontWeight.Normal,
+    val body = TextStyle(fontFamily = BodyFont, fontWeight = FontWeight.Normal,
         fontSize = 16.sp, lineHeight = 24.sp)
-    val label = TextStyle(fontFamily = AppFont, fontWeight = FontWeight.SemiBold,
+    val label = TextStyle(fontFamily = BodyFont, fontWeight = FontWeight.SemiBold,
         fontSize = 12.sp, lineHeight = 16.sp, letterSpacing = .6.sp)
 }
 

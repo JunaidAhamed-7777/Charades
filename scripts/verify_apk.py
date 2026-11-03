@@ -45,7 +45,7 @@ def main() -> None:
         for name in ("privacy_policy.txt", "terms_of_service.txt", "license.txt", "font_licenses.txt"):
             if apk.read(f"assets/{name}") != (source_assets / name).read_bytes():
                 raise SystemExit(f"FAIL: Bundled document is stale: {name}")
-        for font in ("nunito_sans.ttf",):
+        for font in ("space_grotesk.ttf", "manrope.ttf"):
             if f"res/font/{font}" not in names:
                 raise SystemExit(f"FAIL: Font missing from APK: {font}")
         manifest = apk.read("AndroidManifest.xml")

@@ -102,7 +102,7 @@ fun CreditsScreen(onBack: () -> Unit, vm: MenuViewModel = viewModel()) {
                     }
                 }
                 item {
-                    Text("Typography: Nunito Sans by its contributors, distributed under the SIL Open Font License. Source and font license files are included in the project repository.",
+                    Text("Typography: Space Grotesk by Florian Karsten and Manrope by Mikhail Sharanda and their contributors, distributed under the SIL Open Font License. Font licenses are included in the app and project repository.",
                         style = AppType.body, color = MaterialTheme.colorScheme.onSurfaceVariant)
                 }
             }

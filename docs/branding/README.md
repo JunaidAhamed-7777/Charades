@@ -4,4 +4,4 @@ The card/play mark is a native vector: `charades-mark.svg` for source/reuse and 
 
 The generated game-night landing illustration was removed in the 3 November redesign. The home screen presents only the game title, brief instructions, and deck covers.
 
-Bundled typography uses [Nunito Sans](https://github.com/google/fonts/tree/main/ofl/nunitosans) at weights 400 and 600. It is distributed under the SIL Open Font License; see `nunitosans-OFL.txt` and the bundled `font_licenses.txt`. Gameplay media provenance is separate in `docs/photo_sources.json`.
+Bundled typography pairs [Space Grotesk](https://github.com/google/fonts/tree/main/ofl/spacegrotesk) for headings with [Manrope](https://github.com/google/fonts/tree/main/ofl/manrope) for body text and labels. Space Grotesk uses weight 600; Manrope uses weights 400 and 600. Both variable TTFs are authentic Google Fonts distributions, stored locally with their SIL Open Font Licenses in `spacegrotesk-OFL.txt`, `manrope-OFL.txt`, and the bundled `font_licenses.txt`. Gameplay media provenance is separate in `docs/photo_sources.json`.
