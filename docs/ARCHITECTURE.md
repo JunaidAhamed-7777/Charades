@@ -6,7 +6,7 @@ Charades is a native Kotlin/Compose Android app that reads its complete catalog 
 
 `data/repository/CategoryRepository.kt` loads `assets/categories/bundled_categories.json` on an IO dispatcher and maps it to `domain/model/Category.kt` and `Word.kt`. Images resolve to `file:///android_asset/images/<filename>`. Source website URLs are provenance, not image-loading endpoints.
 
-The catalog owns the current seven sections. Do not maintain a second list of enabled/downloaded categories. See [content maintenance](CONTENT.md) for schema and preparation.
+The catalog owns the current six sections and their 50 clues each. Do not maintain a second list of enabled/downloaded categories. Famous People uses an empty clue `imagePath` for intentional name-only reveals; category covers and every other clue must reference valid local media. The existing `Category`/`Word` model and catalog version remain unchanged. See [content maintenance](CONTENT.md) for schema and preparation.
 
 ## Session and reveal
 
@@ -28,7 +28,7 @@ Interaction refreshes the idle deadline. Exit clears the wake flag. Countdown co
 
 `MainActivity` hosts Compose. `ui/navigation/` owns the library/detail/game and local legal/source routes. Use standard back-stack behavior.
 
-`ui/theme/` and `ui/components/` own shared design. [DESIGN](../DESIGN.md) and [UX-CONTRACT](../UX-CONTRACT.md) record the approved dark blue/coral identity and interaction rules. Present fully visible clues intentionally while preserving readable type and reachable controls on small landscape screens.
+`ui/theme/` and `ui/components/` own shared design. [DESIGN](../DESIGN.md) and [UX-CONTRACT](../UX-CONTRACT.md) record the minimal near-black identity and interaction rules. One image wrapper owns 4:3 Crop framing; one card and shared primary/secondary actions prevent screen-local style drift. Preserve readable clues and reachable controls on small landscape screens.
 
 ## Privacy boundary
 

@@ -1,6 +1,6 @@
 # Product decisions
 
-Recorded 28 October 2026. [PRODUCT.md](../PRODUCT.md) is the reconciled implementation target.
+Updated 3 November 2026. [PRODUCT.md](../PRODUCT.md) is the reconciled implementation target.
 
 ## One complete APK
 
@@ -16,19 +16,19 @@ The earlier 30/60/90/120-second rounds, correct/skip scoring, result screens, so
 
 ## Current taxonomy
 
-Use Animals, Movies, Famous People, Animes, Anime Characters, Countries, and Household Objects for v1. Future complete APK releases can expand this set.
+Use Animals, Movies, Famous People, Animes, Countries, and Household Objects, with 50 clues per deck. Remove Anime Characters. Movies is Hollywood-only; Famous People combines historical and current recognizable names with no gameplay photos. Keep the existing catalog schema and game engine.
 
 The temporary eight-deck catalog with food, sports, landmarks, everyday, and nature titles is superseded.
 
 ## Navigation, reveal, and wake
 
-Landscape gameplay presents a complete image, word/name, and source text. X/system Back pop normally without confirmation. Shuffle on a section-detail encounter; preserve that session's order.
+Landscape gameplay presents the word/name, source text, and a fixed 4:3 cropped image where applicable. Famous People is name-only. X/system Back pop normally without confirmation. Shuffle on a section-detail encounter; preserve that session's order.
 
 Countdown deadlines continue through lock/backgrounding. Keep an active clue awake, releasing the flag after three minutes without interaction. Three minutes is an idle wake policy, not a round timer.
 
 ## Visual direction
 
-Prioritize the app's overall aesthetic. Use an art-directed dark navy, blue/coral identity and playful lettering. This replaces the old teal accent and rigid stage-zero pixel/layout hints. Do not treat an exact draft background or fixed control coordinate as more important than coherent design, accessibility, or responsive layout.
+The 3 November redesign supersedes navy/coral, playful lettering, and generated landing art. Use #0E0E10, flat slightly raised surfaces, white titles, muted grey text, one restrained accent, two font weights, and one radius. Shared tokens own the 4/8/12/16/24/32dp spacing scale and four typography roles. Single-image 4:3 covers replace collages; all images use the shared Crop wrapper and local WebP assets with a maximum 720px long edge.
 
 The app remains dark; no light-mode selector is needed.
 

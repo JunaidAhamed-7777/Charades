@@ -1,6 +1,6 @@
 # Charades product context
 
-Reconciled implementation target — 28 October 2026.
+Reconciled implementation target — 3 November 2026.
 
 This combines the original game brief with the latest installation and visual-direction decisions. [Decisions](docs/DECISIONS.md) and [reconciliation](docs/SPEC_RECONCILIATION.md) record what supersedes earlier drafts.
 
@@ -10,7 +10,7 @@ This combines the original game brief with the latest installation and visual-di
 
 People lead their own game. The app supplies clues, a manual guess counter, and simple navigation. It does not judge answers or run competitive timed rounds.
 
-The visual priority is a sleek, coherent app. Use the approved rich dark navy, blue/coral identity, playful lettering, original logo/artwork, and readable native controls. This replaces the older teal-accent direction and rigid stage-zero pixel/layout hints. The interface remains dark.
+The visual priority is dark, minimal, and premium: near-black #0E0E10, flat surfaces, pure white titles, muted grey secondary text, and one sparingly used accent. Use two font weights, one corner radius, shared spacing and typography, and consistent content alignment. No gradients, shadows, bright fills, image collages, or generated landing artwork. This supersedes the earlier navy/coral and playful-lettering direction.
 
 ## Complete installation
 
@@ -22,15 +22,16 @@ Developer-only scripts can acquire/prepare photos before building; normal app st
 
 ## Current sections
 
-The curated v1 collection has seven sections:
+The curated collection has six sections, each with 50 clues:
 
 1. Animals
 2. Movies
 3. Famous People
 4. Animes
-5. Anime Characters
-6. Countries
-7. Household Objects
+5. Countries
+6. Household Objects
+
+Anime Characters is removed. Movies contains Hollywood films only. Famous People mixes historical figures and recognizable current public figures; these clues show the name alone, without a photograph. Other decks retain accurate local clue images. Difficulty ranges from familiar to challenging without specialist trivia.
 
 Future complete APK releases can expand the collection. Images must accurately represent their clues, with local provenance. Use proper source photos/artwork for factual subjects rather than generated identities or unrelated stock images.
 
@@ -46,7 +47,7 @@ Gameplay uses landscape orientation. X and system Back perform a normal pop with
 
 Show a three-second countdown before the first reveal and after Next. Next resets the count before revealing the next clue.
 
-A reveal shows a complete image, word/name, and source text. Keep image recognition, typography, and accessible controls clear on small landscape screens.
+A reveal shows a word/name and source text, with an image for illustrated decks. Famous People reveals names alone. Images use one fixed 4:3 Crop wrapper with rounded corners and a placeholder surface; deck covers use one hero image and a uniform dark scrim. Keep subjects recognizable and controls clear on small landscape screens.
 
 + increments the manual count. − clamps at zero. There is no automatic 20-guess cap, correctness judging, or conversion of guesses to points.
 

@@ -6,14 +6,14 @@ Read this file and `PRODUCT.md` before changing the app. Charades is a complete 
 
 The latest user request takes precedence. `PRODUCT.md` is the reconciled product context; `docs/DECISIONS.md` and `docs/SPEC_RECONCILIATION.md` explain approved changes. `DESIGN.md` and `UX-CONTRACT.md` own shared design and interaction behavior.
 
-The latest design direction prioritizes the app's overall aesthetic over rigid stage-zero pixel/layout hints. Use the approved rich dark navy, blue/coral identity and playful lettering; do not restore an old teal accent or exact draft background merely because it appeared in an early specification.
+The latest design direction is minimal and premium: near-black #0E0E10, flat raised surfaces, white titles, muted grey secondary text, one restrained accent, two font weights, one radius, and shared spacing/type tokens. No gradients, shadows, bright fills, collages, or generated landing artwork. This supersedes navy/coral and playful lettering.
 
 Public name: **Charades**; working name: **Free Charades**. Marketing line: **“The offline game of 20 Questions & Charades.”**
 
 ## Product contract
 
 - Ship every section, clue, image, source record, and legal document in the base APK. A fresh install works in airplane mode without a check/download/setup gate.
-- The current curated set is Animals, Movies, Famous People, Animes, Anime Characters, Countries, and Household Objects. It may grow through future complete APK releases.
+- The current curated set is Animals, Movies, Famous People, Animes, Countries, and Household Objects, with 50 clues each. Movies contains Hollywood films only; Famous People mixes historical and current public figures as name-only clues. Anime Characters is retired.
 - No Room, runtime remote APIs, download/update gates, accounts, analytics, ads, timed rounds, scoring, sounds, saved preferences, or light theme.
 - Gameplay is landscape. Show a three-second countdown before every reveal, including after Next.
 - + increments the manual guess count; − clamps at zero. Next and exit reset it. Do not turn the count into points or impose an automatic 20-guess limit.
@@ -35,7 +35,7 @@ Load/validate the catalog off the main thread. Check local paths and stable IDs,
 
 Use local Android saved state for transient session/navigation restoration, not a preference/history service. Update the privacy policy for any new data handling.
 
-Prioritize coherent visual design and readable images. Support small landscape screens, large text, system insets, contrast, meaningful accessibility labels, and 48 dp touch targets. Apply intentional Fit imagery without clipping the controls.
+Prioritize coherent visual design and readable images. Support small landscape screens, large text, system insets, contrast, meaningful accessibility labels, and 48 dp touch targets. Use the shared fixed 4:3 Crop image wrapper without clipping controls; name-only clues have no image. Store local images as WebP with a maximum 720px long edge.
 
 ## Verification
 
