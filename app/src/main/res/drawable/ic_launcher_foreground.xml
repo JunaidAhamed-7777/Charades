@@ -1,5 +1,10 @@
-<vector xmlns:android="http://schemas.android.com/apk/res/android" android:width="108dp" android:height="108dp" android:viewportWidth="108" android:viewportHeight="108">
- <path android:fillColor="@color/dark_surface" android:pathData="M29,26 L61,21 Q67,20 68,27 L75,70 Q76,77 69,78 L37,83 Q30,84 29,77 L22,35 Q21,28 29,26 Z"/>
- <path android:fillColor="@color/accent" android:pathData="M48,29 L78,34 Q85,35 84,42 L78,79 Q77,86 70,85 L40,80 Q33,79 34,72 L40,36 Q41,28 48,29 Z"/>
- <path android:fillColor="#FFFFFF" android:pathData="M51,45 L68,59 L48,69 Z"/>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp" android:height="108dp"
+    android:viewportWidth="108" android:viewportHeight="108">
+    <!-- One upright clue card, centered within the adaptive icon's safe zone. -->
+    <path android:fillColor="@android:color/transparent"
+        android:strokeColor="@color/accent" android:strokeWidth="3"
+        android:pathData="M42,24 H66 C72.627,24 78,29.373 78,36 V72 C78,78.627 72.627,84 66,84 H42 C35.373,84 30,78.627 30,72 V36 C30,29.373 35.373,24 42,24 Z" />
+    <path android:fillColor="@android:color/white"
+        android:pathData="M65,43 C62,39 59,37 54,37 C44,37 38,44 38,54 C38,64 44,71 54,71 C59,71 63,69 66,65 L61,61 C59,64 57,65 54,65 C48,65 44,61 44,54 C44,47 48,43 54,43 C57,43 59,44 61,47 Z" />
 </vector>
