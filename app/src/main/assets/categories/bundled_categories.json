@@ -4,9 +4,9 @@
     {
       "id": "animals",
       "title": "Animals",
-      "description": "Big cats, tiny waddles, and everything in between.",
+      "description": "From familiar pets to wildlife around the world.",
       "imagePath": "images/animals_lion.webp",
-      "accent": "#E97451",
+      "accent": "#A9B8CF",
       "words": [
         {
           "id": "animals_lion",
@@ -87,15 +87,335 @@
           "sourceTitle": "Peacock_on_tree_(52077240794).jpg",
           "sourceUrl": "https://commons.wikimedia.org/wiki/File:Peacock_on_tree_(52077240794).jpg",
           "credit": "Kandukuru Nagarjun from Bangalore, India"
+        },
+        {
+          "id": "animals_dog",
+          "text": "Dog",
+          "imagePath": "images/animals_dog.webp",
+          "sourceTitle": "Huskiesatrest.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Huskiesatrest.jpg",
+          "credit": "M. Rehemtulla"
+        },
+        {
+          "id": "animals_cat",
+          "text": "Cat",
+          "imagePath": "images/animals_cat.webp",
+          "sourceTitle": "Siam_lilacpoint.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Siam_lilacpoint.jpg",
+          "credit": "Karin Langner-Bahmann, upload von Martin Bahmann"
+        },
+        {
+          "id": "animals_horse",
+          "text": "Horse",
+          "imagePath": "images/animals_horse.webp",
+          "sourceTitle": "Nokota_Horses_cropped.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Nokota_Horses_cropped.jpg",
+          "credit": "Nokota_Horses.jpg: François Marchal derivative work: Dana boomer ()"
+        },
+        {
+          "id": "animals_cow",
+          "text": "Cow",
+          "imagePath": "images/animals_cow.webp",
+          "sourceTitle": "Cow_(Fleckvieh_breed)_Oeschinensee_Slaunger_2009-07-07.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cow_(Fleckvieh_breed)_Oeschinensee_Slaunger_2009-07-07.jpg",
+          "credit": "Kim Hansen"
+        },
+        {
+          "id": "animals_pig",
+          "text": "Pig",
+          "imagePath": "images/animals_pig.webp",
+          "sourceTitle": "Pig_farm_Vampula_1.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Pig_farm_Vampula_1.jpg",
+          "credit": "kallerna"
+        },
+        {
+          "id": "animals_sheep",
+          "text": "Sheep",
+          "imagePath": "images/animals_sheep.webp",
+          "sourceTitle": "Flock_of_sheep.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Flock_of_sheep.jpg",
+          "credit": "Keith Weller"
+        },
+        {
+          "id": "animals_goat",
+          "text": "Goat",
+          "imagePath": "images/animals_goat.webp",
+          "sourceTitle": "Hausziege_04.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hausziege_04.jpg",
+          "credit": "Kuebi = Armin Kübelbeck"
+        },
+        {
+          "id": "animals_rabbit",
+          "text": "Rabbit",
+          "imagePath": "images/animals_rabbit.webp",
+          "sourceTitle": "Oryctolagus_cuniculus_Rcdo.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Oryctolagus_cuniculus_Rcdo.jpg",
+          "credit": "JM Ligero Loarte"
+        },
+        {
+          "id": "animals_chicken",
+          "text": "Chicken",
+          "imagePath": "images/animals_chicken.webp",
+          "sourceTitle": "Male_and_female_chicken_sitting_together.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Male_and_female_chicken_sitting_together.jpg",
+          "credit": "Andrei Niemimäki from Turku, Finland"
+        },
+        {
+          "id": "animals_duck",
+          "text": "Duck",
+          "imagePath": "images/animals_duck.webp",
+          "sourceTitle": "Anas_platyrhynchos_male_female_quadrat.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Anas_platyrhynchos_male_female_quadrat.jpg",
+          "credit": "Richard Bartz"
+        },
+        {
+          "id": "animals_owl",
+          "text": "Owl",
+          "imagePath": "images/animals_owl.webp",
+          "sourceTitle": "American_Barn_Owl_(Tyto_furcata_guatemalae),_Orange_Walk.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:American_Barn_Owl_(Tyto_furcata_guatemalae),_Orange_Walk.jpg",
+          "credit": "Charles J. Sharp"
+        },
+        {
+          "id": "animals_eagle",
+          "text": "Eagle",
+          "imagePath": "images/animals_eagle.webp",
+          "sourceTitle": "Bald_eagle_about_to_fly_in_Alaska_(2016).jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Bald_eagle_about_to_fly_in_Alaska_(2016).jpg",
+          "credit": "Andy Morffew from Itchen Abbas, Hampshire, UK"
+        },
+        {
+          "id": "animals_parrot",
+          "text": "Parrot",
+          "imagePath": "images/animals_parrot.webp",
+          "sourceTitle": "Scarlet_macaw_(Ara_macao_cyanopterus)_Copan.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Scarlet_macaw_(Ara_macao_cyanopterus)_Copan.jpg",
+          "credit": "Charles J. Sharp"
+        },
+        {
+          "id": "animals_flamingo",
+          "text": "Flamingo",
+          "imagePath": "images/animals_flamingo.webp",
+          "sourceTitle": "010_Greater_flamingos_male_and_female_in_the_Camargue_during_mating_season_Photo_by_Giles_Laurent.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:010_Greater_flamingos_male_and_female_in_the_Camargue_during_mating_season_Photo_by_Giles_Laurent.jpg",
+          "credit": "Giles Laurent"
+        },
+        {
+          "id": "animals_swan",
+          "text": "Swan",
+          "imagePath": "images/animals_swan.webp",
+          "sourceTitle": "CygneVaires.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:CygneVaires.jpg",
+          "credit": "Sanchezn"
+        },
+        {
+          "id": "animals_ostrich",
+          "text": "Ostrich",
+          "imagePath": "images/animals_ostrich.webp",
+          "sourceTitle": "Struthio_camelus_-_Etosha_2014_(3).jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Struthio_camelus_-_Etosha_2014_(3).jpg",
+          "credit": "Yathin S Krishnappa"
+        },
+        {
+          "id": "animals_gorilla",
+          "text": "Gorilla",
+          "imagePath": "images/animals_gorilla.webp",
+          "sourceTitle": "Male_gorilla_in_SF_zoo.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Male_gorilla_in_SF_zoo.jpg",
+          "credit": "Brocken Inaglory"
+        },
+        {
+          "id": "animals_chimpanzee",
+          "text": "Chimpanzee",
+          "imagePath": "images/animals_chimpanzee.webp",
+          "sourceTitle": "015_Chimpanzee_at_Kibale_forest_National_Park_Photo_by_Giles_Laurent.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:015_Chimpanzee_at_Kibale_forest_National_Park_Photo_by_Giles_Laurent.jpg",
+          "credit": "Giles Laurent"
+        },
+        {
+          "id": "animals_orangutan",
+          "text": "Orangutan",
+          "imagePath": "images/animals_orangutan.webp",
+          "sourceTitle": "Tanjung_Puting30477.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tanjung_Puting30477.jpg",
+          "credit": "Nanosanchez"
+        },
+        {
+          "id": "animals_koala",
+          "text": "Koala",
+          "imagePath": "images/animals_koala.webp",
+          "sourceTitle": "Koala_climbing_tree.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Koala_climbing_tree.jpg",
+          "credit": "Diliff"
+        },
+        {
+          "id": "animals_sloth",
+          "text": "Sloth",
+          "imagePath": "images/animals_sloth.webp",
+          "sourceTitle": "Bradypus.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Bradypus.jpg",
+          "credit": "Stefan Laube (Tauchgurke)"
+        },
+        {
+          "id": "animals_hippopotamus",
+          "text": "Hippopotamus",
+          "imagePath": "images/animals_hippopotamus.webp",
+          "sourceTitle": "Portrait_Hippopotamus_in_the_water.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Portrait_Hippopotamus_in_the_water.jpg",
+          "credit": "Muhammad Mahdi Karim"
+        },
+        {
+          "id": "animals_rhinoceros",
+          "text": "Rhinoceros",
+          "imagePath": "images/animals_rhinoceros.webp",
+          "sourceTitle": "109_Male_White_rhinoceros_walking_in_the_Kalahari_Desert_of_Namibia_Photo_by_Giles_Laurent.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:109_Male_White_rhinoceros_walking_in_the_Kalahari_Desert_of_Namibia_Photo_by_Giles_Laurent.jpg",
+          "credit": "Giles Laurent"
+        },
+        {
+          "id": "animals_crocodile",
+          "text": "Crocodile",
+          "imagePath": "images/animals_crocodile.webp",
+          "sourceTitle": "NileCrocodile.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:NileCrocodile.jpg",
+          "credit": "Dewet"
+        },
+        {
+          "id": "animals_tortoise",
+          "text": "Tortoise",
+          "imagePath": "images/animals_tortoise.webp",
+          "sourceTitle": "Galapagos_giant_tortoise_Geochelone_elephantopus.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Galapagos_giant_tortoise_Geochelone_elephantopus.jpg",
+          "credit": "Mfield, Matthew Field, http://www.photography.mattfield.com"
+        },
+        {
+          "id": "animals_frog",
+          "text": "Frog",
+          "imagePath": "images/animals_frog.webp",
+          "sourceTitle": "Red-eyed_Tree_Frog_(Agalychnis_callidryas)_1.png",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Red-eyed_Tree_Frog_(Agalychnis_callidryas)_1.png",
+          "credit": "Red-eyed Tree Frog (Agalychnis callidryas) 3.jpg: Geoff Gallice from Gainesville, FL, USA derivative work: B kimmel"
+        },
+        {
+          "id": "animals_cobra",
+          "text": "Cobra",
+          "imagePath": "images/animals_cobra.webp",
+          "sourceTitle": "Indian_Cobra,_crop.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Indian_Cobra,_crop.jpg",
+          "credit": "Pavan Kumar N"
+        },
+        {
+          "id": "animals_chameleon",
+          "text": "Chameleon",
+          "imagePath": "images/animals_chameleon.webp",
+          "sourceTitle": "Yemen_Chameleon.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Yemen_Chameleon.jpg",
+          "credit": "Kupos"
+        },
+        {
+          "id": "animals_shark",
+          "text": "Shark",
+          "imagePath": "images/animals_shark.webp",
+          "sourceTitle": "White_shark.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:White_shark.jpg",
+          "credit": "Pterantula (Terry Goss) at en.wikipedia"
+        },
+        {
+          "id": "animals_octopus",
+          "text": "Octopus",
+          "imagePath": "images/animals_octopus.webp",
+          "sourceTitle": "Octopus2.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Octopus2.jpg",
+          "credit": "albert kok"
+        },
+        {
+          "id": "animals_jellyfish",
+          "text": "Jellyfish",
+          "imagePath": "images/animals_jellyfish.webp",
+          "sourceTitle": "Aurelia_aurita_(Cnidaria)_Luc_Viatour.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Aurelia_aurita_(Cnidaria)_Luc_Viatour.jpg",
+          "credit": "Luc Viatour"
+        },
+        {
+          "id": "animals_seahorse",
+          "text": "Seahorse",
+          "imagePath": "images/animals_seahorse.webp",
+          "sourceTitle": "Hal_-_Hippocampus_kuda_-_4.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hal_-_Hippocampus_kuda_-_4.jpg",
+          "credit": "Emőke Dénes"
+        },
+        {
+          "id": "animals_butterfly",
+          "text": "Butterfly",
+          "imagePath": "images/animals_butterfly.webp",
+          "sourceTitle": "Monarch_Butterfly_Danaus_plexippus_Male_2664px.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Monarch_Butterfly_Danaus_plexippus_Male_2664px.jpg",
+          "credit": "Photo by and (c)2007 Derek Ramsey (Ram-Man)"
+        },
+        {
+          "id": "animals_bee",
+          "text": "Bee",
+          "imagePath": "images/animals_bee.webp",
+          "sourceTitle": "Apis_mellifera_Western_honey_bee.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Apis_mellifera_Western_honey_bee.jpg",
+          "credit": "Andreas Trepte"
+        },
+        {
+          "id": "animals_ant",
+          "text": "Ant",
+          "imagePath": "images/animals_ant.webp",
+          "sourceTitle": "Red_Ant_-_March_2025.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Red_Ant_-_March_2025.jpg",
+          "credit": "Samantha Henneke from Seagrove, North Carolina, USA"
+        },
+        {
+          "id": "animals_camel",
+          "text": "Camel",
+          "imagePath": "images/animals_camel.webp",
+          "sourceTitle": "Camelus_dromedarius_in_Nuweiba.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Camelus_dromedarius_in_Nuweiba.jpg",
+          "credit": "Florian Prischl"
+        },
+        {
+          "id": "animals_polar_bear",
+          "text": "Polar bear",
+          "imagePath": "images/animals_polar_bear.webp",
+          "sourceTitle": "Polar_Bear_-_Alaska_(cropped).jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Polar_Bear_-_Alaska_(cropped).jpg",
+          "credit": "Alan Wilson"
+        },
+        {
+          "id": "animals_wolf",
+          "text": "Wolf",
+          "imagePath": "images/animals_wolf.webp",
+          "sourceTitle": "Eurasian_wolf_2.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Eurasian_wolf_2.jpg",
+          "credit": "User:Mas3cf"
+        },
+        {
+          "id": "animals_fox",
+          "text": "Fox",
+          "imagePath": "images/animals_fox.webp",
+          "sourceTitle": "Portrait_of_a_red_fox_in_Rautas_fjällurskog_(cropped).jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Portrait_of_a_red_fox_in_Rautas_fj%C3%A4llurskog_(cropped).jpg",
+          "credit": "ClaudiaTen"
+        },
+        {
+          "id": "animals_raccoon",
+          "text": "Raccoon",
+          "imagePath": "images/animals_raccoon.webp",
+          "sourceTitle": "Raccoon_in_Central_Park_(35264).jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Raccoon_in_Central_Park_(35264).jpg",
+          "credit": "Rhododendrites"
         }
       ]
     },
     {
       "id": "movies",
       "title": "Movies",
-      "description": "Big-screen favorites, one unforgettable clue at a time.",
+      "description": "Hollywood favorites, from animated classics to modern blockbusters.",
       "imagePath": "images/movies_jurassic_park.webp",
-      "accent": "#BC687C",
+      "accent": "#A9B8CF",
       "words": [
         {
           "id": "movies_jurassic_park",
@@ -138,30 +458,6 @@
           "credit": "The cover art can or could be obtained from http://www.impawards.com/2009/avatar.html"
         },
         {
-          "id": "movies_sholay",
-          "text": "Sholay",
-          "imagePath": "images/movies_sholay.webp",
-          "sourceTitle": "Sholay-poster.jpg",
-          "sourceUrl": "https://en.wikipedia.org/wiki/File:Sholay-poster.jpg",
-          "credit": "Source: London Hollywood; poster artist not identified"
-        },
-        {
-          "id": "movies_dilwale_dulhania_le_jayenge",
-          "text": "Dilwale Dulhania Le Jayenge",
-          "imagePath": "images/movies_dilwale_dulhania_le_jayenge.webp",
-          "sourceTitle": "Dilwale_Dulhania_Le_Jayenge_poster.jpg",
-          "sourceUrl": "https://en.wikipedia.org/wiki/File:Dilwale_Dulhania_Le_Jayenge_poster.jpg",
-          "credit": "https://www.collectors.com/entertainment-item/dilwale-dulhania-le-jayenge-press-book-bollywood-shahrukh-k/8233683518897779844"
-        },
-        {
-          "id": "movies_3_idiots",
-          "text": "3 Idiots",
-          "imagePath": "images/movies_3_idiots.webp",
-          "sourceTitle": "3_idiots_poster.jpg",
-          "sourceUrl": "https://en.wikipedia.org/wiki/File:3_idiots_poster.jpg",
-          "credit": "MoviePosterDB"
-        },
-        {
           "id": "movies_the_dark_knight",
           "text": "The Dark Knight",
           "imagePath": "images/movies_the_dark_knight.webp",
@@ -176,104 +472,768 @@
           "sourceTitle": "Home_alone_poster.jpg",
           "sourceUrl": "https://en.wikipedia.org/wiki/File:Home_alone_poster.jpg",
           "credit": "IMP Awards"
+        },
+        {
+          "id": "movies_toy_story",
+          "text": "Toy Story",
+          "imagePath": "images/movies_toy_story.webp",
+          "sourceTitle": "Toy_Story.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/File:Toy_Story.jpg",
+          "credit": "From impawards."
+        },
+        {
+          "id": "movies_shrek",
+          "text": "Shrek",
+          "imagePath": "images/movies_shrek.webp",
+          "sourceTitle": "Shrek_(2001_animated_feature_film).jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/File:Shrek_(2001_animated_feature_film).jpg",
+          "credit": "http://graphics.wsj.com/oscars-expanded/"
+        },
+        {
+          "id": "movies_frozen",
+          "text": "Frozen",
+          "imagePath": "images/movies_frozen.webp",
+          "sourceTitle": "Frozen_(2013_film)_poster.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/File:Frozen_(2013_film)_poster.jpg",
+          "credit": "May be found at the following website: [1]"
+        },
+        {
+          "id": "movies_inception",
+          "text": "Inception",
+          "imagePath": "images/movies_inception.webp",
+          "sourceTitle": "Inception_(2010)_theatrical_poster.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/File:Inception_(2010)_theatrical_poster.jpg",
+          "credit": "May be found at the following website: IMP Awards"
+        },
+        {
+          "id": "movies_interstellar",
+          "text": "Interstellar",
+          "imagePath": "images/movies_interstellar.webp",
+          "sourceTitle": "Interstellar_film_poster.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/File:Interstellar_film_poster.jpg",
+          "credit": "May be found at the following website: IMP Awards"
+        },
+        {
+          "id": "movies_the_matrix",
+          "text": "The Matrix",
+          "imagePath": "images/movies_the_matrix.webp",
+          "sourceTitle": "The_Matrix.png",
+          "sourceUrl": "https://en.wikipedia.org/wiki/File:The_Matrix.png",
+          "credit": "[1][2]"
+        },
+        {
+          "id": "movies_jaws",
+          "text": "Jaws",
+          "imagePath": "images/movies_jaws.webp",
+          "sourceTitle": "Jaws_movie_poster.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Jaws_movie_poster.jpg",
+          "credit": "Roger Kastel"
+        },
+        {
+          "id": "movies_e_t_the_extra_terrestrial",
+          "text": "E.T. the Extra-Terrestrial",
+          "imagePath": "images/movies_e_t_the_extra_terrestrial.webp",
+          "sourceTitle": "E_t_the_extra_terrestrial_ver3.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/File:E_t_the_extra_terrestrial_ver3.jpg",
+          "credit": "The poster art can or could be obtained from John Alvin."
+        },
+        {
+          "id": "movies_back_to_the_future",
+          "text": "Back to the Future",
+          "imagePath": "images/movies_back_to_the_future.webp",
+          "sourceTitle": "Back_to_the_Future.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/File:Back_to_the_Future.jpg",
+          "credit": "May be found at the following website: Film Art Gallery"
+        },
+        {
+          "id": "movies_forrest_gump",
+          "text": "Forrest Gump",
+          "imagePath": "images/movies_forrest_gump.webp",
+          "sourceTitle": "Forrest_Gump_poster.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/File:Forrest_Gump_poster.jpg",
+          "credit": "IMDb"
+        },
+        {
+          "id": "movies_gladiator",
+          "text": "Gladiator",
+          "imagePath": "images/movies_gladiator.webp",
+          "sourceTitle": "Gladiator_(2000_film_poster).png",
+          "sourceUrl": "https://en.wikipedia.org/wiki/File:Gladiator_(2000_film_poster).png",
+          "credit": "May be found at the following website: IMP Awards"
+        },
+        {
+          "id": "movies_the_terminator",
+          "text": "The Terminator",
+          "imagePath": "images/movies_the_terminator.webp",
+          "sourceTitle": "The_Terminator.png",
+          "sourceUrl": "https://en.wikipedia.org/wiki/File:The_Terminator.png",
+          "credit": "https://filmartgallery.com/collections/terminator-movie-posters/products/the-terminator-1"
+        },
+        {
+          "id": "movies_rocky",
+          "text": "Rocky",
+          "imagePath": "images/movies_rocky.webp",
+          "sourceTitle": "Rocky_poster.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/File:Rocky_poster.jpg",
+          "credit": "The poster art can or could be obtained from United Artists."
+        },
+        {
+          "id": "movies_the_godfather",
+          "text": "The Godfather",
+          "imagePath": "images/movies_the_godfather.webp",
+          "sourceTitle": "Godfather_ver1.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/File:Godfather_ver1.jpg",
+          "credit": "http://www.movieposterdb.com/poster/ff7638bd"
+        },
+        {
+          "id": "movies_pulp_fiction",
+          "text": "Pulp Fiction",
+          "imagePath": "images/movies_pulp_fiction.webp",
+          "sourceTitle": "Pulp_Fiction_(1994)_poster.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/File:Pulp_Fiction_(1994)_poster.jpg",
+          "credit": "IMDb"
+        },
+        {
+          "id": "movies_the_shawshank_redemption",
+          "text": "The Shawshank Redemption",
+          "imagePath": "images/movies_the_shawshank_redemption.webp",
+          "sourceTitle": "ShawshankRedemptionMoviePoster.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/File:ShawshankRedemptionMoviePoster.jpg",
+          "credit": "The poster art can or could be obtained from IMDb."
+        },
+        {
+          "id": "movies_fight_club",
+          "text": "Fight Club",
+          "imagePath": "images/movies_fight_club.webp",
+          "sourceTitle": "Fight_Club_poster.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/File:Fight_Club_poster.jpg",
+          "credit": "http://www.impawards.com/1999/fight_club_ver4.html"
+        },
+        {
+          "id": "movies_pirates_of_the_caribbean_the_curse_of_the_black_pearl",
+          "text": "Pirates of the Caribbean: The Curse of the Black Pearl",
+          "imagePath": "images/movies_pirates_of_the_caribbean_the_curse_of_the_black_pearl.webp",
+          "sourceTitle": "Pirates_of_the_Caribbean_-_The_Curse_of_the_Black_Pearl.png",
+          "sourceUrl": "https://en.wikipedia.org/wiki/File:Pirates_of_the_Caribbean_-_The_Curse_of_the_Black_Pearl.png",
+          "credit": "http://www.impawards.com/2003/pirates_of_the_caribbean_ver3.html"
+        },
+        {
+          "id": "movies_star_wars",
+          "text": "Star Wars",
+          "imagePath": "images/movies_star_wars.webp",
+          "sourceTitle": "StarWarsMoviePoster1977.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/File:StarWarsMoviePoster1977.jpg",
+          "credit": "May be found at the following website: http://www.impawards.com/1977/star_wars_ver2.html"
+        },
+        {
+          "id": "movies_the_avengers",
+          "text": "The Avengers",
+          "imagePath": "images/movies_the_avengers.webp",
+          "sourceTitle": "The_Avengers_(2012_film)_poster.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/File:The_Avengers_(2012_film)_poster.jpg",
+          "credit": "http://www.impawards.com/2012/avengers_ver14.html"
+        },
+        {
+          "id": "movies_iron_man",
+          "text": "Iron Man",
+          "imagePath": "images/movies_iron_man.webp",
+          "sourceTitle": "Iron_Man_(2008_film)_poster.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/File:Iron_Man_(2008_film)_poster.jpg",
+          "credit": "http://www.impawards.com/2008/iron_man_ver3.html"
+        },
+        {
+          "id": "movies_black_panther",
+          "text": "Black Panther",
+          "imagePath": "images/movies_black_panther.webp",
+          "sourceTitle": "Black_Panther_(film)_poster.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/File:Black_Panther_(film)_poster.jpg",
+          "credit": "http://www.impawards.com/2018/black_panther_ver3.html"
+        },
+        {
+          "id": "movies_spider_man",
+          "text": "Spider-Man",
+          "imagePath": "images/movies_spider_man.webp",
+          "sourceTitle": "Spider-Man_(2002_film)_poster.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/File:Spider-Man_(2002_film)_poster.jpg",
+          "credit": "The cover art can or could be obtained from IMP Awards or Columbia Pictures."
+        },
+        {
+          "id": "movies_deadpool",
+          "text": "Deadpool",
+          "imagePath": "images/movies_deadpool.webp",
+          "sourceTitle": "Deadpool_(2016_poster).png",
+          "sourceUrl": "https://en.wikipedia.org/wiki/File:Deadpool_(2016_poster).png",
+          "credit": "Internet Movie Database"
+        },
+        {
+          "id": "movies_top_gun_maverick",
+          "text": "Top Gun: Maverick",
+          "imagePath": "images/movies_top_gun_maverick.webp",
+          "sourceTitle": "Top_Gun_Maverick_Poster.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/File:Top_Gun_Maverick_Poster.jpg",
+          "credit": "http://www.impawards.com/2022/top_gun_maverick_ver5.html"
+        },
+        {
+          "id": "movies_mission_impossible",
+          "text": "Mission: Impossible",
+          "imagePath": "images/movies_mission_impossible.webp",
+          "sourceTitle": "MissionImpossiblePoster.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/File:MissionImpossiblePoster.jpg",
+          "credit": "MissionImpossiblePoster.jpg — source file page"
+        },
+        {
+          "id": "movies_men_in_black",
+          "text": "Men in Black",
+          "imagePath": "images/movies_men_in_black.webp",
+          "sourceTitle": "Men_in_Black_Poster.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/File:Men_in_Black_Poster.jpg",
+          "credit": "The poster art can or could be obtained from Columbia Pictures."
+        },
+        {
+          "id": "movies_ghostbusters",
+          "text": "Ghostbusters",
+          "imagePath": "images/movies_ghostbusters.webp",
+          "sourceTitle": "Ghostbusters_(1984)_theatrical_poster.png",
+          "sourceUrl": "https://en.wikipedia.org/wiki/File:Ghostbusters_(1984)_theatrical_poster.png",
+          "credit": "Original Film Art - Vintage Movie Posters"
+        },
+        {
+          "id": "movies_independence_day",
+          "text": "Independence Day",
+          "imagePath": "images/movies_independence_day.webp",
+          "sourceTitle": "Independence_day_movieposter.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/File:Independence_day_movieposter.jpg",
+          "credit": "The poster art can or could be obtained from 20th Century Fox."
+        },
+        {
+          "id": "movies_jurassic_world",
+          "text": "Jurassic World",
+          "imagePath": "images/movies_jurassic_world.webp",
+          "sourceTitle": "Jurassic_World_poster.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/File:Jurassic_World_poster.jpg",
+          "credit": "https://amblin.com/movie/jurassic-world/"
+        },
+        {
+          "id": "movies_inside_out",
+          "text": "Inside Out",
+          "imagePath": "images/movies_inside_out.webp",
+          "sourceTitle": "Inside_Out_(2015_film)_poster.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/File:Inside_Out_(2015_film)_poster.jpg",
+          "credit": "The cover art can or could be obtained from http://www.impawards.com/2015/inside_out_ver13.html"
+        },
+        {
+          "id": "movies_coco",
+          "text": "Coco",
+          "imagePath": "images/movies_coco.webp",
+          "sourceTitle": "Coco_(2017_film)_poster.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/File:Coco_(2017_film)_poster.jpg",
+          "credit": "www.comingsoon.net/movies/news/886977-new-coco-poster-celebrates-the-day-of-the-dead-pixar-style#/slide/1"
+        },
+        {
+          "id": "movies_moana",
+          "text": "Moana",
+          "imagePath": "images/movies_moana.webp",
+          "sourceTitle": "Moana_Teaser_Poster.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/File:Moana_Teaser_Poster.jpg",
+          "credit": "The poster art can or could be obtained from the distributor."
+        },
+        {
+          "id": "movies_kung_fu_panda",
+          "text": "Kung Fu Panda",
+          "imagePath": "images/movies_kung_fu_panda.webp",
+          "sourceTitle": "Kungfupanda.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/File:Kungfupanda.jpg",
+          "credit": "May be found at the following website: http://www.movieposterdb.com/poster/35b70595"
+        },
+        {
+          "id": "movies_madagascar",
+          "text": "Madagascar",
+          "imagePath": "images/movies_madagascar.webp",
+          "sourceTitle": "Madagascar_Theatrical_Poster.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/File:Madagascar_Theatrical_Poster.jpg",
+          "credit": "About.com"
+        },
+        {
+          "id": "movies_ratatouille",
+          "text": "Ratatouille",
+          "imagePath": "images/movies_ratatouille.webp",
+          "sourceTitle": "RatatouillePoster.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/File:RatatouillePoster.jpg",
+          "credit": "http://disneymoviesanywhere.tumblr.com/post/146658906942/happy-9th-anniversary-ratatouille-today-we-will"
+        },
+        {
+          "id": "movies_wall_e",
+          "text": "WALL-E",
+          "imagePath": "images/movies_wall_e.webp",
+          "sourceTitle": "WALL-E_poster.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/File:WALL-E_poster.jpg",
+          "credit": "http://www.impawards.com/2008/wall_e_ver3.html"
+        },
+        {
+          "id": "movies_up",
+          "text": "Up",
+          "imagePath": "images/movies_up.webp",
+          "sourceTitle": "Up_(2009_film).jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/File:Up_(2009_film).jpg",
+          "credit": "http://www.impawards.com/2009/up_ver2.html"
+        },
+        {
+          "id": "movies_the_incredibles",
+          "text": "The Incredibles",
+          "imagePath": "images/movies_the_incredibles.webp",
+          "sourceTitle": "The_Incredibles_(2004_animated_feature_film).jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/File:The_Incredibles_(2004_animated_feature_film).jpg",
+          "credit": "http://www.moviexclusive.com/review/incredibles/poster.jpg"
+        },
+        {
+          "id": "movies_despicable_me",
+          "text": "Despicable Me",
+          "imagePath": "images/movies_despicable_me.webp",
+          "sourceTitle": "Despicable_Me_(2010_animated_feature_film).jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/File:Despicable_Me_(2010_animated_feature_film).jpg",
+          "credit": "The cover art can or could be obtained from IMP Awards."
+        },
+        {
+          "id": "movies_cars",
+          "text": "Cars",
+          "imagePath": "images/movies_cars.webp",
+          "sourceTitle": "Cars_2006.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/File:Cars_2006.jpg",
+          "credit": "May be found at the following website: IMP Awards"
+        },
+        {
+          "id": "movies_zootopia",
+          "text": "Zootopia",
+          "imagePath": "images/movies_zootopia.webp",
+          "sourceTitle": "Zootopia_(movie_poster).jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/File:Zootopia_(movie_poster).jpg",
+          "credit": "http://www.impawards.com/2016/zootopia_ver3.html"
+        },
+        {
+          "id": "movies_the_truman_show",
+          "text": "The Truman Show",
+          "imagePath": "images/movies_the_truman_show.webp",
+          "sourceTitle": "Trumanshow.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/File:Trumanshow.jpg",
+          "credit": "The poster art can or could be obtained from Paramount Pictures."
         }
       ]
     },
     {
       "id": "famous_people",
       "title": "Famous People",
-      "description": "The stars, legends, and icons everyone knows.",
-      "imagePath": "images/famous_people_shah_rukh_khan.webp",
-      "accent": "#9E76AB",
+      "description": "Historic figures and familiar names from today's world. Name clues only.",
+      "imagePath": "images/famous_people_cover.webp",
+      "accent": "#A9B8CF",
       "words": [
         {
-          "id": "famous_people_shah_rukh_khan",
-          "text": "Shah Rukh Khan",
-          "imagePath": "images/famous_people_shah_rukh_khan.webp",
-          "sourceTitle": "Shah_Rukh_Khan_graces_the_launch_of_the_new_Santro.jpg",
-          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Shah_Rukh_Khan_graces_the_launch_of_the_new_Santro.jpg",
-          "credit": "Bollywood Hungama"
+          "id": "famous_people_albert_einstein",
+          "text": "Albert Einstein",
+          "imagePath": "",
+          "sourceTitle": "Albert Einstein",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Albert_Einstein",
+          "credit": ""
         },
         {
-          "id": "famous_people_virat_kohli",
-          "text": "Virat Kohli",
-          "imagePath": "images/famous_people_virat_kohli.webp",
-          "sourceTitle": "Virat_Kohli_during_the_India_vs_Aus_4th_Test_match_at_Narendra_Modi_Stadium_on_09_March_2023.jpg",
-          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Virat_Kohli_during_the_India_vs_Aus_4th_Test_match_at_Narendra_Modi_Stadium_on_09_March_2023.jpg",
-          "credit": "Prime Minister's Office"
+          "id": "famous_people_isaac_newton",
+          "text": "Isaac Newton",
+          "imagePath": "",
+          "sourceTitle": "Isaac Newton",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Isaac_Newton",
+          "credit": ""
         },
         {
-          "id": "famous_people_ms_dhoni",
-          "text": "MS Dhoni",
-          "imagePath": "images/famous_people_ms_dhoni.webp",
-          "sourceTitle": "MS_Dhoni_(Prabhav_'23_-_RiGI_2023).jpg",
-          "sourceUrl": "https://commons.wikimedia.org/wiki/File:MS_Dhoni_(Prabhav_%2723_-_RiGI_2023).jpg",
-          "credit": "RIGI"
+          "id": "famous_people_marie_curie",
+          "text": "Marie Curie",
+          "imagePath": "",
+          "sourceTitle": "Marie Curie",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Marie_Curie",
+          "credit": ""
+        },
+        {
+          "id": "famous_people_charles_darwin",
+          "text": "Charles Darwin",
+          "imagePath": "",
+          "sourceTitle": "Charles Darwin",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Charles_Darwin",
+          "credit": ""
+        },
+        {
+          "id": "famous_people_leonardo_da_vinci",
+          "text": "Leonardo da Vinci",
+          "imagePath": "",
+          "sourceTitle": "Leonardo da Vinci",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Leonardo_da_Vinci",
+          "credit": ""
+        },
+        {
+          "id": "famous_people_william_shakespeare",
+          "text": "William Shakespeare",
+          "imagePath": "",
+          "sourceTitle": "William Shakespeare",
+          "sourceUrl": "https://en.wikipedia.org/wiki/William_Shakespeare",
+          "credit": ""
+        },
+        {
+          "id": "famous_people_cleopatra",
+          "text": "Cleopatra",
+          "imagePath": "",
+          "sourceTitle": "Cleopatra",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Cleopatra",
+          "credit": ""
+        },
+        {
+          "id": "famous_people_julius_caesar",
+          "text": "Julius Caesar",
+          "imagePath": "",
+          "sourceTitle": "Julius Caesar",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Julius_Caesar",
+          "credit": ""
+        },
+        {
+          "id": "famous_people_napoleon_bonaparte",
+          "text": "Napoleon Bonaparte",
+          "imagePath": "",
+          "sourceTitle": "Napoleon",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Napoleon",
+          "credit": ""
+        },
+        {
+          "id": "famous_people_abraham_lincoln",
+          "text": "Abraham Lincoln",
+          "imagePath": "",
+          "sourceTitle": "Abraham Lincoln",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Abraham_Lincoln",
+          "credit": ""
+        },
+        {
+          "id": "famous_people_mahatma_gandhi",
+          "text": "Mahatma Gandhi",
+          "imagePath": "",
+          "sourceTitle": "Mahatma Gandhi",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Mahatma_Gandhi",
+          "credit": ""
+        },
+        {
+          "id": "famous_people_nelson_mandela",
+          "text": "Nelson Mandela",
+          "imagePath": "",
+          "sourceTitle": "Nelson Mandela",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Nelson_Mandela",
+          "credit": ""
+        },
+        {
+          "id": "famous_people_martin_luther_king_jr",
+          "text": "Martin Luther King Jr.",
+          "imagePath": "",
+          "sourceTitle": "Martin Luther King Jr.",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Martin_Luther_King_Jr.",
+          "credit": ""
+        },
+        {
+          "id": "famous_people_mother_teresa",
+          "text": "Mother Teresa",
+          "imagePath": "",
+          "sourceTitle": "Mother Teresa",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Mother_Teresa",
+          "credit": ""
         },
         {
           "id": "famous_people_a_p_j_abdul_kalam",
           "text": "A. P. J. Abdul Kalam",
-          "imagePath": "images/famous_people_a_p_j_abdul_kalam.webp",
-          "sourceTitle": "A._P._J._Abdul_Kalam.jpg",
-          "sourceUrl": "https://commons.wikimedia.org/wiki/File:A._P._J._Abdul_Kalam.jpg",
-          "credit": "Government of India"
+          "imagePath": "",
+          "sourceTitle": "A. P. J. Abdul Kalam",
+          "sourceUrl": "https://en.wikipedia.org/wiki/A._P._J._Abdul_Kalam",
+          "credit": ""
         },
         {
-          "id": "famous_people_sachin_tendulkar",
-          "text": "Sachin Tendulkar",
-          "imagePath": "images/famous_people_sachin_tendulkar.webp",
-          "sourceTitle": "The_cricket_legend_Sachin_Tendulkar_at_the_Oval_Maidan_in_Mumbai_During_the_Duke_and_Duchess_of_Cambridge_Visit(26271019082).jpg",
-          "sourceUrl": "https://commons.wikimedia.org/wiki/File:The_cricket_legend_Sachin_Tendulkar_at_the_Oval_Maidan_in_Mumbai_During_the_Duke_and_Duchess_of_Cambridge_Visit(26271019082).jpg",
-          "credit": "British High Commission, New Delhi"
+          "id": "famous_people_neil_armstrong",
+          "text": "Neil Armstrong",
+          "imagePath": "",
+          "sourceTitle": "Neil Armstrong",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Neil_Armstrong",
+          "credit": ""
         },
         {
-          "id": "famous_people_taylor_swift",
-          "text": "Taylor Swift",
-          "imagePath": "images/famous_people_taylor_swift.webp",
-          "sourceTitle": "Taylor_Swift_at_the_2023_MTV_Video_Music_Awards_(3).png",
-          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Taylor_Swift_at_the_2023_MTV_Video_Music_Awards_(3).png",
-          "credit": "iHeartRadioCA"
-        },
-        {
-          "id": "famous_people_lionel_messi",
-          "text": "Lionel Messi",
-          "imagePath": "images/famous_people_lionel_messi.webp",
-          "sourceTitle": "Leo_Messi_Argentina_v_Egypt_7_July_2026-1.jpg",
-          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Leo_Messi_Argentina_v_Egypt_7_July_2026-1.jpg",
-          "credit": "Bryan Berlin"
-        },
-        {
-          "id": "famous_people_cristiano_ronaldo",
-          "text": "Cristiano Ronaldo",
-          "imagePath": "images/famous_people_cristiano_ronaldo.webp",
-          "sourceTitle": "Cristiano_Ronaldo_Croatia_v_Portugal_2_July_2026-075_(cropped).jpg",
-          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cristiano_Ronaldo_Croatia_v_Portugal_2_July_2026-075_(cropped).jpg",
-          "credit": "Bryan Berlin"
-        },
-        {
-          "id": "famous_people_albert_einstein",
-          "text": "Albert Einstein",
-          "imagePath": "images/famous_people_albert_einstein.webp",
-          "sourceTitle": "Albert_Einstein_Head_cleaned.jpg",
-          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Albert_Einstein_Head_cleaned.jpg",
-          "credit": "Oren Jack Turner"
+          "id": "famous_people_amelia_earhart",
+          "text": "Amelia Earhart",
+          "imagePath": "",
+          "sourceTitle": "Amelia Earhart",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Amelia_Earhart",
+          "credit": ""
         },
         {
           "id": "famous_people_charlie_chaplin",
           "text": "Charlie Chaplin",
-          "imagePath": "images/famous_people_charlie_chaplin.webp",
-          "sourceTitle": "Charlie_Chaplin_portrait_Getty_1739411952.jpg",
-          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Charlie_Chaplin_portrait_Getty_1739411952.jpg",
-          "credit": "Strauss-Peyton Studio"
+          "imagePath": "",
+          "sourceTitle": "Charlie Chaplin",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Charlie_Chaplin",
+          "credit": ""
+        },
+        {
+          "id": "famous_people_michael_jackson",
+          "text": "Michael Jackson",
+          "imagePath": "",
+          "sourceTitle": "Michael Jackson",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Michael_Jackson",
+          "credit": ""
+        },
+        {
+          "id": "famous_people_queen_elizabeth_ii",
+          "text": "Queen Elizabeth II",
+          "imagePath": "",
+          "sourceTitle": "Elizabeth II",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Elizabeth_II",
+          "credit": ""
+        },
+        {
+          "id": "famous_people_taylor_swift",
+          "text": "Taylor Swift",
+          "imagePath": "",
+          "sourceTitle": "Taylor Swift",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Taylor_Swift",
+          "credit": ""
+        },
+        {
+          "id": "famous_people_beyonce",
+          "text": "Beyoncé",
+          "imagePath": "",
+          "sourceTitle": "Beyoncé",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Beyonc%C3%A9",
+          "credit": ""
+        },
+        {
+          "id": "famous_people_billie_eilish",
+          "text": "Billie Eilish",
+          "imagePath": "",
+          "sourceTitle": "Billie Eilish",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Billie_Eilish",
+          "credit": ""
+        },
+        {
+          "id": "famous_people_lady_gaga",
+          "text": "Lady Gaga",
+          "imagePath": "",
+          "sourceTitle": "Lady Gaga",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Lady_Gaga",
+          "credit": ""
+        },
+        {
+          "id": "famous_people_bad_bunny",
+          "text": "Bad Bunny",
+          "imagePath": "",
+          "sourceTitle": "Bad Bunny",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Bad_Bunny",
+          "credit": ""
+        },
+        {
+          "id": "famous_people_kendrick_lamar",
+          "text": "Kendrick Lamar",
+          "imagePath": "",
+          "sourceTitle": "Kendrick Lamar",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Kendrick_Lamar",
+          "credit": ""
+        },
+        {
+          "id": "famous_people_ariana_grande",
+          "text": "Ariana Grande",
+          "imagePath": "",
+          "sourceTitle": "Ariana Grande",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Ariana_Grande",
+          "credit": ""
+        },
+        {
+          "id": "famous_people_rihanna",
+          "text": "Rihanna",
+          "imagePath": "",
+          "sourceTitle": "Rihanna",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Rihanna",
+          "credit": ""
+        },
+        {
+          "id": "famous_people_shakira",
+          "text": "Shakira",
+          "imagePath": "",
+          "sourceTitle": "Shakira",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Shakira",
+          "credit": ""
+        },
+        {
+          "id": "famous_people_ed_sheeran",
+          "text": "Ed Sheeran",
+          "imagePath": "",
+          "sourceTitle": "Ed Sheeran",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Ed_Sheeran",
+          "credit": ""
+        },
+        {
+          "id": "famous_people_shah_rukh_khan",
+          "text": "Shah Rukh Khan",
+          "imagePath": "",
+          "sourceTitle": "Shah Rukh Khan",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Shah_Rukh_Khan",
+          "credit": ""
+        },
+        {
+          "id": "famous_people_amitabh_bachchan",
+          "text": "Amitabh Bachchan",
+          "imagePath": "",
+          "sourceTitle": "Amitabh Bachchan",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Amitabh_Bachchan",
+          "credit": ""
+        },
+        {
+          "id": "famous_people_deepika_padukone",
+          "text": "Deepika Padukone",
+          "imagePath": "",
+          "sourceTitle": "Deepika Padukone",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Deepika_Padukone",
+          "credit": ""
+        },
+        {
+          "id": "famous_people_priyanka_chopra",
+          "text": "Priyanka Chopra",
+          "imagePath": "",
+          "sourceTitle": "Priyanka Chopra",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Priyanka_Chopra",
+          "credit": ""
+        },
+        {
+          "id": "famous_people_tom_cruise",
+          "text": "Tom Cruise",
+          "imagePath": "",
+          "sourceTitle": "Tom Cruise",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Tom_Cruise",
+          "credit": ""
+        },
+        {
+          "id": "famous_people_leonardo_dicaprio",
+          "text": "Leonardo DiCaprio",
+          "imagePath": "",
+          "sourceTitle": "Leonardo DiCaprio",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Leonardo_DiCaprio",
+          "credit": ""
+        },
+        {
+          "id": "famous_people_dwayne_johnson",
+          "text": "Dwayne Johnson",
+          "imagePath": "",
+          "sourceTitle": "Dwayne Johnson",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Dwayne_Johnson",
+          "credit": ""
+        },
+        {
+          "id": "famous_people_zendaya",
+          "text": "Zendaya",
+          "imagePath": "",
+          "sourceTitle": "Zendaya",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Zendaya",
+          "credit": ""
+        },
+        {
+          "id": "famous_people_timothee_chalamet",
+          "text": "Timothée Chalamet",
+          "imagePath": "",
+          "sourceTitle": "Timothée Chalamet",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Timoth%C3%A9e_Chalamet",
+          "credit": ""
+        },
+        {
+          "id": "famous_people_jackie_chan",
+          "text": "Jackie Chan",
+          "imagePath": "",
+          "sourceTitle": "Jackie Chan",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Jackie_Chan",
+          "credit": ""
+        },
+        {
+          "id": "famous_people_lionel_messi",
+          "text": "Lionel Messi",
+          "imagePath": "",
+          "sourceTitle": "Lionel Messi",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Lionel_Messi",
+          "credit": ""
+        },
+        {
+          "id": "famous_people_cristiano_ronaldo",
+          "text": "Cristiano Ronaldo",
+          "imagePath": "",
+          "sourceTitle": "Cristiano Ronaldo",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Cristiano_Ronaldo",
+          "credit": ""
+        },
+        {
+          "id": "famous_people_virat_kohli",
+          "text": "Virat Kohli",
+          "imagePath": "",
+          "sourceTitle": "Virat Kohli",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Virat_Kohli",
+          "credit": ""
+        },
+        {
+          "id": "famous_people_ms_dhoni",
+          "text": "MS Dhoni",
+          "imagePath": "",
+          "sourceTitle": "MS Dhoni",
+          "sourceUrl": "https://en.wikipedia.org/wiki/MS_Dhoni",
+          "credit": ""
+        },
+        {
+          "id": "famous_people_sachin_tendulkar",
+          "text": "Sachin Tendulkar",
+          "imagePath": "",
+          "sourceTitle": "Sachin Tendulkar",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Sachin_Tendulkar",
+          "credit": ""
+        },
+        {
+          "id": "famous_people_serena_williams",
+          "text": "Serena Williams",
+          "imagePath": "",
+          "sourceTitle": "Serena Williams",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Serena_Williams",
+          "credit": ""
+        },
+        {
+          "id": "famous_people_simone_biles",
+          "text": "Simone Biles",
+          "imagePath": "",
+          "sourceTitle": "Simone Biles",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Simone_Biles",
+          "credit": ""
+        },
+        {
+          "id": "famous_people_usain_bolt",
+          "text": "Usain Bolt",
+          "imagePath": "",
+          "sourceTitle": "Usain Bolt",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Usain_Bolt",
+          "credit": ""
+        },
+        {
+          "id": "famous_people_elon_musk",
+          "text": "Elon Musk",
+          "imagePath": "",
+          "sourceTitle": "Elon Musk",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Elon_Musk",
+          "credit": ""
+        },
+        {
+          "id": "famous_people_oprah_winfrey",
+          "text": "Oprah Winfrey",
+          "imagePath": "",
+          "sourceTitle": "Oprah Winfrey",
+          "sourceUrl": "https://en.wikipedia.org/wiki/Oprah_Winfrey",
+          "credit": ""
         }
       ]
     },
     {
       "id": "animes",
       "title": "Animes",
-      "description": "Beloved series and films from the world of anime.",
+      "description": "Recognizable anime series and films, old and new.",
       "imagePath": "images/animes_naruto.webp",
-      "accent": "#DDA343",
+      "accent": "#A9B8CF",
       "words": [
         {
           "id": "animes_naruto",
@@ -354,95 +1314,326 @@
           "sourceTitle": "Spirited_Away_Japanese_poster.png",
           "sourceUrl": "https://en.wikipedia.org/wiki/File:Spirited_Away_Japanese_poster.png",
           "credit": "IMDb"
-        }
-      ]
-    },
-    {
-      "id": "anime_characters",
-      "title": "Anime Characters",
-      "description": "Heroes, rivals, and a few very familiar faces.",
-      "imagePath": "images/anime_characters_naruto_uzumaki.webp",
-      "accent": "#458E8A",
-      "words": [
-        {
-          "id": "anime_characters_naruto_uzumaki",
-          "text": "Naruto Uzumaki",
-          "imagePath": "images/anime_characters_naruto_uzumaki.webp",
-          "sourceTitle": "NarutoUzumaki.png",
-          "sourceUrl": "https://en.wikipedia.org/wiki/File:NarutoUzumaki.png",
-          "credit": "https://naruto-official.com/en/special/20th"
         },
         {
-          "id": "anime_characters_monkey_d_luffy",
-          "text": "Monkey D. Luffy",
-          "imagePath": "images/anime_characters_monkey_d_luffy.webp",
-          "sourceTitle": "Monkey_D_Luffy.png",
-          "sourceUrl": "https://en.wikipedia.org/wiki/File:Monkey_D_Luffy.png",
-          "credit": "One Piece manga"
+          "id": "animes_attack_on_titan",
+          "text": "Attack on Titan",
+          "imagePath": "images/animes_attack_on_titan.webp",
+          "sourceTitle": "Attack on Titan — official season-one key visual",
+          "sourceUrl": "https://shingeki.tv/season1/",
+          "credit": "Hajime Isayama / Kodansha / Attack on Titan Production Committee"
         },
         {
-          "id": "anime_characters_goku",
-          "text": "Goku",
-          "imagePath": "images/anime_characters_goku.webp",
-          "sourceTitle": "GokumangaToriyama.png",
-          "sourceUrl": "https://en.wikipedia.org/wiki/File:GokumangaToriyama.png",
-          "credit": "Shueisha; Akira Toriyama"
+          "id": "animes_death_note",
+          "text": "Death Note",
+          "imagePath": "images/animes_death_note.webp",
+          "sourceTitle": "Death Note — official 2006 anime artwork",
+          "sourceUrl": "https://www.ntv.co.jp/deathnote/",
+          "credit": "Tsugumi Ohba / Takeshi Obata / Shueisha / VAP / Madhouse / NTV / D.N. Dream Partners"
         },
         {
-          "id": "anime_characters_pikachu",
-          "text": "Pikachu",
-          "imagePath": "images/anime_characters_pikachu.webp",
-          "sourceTitle": "Pokémon_Pikachu_art.png",
-          "sourceUrl": "https://en.wikipedia.org/wiki/File:Pok%C3%A9mon_Pikachu_art.png",
-          "credit": "Game Freak"
+          "id": "animes_jujutsu_kaisen",
+          "text": "Jujutsu Kaisen",
+          "imagePath": "images/animes_jujutsu_kaisen.webp",
+          "sourceTitle": "Jujutsu_Kaisen_S1_Vol.1.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/File:Jujutsu_Kaisen_S1_Vol.1.jpg",
+          "credit": "Shueisha, Gege Akutami & MAPPA"
         },
         {
-          "id": "anime_characters_eren_yeager",
-          "text": "Eren Yeager",
-          "imagePath": "images/anime_characters_eren_yeager.webp",
-          "sourceTitle": "ErenYeagerIsayama.png",
-          "sourceUrl": "https://en.wikipedia.org/wiki/File:ErenYeagerIsayama.png",
-          "credit": "Kodansha; Hajime Isayama"
+          "id": "animes_spy_family",
+          "text": "Spy × Family",
+          "imagePath": "images/animes_spy_family.webp",
+          "sourceTitle": "Spy_x_Family_key_visual.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/File:Spy_x_Family_key_visual.jpg",
+          "credit": "Wit Studio and CloverWorks"
         },
         {
-          "id": "anime_characters_light_yagami",
-          "text": "Light Yagami",
-          "imagePath": "images/anime_characters_light_yagami.webp",
-          "sourceTitle": "Light_from_Death_Note.jpg",
-          "sourceUrl": "https://en.wikipedia.org/wiki/File:Light_from_Death_Note.jpg",
-          "credit": "Death Note chapter 1 title page"
+          "id": "animes_one_punch_man",
+          "text": "One-Punch Man",
+          "imagePath": "images/animes_one_punch_man.webp",
+          "sourceTitle": "One-Punch_Man_BR1.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/File:One-Punch_Man_BR1.jpg",
+          "credit": "Bandai Visual"
         },
         {
-          "id": "anime_characters_levi_ackerman",
-          "text": "Levi Ackerman",
-          "imagePath": "images/anime_characters_levi_ackerman.webp",
-          "sourceTitle": "Leviackerman.png",
-          "sourceUrl": "https://en.wikipedia.org/wiki/File:Leviackerman.png",
-          "credit": "Isayama, Hajime"
+          "id": "animes_hunter_hunter",
+          "text": "Hunter × Hunter",
+          "imagePath": "images/animes_hunter_hunter.webp",
+          "sourceTitle": "Hunter_×_Hunter_(2011).png",
+          "sourceUrl": "https://en.wikipedia.org/wiki/File:Hunter_%C3%97_Hunter_(2011).png",
+          "credit": "POT (Yoshihiro Togashi), VAP, NTV, Madhouse"
         },
         {
-          "id": "anime_characters_tanjiro_kamado",
-          "text": "Tanjiro Kamado",
-          "imagePath": "images/anime_characters_tanjiro_kamado.webp",
-          "sourceTitle": "Tanjirou_manga.png",
-          "sourceUrl": "https://en.wikipedia.org/wiki/File:Tanjirou_manga.png",
-          "credit": "It is believed that this and similar images can or could be obtained from the publisher/the author. This copy was obtained from [1]."
-        },
-        {
-          "id": "anime_characters_sailor_moon",
+          "id": "animes_sailor_moon",
           "text": "Sailor Moon",
-          "imagePath": "images/anime_characters_sailor_moon.webp",
-          "sourceTitle": "Sailor_Moon_01.jpg",
-          "sourceUrl": "https://en.wikipedia.org/wiki/File:Sailor_Moon_01.jpg",
-          "credit": "A promotional calendar for the Sailor Moon SuperS season."
+          "imagePath": "images/animes_sailor_moon.webp",
+          "sourceTitle": "Sailormoonseason1.gif",
+          "sourceUrl": "https://en.wikipedia.org/wiki/File:Sailormoonseason1.gif",
+          "credit": "Amazon.com"
         },
         {
-          "id": "anime_characters_doraemon",
+          "id": "animes_doraemon",
           "text": "Doraemon",
-          "imagePath": "images/anime_characters_doraemon.webp",
-          "sourceTitle": "Doraemon_character.png",
-          "sourceUrl": "https://en.wikipedia.org/wiki/File:Doraemon_character.png",
-          "credit": "Fujiko Fujio"
+          "imagePath": "images/animes_doraemon.webp",
+          "sourceTitle": "Doraemon characters (1979).png",
+          "sourceUrl": "https://en.wikipedia.org/wiki/File:Doraemon_characters_(1979).png",
+          "credit": "https://yonimokimyo.com/urbanlegend-animation-manga/773"
+        },
+        {
+          "id": "animes_crayon_shin_chan",
+          "text": "Crayon Shin-chan",
+          "imagePath": "images/animes_crayon_shin_chan.webp",
+          "sourceTitle": "Crayon_Shin-chan_vol_1_cover.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/File:Crayon_Shin-chan_vol_1_cover.jpg",
+          "credit": "Book. Anime Stuff Store"
+        },
+        {
+          "id": "animes_digimon_adventure",
+          "text": "Digimon Adventure",
+          "imagePath": "images/animes_digimon_adventure.webp",
+          "sourceTitle": "Digimon_Adventure_box_set.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/File:Digimon_Adventure_box_set.jpg",
+          "credit": "Mandarake"
+        },
+        {
+          "id": "animes_yu_gi_oh",
+          "text": "Yu-Gi-Oh!",
+          "imagePath": "images/animes_yu_gi_oh.webp",
+          "sourceTitle": "Yu-Gi-Oh!_DVD_vol_1.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/File:Yu-Gi-Oh!_DVD_vol_1.jpg",
+          "credit": "May be found at the following website: https://www.amazon.co.jp/dp/B00005HM1V/"
+        },
+        {
+          "id": "animes_beyblade",
+          "text": "Beyblade",
+          "imagePath": "images/animes_beyblade.webp",
+          "sourceTitle": "BeybladeGRVol1.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/File:BeybladeGRVol1.jpg",
+          "credit": "Takao Aoki"
+        },
+        {
+          "id": "animes_inuyasha",
+          "text": "Inuyasha",
+          "imagePath": "images/animes_inuyasha.webp",
+          "sourceTitle": "Inuyasha_(season_1).png",
+          "sourceUrl": "https://en.wikipedia.org/wiki/File:Inuyasha_(season_1).png",
+          "credit": "Viz Media"
+        },
+        {
+          "id": "animes_fairy_tail",
+          "text": "Fairy Tail",
+          "imagePath": "images/animes_fairy_tail.webp",
+          "sourceTitle": "Fairy_Tail_DVD_1.png",
+          "sourceUrl": "https://en.wikipedia.org/wiki/File:Fairy_Tail_DVD_1.png",
+          "credit": "Amazon.co.jp"
+        },
+        {
+          "id": "animes_black_clover",
+          "text": "Black Clover",
+          "imagePath": "images/animes_black_clover.webp",
+          "sourceTitle": "Black_Clover_Volume_1_Blu-Ray.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/File:Black_Clover_Volume_1_Blu-Ray.jpg",
+          "credit": "https://bclover.jp/season1/sp/discography/detail.php?id=1015352"
+        },
+        {
+          "id": "animes_haikyu",
+          "text": "Haikyu!!",
+          "imagePath": "images/animes_haikyu.webp",
+          "sourceTitle": "Haikyu_TV.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/File:Haikyu_TV.jpg",
+          "credit": "Production I.G."
+        },
+        {
+          "id": "animes_blue_lock",
+          "text": "Blue Lock",
+          "imagePath": "images/animes_blue_lock.webp",
+          "sourceTitle": "Blue_Lock_key_visual.png",
+          "sourceUrl": "https://en.wikipedia.org/wiki/File:Blue_Lock_key_visual.png",
+          "credit": "Kodansha, Eight Bit, TV Asahi"
+        },
+        {
+          "id": "animes_chainsaw_man",
+          "text": "Chainsaw Man",
+          "imagePath": "images/animes_chainsaw_man.webp",
+          "sourceTitle": "Chainsaw_Man_anime.png",
+          "sourceUrl": "https://en.wikipedia.org/wiki/File:Chainsaw_Man_anime.png",
+          "credit": "Tatsuki Fujimoto/Shueisha, MAPPA"
+        },
+        {
+          "id": "animes_tokyo_ghoul",
+          "text": "Tokyo Ghoul",
+          "imagePath": "images/animes_tokyo_ghoul.webp",
+          "sourceTitle": "Tokyo Ghoul — official anime key visual",
+          "sourceUrl": "https://www.marv.jp/special/tokyoghoul/first/index.html",
+          "credit": "Sui Ishida / Shueisha / Tokyo Ghoul Production Committee"
+        },
+        {
+          "id": "animes_tokyo_revengers",
+          "text": "Tokyo Revengers",
+          "imagePath": "images/animes_tokyo_revengers.webp",
+          "sourceTitle": "TokyoRevengersSeason1.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/File:TokyoRevengersSeason1.jpg",
+          "credit": "Liden Films"
+        },
+        {
+          "id": "animes_mob_psycho_100",
+          "text": "Mob Psycho 100",
+          "imagePath": "images/animes_mob_psycho_100.webp",
+          "sourceTitle": "Mob_Psycho_100_TV.png",
+          "sourceUrl": "https://en.wikipedia.org/wiki/File:Mob_Psycho_100_TV.png",
+          "credit": "Bones, Warner Bros., Shogakukan"
+        },
+        {
+          "id": "animes_neon_genesis_evangelion",
+          "text": "Neon Genesis Evangelion",
+          "imagePath": "images/animes_neon_genesis_evangelion.webp",
+          "sourceTitle": "Evangelion_retouched.png",
+          "sourceUrl": "https://en.wikipedia.org/wiki/File:Evangelion_retouched.png",
+          "credit": "Neon Genesis Evangelion, opening credits for each episode"
+        },
+        {
+          "id": "animes_code_geass",
+          "text": "Code Geass",
+          "imagePath": "images/animes_code_geass.webp",
+          "sourceTitle": "Code_Geass_R1_box_set_cover.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/File:Code_Geass_R1_box_set_cover.jpg",
+          "credit": "Bandai Namco"
+        },
+        {
+          "id": "animes_vinland_saga",
+          "text": "Vinland Saga",
+          "imagePath": "images/animes_vinland_saga.webp",
+          "sourceTitle": "Vinland_Saga_key_visual.png",
+          "sourceUrl": "https://en.wikipedia.org/wiki/File:Vinland_Saga_key_visual.png",
+          "credit": "Twin Engine, Wit Studio"
+        },
+        {
+          "id": "animes_dr_stone",
+          "text": "Dr. Stone",
+          "imagePath": "images/animes_dr_stone.webp",
+          "sourceTitle": "Dr._Stone_KV.png",
+          "sourceUrl": "https://en.wikipedia.org/wiki/File:Dr._Stone_KV.png",
+          "credit": "TMS Entertainment, Toho Animation, Shueisha, Riichiro Inagaki & Boichi"
+        },
+        {
+          "id": "animes_jojo_s_bizarre_adventure",
+          "text": "JoJo's Bizarre Adventure",
+          "imagePath": "images/animes_jojo_s_bizarre_adventure.webp",
+          "sourceTitle": "JoJo's_Bizarre_Adventure_logo.png",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:JoJo%27s_Bizarre_Adventure_logo.png",
+          "credit": "Hirohiko Araki"
+        },
+        {
+          "id": "animes_fruits_basket",
+          "text": "Fruits Basket",
+          "imagePath": "images/animes_fruits_basket.webp",
+          "sourceTitle": "Fruits_Basket_Box_Set.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/File:Fruits_Basket_Box_Set.jpg",
+          "credit": "Amazon.com"
+        },
+        {
+          "id": "animes_your_lie_in_april",
+          "text": "Your Lie in April",
+          "imagePath": "images/animes_your_lie_in_april.webp",
+          "sourceTitle": "Your_Lie_in_April_Blu-ray_Volume_1_cover.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/File:Your_Lie_in_April_Blu-ray_Volume_1_cover.jpg",
+          "credit": "Aniplex"
+        },
+        {
+          "id": "animes_violet_evergarden_the_movie",
+          "text": "Violet Evergarden: The Movie",
+          "imagePath": "images/animes_violet_evergarden_the_movie.webp",
+          "sourceTitle": "Violet_Evergarden_the_Movie_poster.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/File:Violet_Evergarden_the_Movie_poster.jpg",
+          "credit": "https://www.dreampass.jp/m363980"
+        },
+        {
+          "id": "animes_assassination_classroom",
+          "text": "Assassination Classroom",
+          "imagePath": "images/animes_assassination_classroom.webp",
+          "sourceTitle": "Assassination_Classroom_DVD_1_Cover.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/File:Assassination_Classroom_DVD_1_Cover.jpg",
+          "credit": "http://ansatsu-anime.com/discography/detail.php?id=1009494 ansatsu-anime.com]"
+        },
+        {
+          "id": "animes_the_seven_deadly_sins",
+          "text": "The Seven Deadly Sins",
+          "imagePath": "images/animes_the_seven_deadly_sins.webp",
+          "sourceTitle": "The_Seven_Deadly_Sins_2014_TV_series.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/File:The_Seven_Deadly_Sins_2014_TV_series.jpg",
+          "credit": "A-1 Pictures"
+        },
+        {
+          "id": "animes_the_promised_neverland",
+          "text": "The Promised Neverland",
+          "imagePath": "images/animes_the_promised_neverland.webp",
+          "sourceTitle": "The_Promised_Neverland.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/File:The_Promised_Neverland.jpg",
+          "credit": "CloverWorks Inc."
+        },
+        {
+          "id": "animes_detective_conan",
+          "text": "Detective Conan",
+          "imagePath": "images/animes_detective_conan.webp",
+          "sourceTitle": "Case_Closed_1st_Key_Visual.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/File:Case_Closed_1st_Key_Visual.jpg",
+          "credit": "Gosho Aoyama, Shogakukan, Yomiuri TV, TMS Entertainment"
+        },
+        {
+          "id": "animes_yu_yu_hakusho",
+          "text": "Yu Yu Hakusho",
+          "imagePath": "images/animes_yu_yu_hakusho.webp",
+          "sourceTitle": "YuYu Hakusho DVD season 1.gif",
+          "sourceUrl": "https://en.wikipedia.org/wiki/File:YuYu_Hakusho_DVD_season_1.gif",
+          "credit": "[1]"
+        },
+        {
+          "id": "animes_my_neighbor_totoro",
+          "text": "My Neighbor Totoro",
+          "imagePath": "images/animes_my_neighbor_totoro.webp",
+          "sourceTitle": "My_Neighbor_Totoro_-_Tonari_no_Totoro_(Movie_Poster).jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/File:My_Neighbor_Totoro_-_Tonari_no_Totoro_(Movie_Poster).jpg",
+          "credit": "Poster scan"
+        },
+        {
+          "id": "animes_howl_s_moving_castle",
+          "text": "Howl's Moving Castle",
+          "imagePath": "images/animes_howl_s_moving_castle.webp",
+          "sourceTitle": "Howls-moving-castleposter.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/File:Howls-moving-castleposter.jpg",
+          "credit": "http://www.empiremovies.com/posters.php?id=2694&howlsmovingcastle.htm"
+        },
+        {
+          "id": "animes_princess_mononoke",
+          "text": "Princess Mononoke",
+          "imagePath": "images/animes_princess_mononoke.webp",
+          "sourceTitle": "Princess_Mononoke_Japanese_poster.png",
+          "sourceUrl": "https://en.wikipedia.org/wiki/File:Princess_Mononoke_Japanese_poster.png",
+          "credit": "IMDb"
+        },
+        {
+          "id": "animes_your_name",
+          "text": "Your Name",
+          "imagePath": "images/animes_your_name.webp",
+          "sourceTitle": "Your_Name_poster.png",
+          "sourceUrl": "https://en.wikipedia.org/wiki/File:Your_Name_poster.png",
+          "credit": "https://twitter.com/kiminona_movie/status/759044012384788481?s=21"
+        },
+        {
+          "id": "animes_a_silent_voice",
+          "text": "A Silent Voice",
+          "imagePath": "images/animes_a_silent_voice.webp",
+          "sourceTitle": "A_Silent_Voice_Film_Poster.jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/File:A_Silent_Voice_Film_Poster.jpg",
+          "credit": "C@rtelesmix"
+        },
+        {
+          "id": "animes_akira",
+          "text": "Akira",
+          "imagePath": "images/animes_akira.webp",
+          "sourceTitle": "AKIRA_(1988_poster).jpg",
+          "sourceUrl": "https://en.wikipedia.org/wiki/File:AKIRA_(1988_poster).jpg",
+          "credit": "TMS Entertainment, Toho"
         }
       ]
     },
@@ -451,7 +1642,7 @@
       "title": "Countries",
       "description": "Recognize countries from their national flags.",
       "imagePath": "images/countries_india.webp",
-      "accent": "#4E8BA7",
+      "accent": "#A9B8CF",
       "words": [
         {
           "id": "countries_india",
@@ -531,16 +1722,336 @@
           "imagePath": "images/countries_canada.webp",
           "sourceTitle": "Flag of Canada.svg",
           "sourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Canada.svg",
-          "credit": "Created by George F. G. Stanley / E Pluribus Anthony / User:Mzajac"
+          "credit": "Created by George F. G. Stanley / / User:Mzajac"
+        },
+        {
+          "id": "countries_united_kingdom",
+          "text": "United Kingdom",
+          "imagePath": "images/countries_united_kingdom.webp",
+          "sourceTitle": "Flag of the United Kingdom.svg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_the_United_Kingdom_(3-5).svg",
+          "credit": "Original: Acts of Union 1800 Vector: Yaddah"
+        },
+        {
+          "id": "countries_china",
+          "text": "China",
+          "imagePath": "images/countries_china.webp",
+          "sourceTitle": "Flag of China.svg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_the_People%27s_Republic_of_China.svg",
+          "credit": "Zeng Liansong"
+        },
+        {
+          "id": "countries_germany",
+          "text": "Germany",
+          "imagePath": "images/countries_germany.webp",
+          "sourceTitle": "Flag of Germany.svg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Germany.svg",
+          "credit": "User:SKopp, User:Madden, and other users"
+        },
+        {
+          "id": "countries_spain",
+          "text": "Spain",
+          "imagePath": "images/countries_spain.webp",
+          "sourceTitle": "Flag of Spain.svg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Spain.svg",
+          "credit": "RelShot 263, Echando una mano; earlier version was Pedro A. Gracia Fajardo, escudo de Manual de Imagen Institucional de la Administración General del Estado"
+        },
+        {
+          "id": "countries_mexico",
+          "text": "Mexico",
+          "imagePath": "images/countries_mexico.webp",
+          "sourceTitle": "Flag of Mexico.svg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Mexico.svg",
+          "credit": "Omar Alejandro Covarrubias Neri, 9 April 2006. Based on the 1968 arms by Francisco Eppens Helguera and Juan Manuel Gabino Villascán."
+        },
+        {
+          "id": "countries_argentina",
+          "text": "Argentina",
+          "imagePath": "images/countries_argentina.webp",
+          "sourceTitle": "Flag of Argentina.svg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Argentina.svg",
+          "credit": "Manuel Belgrano"
+        },
+        {
+          "id": "countries_south_africa",
+          "text": "South Africa",
+          "imagePath": "images/countries_south_africa.webp",
+          "sourceTitle": "Flag of South Africa.svg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_South_Africa.svg",
+          "credit": "Flag design by Frederick Brownell, image by Wikimedia Commons users"
+        },
+        {
+          "id": "countries_new_zealand",
+          "text": "New Zealand",
+          "imagePath": "images/countries_new_zealand.webp",
+          "sourceTitle": "Flag of New Zealand.svg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_New_Zealand.svg",
+          "credit": "Original: Albert Hastings Markham Vector: Zscout370, Hugh Jass, s. File history"
+        },
+        {
+          "id": "countries_russia",
+          "text": "Russia",
+          "imagePath": "images/countries_russia.webp",
+          "sourceTitle": "Flag of Russia.svg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Russia.svg",
+          "credit": "Peter the Great"
+        },
+        {
+          "id": "countries_ukraine",
+          "text": "Ukraine",
+          "imagePath": "images/countries_ukraine.webp",
+          "sourceTitle": "Flag of Ukraine.svg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Ukraine.svg",
+          "credit": "Government of Ukraine"
+        },
+        {
+          "id": "countries_sweden",
+          "text": "Sweden",
+          "imagePath": "images/countries_sweden.webp",
+          "sourceTitle": "Flag of Sweden.svg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Sweden.svg",
+          "credit": "Jon Harald Søby and others."
+        },
+        {
+          "id": "countries_norway",
+          "text": "Norway",
+          "imagePath": "images/countries_norway.webp",
+          "sourceTitle": "Flag of Norway.svg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Norway.svg",
+          "credit": "Original: Fredrik Meltzer Vector: Gutten på Hemsen"
+        },
+        {
+          "id": "countries_denmark",
+          "text": "Denmark",
+          "imagePath": "images/countries_denmark.webp",
+          "sourceTitle": "Flag of Denmark.svg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Denmark.svg",
+          "credit": "Madden and others"
+        },
+        {
+          "id": "countries_finland",
+          "text": "Finland",
+          "imagePath": "images/countries_finland.webp",
+          "sourceTitle": "Flag of Finland.svg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Finland.svg",
+          "credit": "Unknown"
+        },
+        {
+          "id": "countries_switzerland",
+          "text": "Switzerland",
+          "imagePath": "images/countries_switzerland.webp",
+          "sourceTitle": "Flag of Switzerland.svg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Switzerland.svg",
+          "credit": "Original: Unknown Vector: User:Marc Mongenet Credits: User:-xfi- User:Zscout370"
+        },
+        {
+          "id": "countries_greece",
+          "text": "Greece",
+          "imagePath": "images/countries_greece.webp",
+          "sourceTitle": "Flag of Greece.svg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Greece.svg",
+          "credit": "Unknown authorUnknown author"
+        },
+        {
+          "id": "countries_portugal",
+          "text": "Portugal",
+          "imagePath": "images/countries_portugal.webp",
+          "sourceTitle": "Flag of Portugal.svg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Portugal.svg",
+          "credit": "Original: Columbano Bordalo Pinheiro (1910; generic design) Vector: Vítor Luís Rodrigues; António Martins-Tuválkin (2004; this specific vector set: see sources)"
+        },
+        {
+          "id": "countries_netherlands",
+          "text": "Netherlands",
+          "imagePath": "images/countries_netherlands.webp",
+          "sourceTitle": "Flag of the Netherlands.svg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_the_Netherlands.svg",
+          "credit": "Zscout370"
+        },
+        {
+          "id": "countries_belgium",
+          "text": "Belgium",
+          "imagePath": "images/countries_belgium.webp",
+          "sourceTitle": "Flag of Belgium.svg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Belgium.svg",
+          "credit": "Dbenbenn and others"
+        },
+        {
+          "id": "countries_ireland",
+          "text": "Ireland",
+          "imagePath": "images/countries_ireland.webp",
+          "sourceTitle": "Flag of Ireland.svg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Ireland.svg",
+          "credit": "Éire"
+        },
+        {
+          "id": "countries_poland",
+          "text": "Poland",
+          "imagePath": "images/countries_poland.webp",
+          "sourceTitle": "Flag of Poland.svg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Poland.svg",
+          "credit": "See below."
+        },
+        {
+          "id": "countries_austria",
+          "text": "Austria",
+          "imagePath": "images/countries_austria.webp",
+          "sourceTitle": "Flag of Austria.svg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Austria.svg",
+          "credit": "Bundesministerium für Landesverteidigung"
+        },
+        {
+          "id": "countries_turkey",
+          "text": "Turkey",
+          "imagePath": "images/countries_turkey.webp",
+          "sourceTitle": "Flag of Turkey.svg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Turkey.svg",
+          "credit": "David Benbennick (original author)"
+        },
+        {
+          "id": "countries_saudi_arabia",
+          "text": "Saudi Arabia",
+          "imagePath": "images/countries_saudi_arabia.webp",
+          "sourceTitle": "Flag of Saudi Arabia.svg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Saudi_Arabia.svg",
+          "credit": "The Shura Council"
+        },
+        {
+          "id": "countries_united_arab_emirates",
+          "text": "United Arab Emirates",
+          "imagePath": "images/countries_united_arab_emirates.webp",
+          "sourceTitle": "Flag of the United Arab Emirates.svg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_the_United_Arab_Emirates.svg",
+          "credit": "Abdulla Mohammed Al Maainah"
+        },
+        {
+          "id": "countries_israel",
+          "text": "Israel",
+          "imagePath": "images/countries_israel.webp",
+          "sourceTitle": "Flag of Israel.svg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Israel.svg",
+          "credit": "Israel Belkind and Fanny Abramovitch (original design)"
+        },
+        {
+          "id": "countries_pakistan",
+          "text": "Pakistan",
+          "imagePath": "images/countries_pakistan.webp",
+          "sourceTitle": "Flag of Pakistan.svg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Pakistan.svg",
+          "credit": "User:Zscout370"
+        },
+        {
+          "id": "countries_bangladesh",
+          "text": "Bangladesh",
+          "imagePath": "images/countries_bangladesh.webp",
+          "sourceTitle": "Flag of Bangladesh.svg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Bangladesh.svg",
+          "credit": "See File history below for details."
+        },
+        {
+          "id": "countries_sri_lanka",
+          "text": "Sri Lanka",
+          "imagePath": "images/countries_sri_lanka.webp",
+          "sourceTitle": "Flag of Sri Lanka.svg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Sri_Lanka.svg",
+          "credit": "Original: Sri Lanka Vectorization: Zscout370,"
+        },
+        {
+          "id": "countries_nepal",
+          "text": "Nepal",
+          "imagePath": "images/countries_nepal.webp",
+          "sourceTitle": "Flag of Nepal.svg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Nepal.svg",
+          "credit": "Drawn by Pumbaa80, Achim1999"
+        },
+        {
+          "id": "countries_bhutan",
+          "text": "Bhutan",
+          "imagePath": "images/countries_bhutan.webp",
+          "sourceTitle": "Flag of Bhutan.svg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Bhutan.svg",
+          "credit": "See File history below for details."
+        },
+        {
+          "id": "countries_thailand",
+          "text": "Thailand",
+          "imagePath": "images/countries_thailand.webp",
+          "sourceTitle": "Flag of Thailand.svg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Thailand.svg",
+          "credit": "Zscout370"
+        },
+        {
+          "id": "countries_vietnam",
+          "text": "Vietnam",
+          "imagePath": "images/countries_vietnam.webp",
+          "sourceTitle": "Flag of Vietnam.svg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Vietnam.svg",
+          "credit": "See File history below for details."
+        },
+        {
+          "id": "countries_indonesia",
+          "text": "Indonesia",
+          "imagePath": "images/countries_indonesia.webp",
+          "sourceTitle": "Flag of Indonesia.svg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Indonesia.svg",
+          "credit": "Jayakatwang"
+        },
+        {
+          "id": "countries_malaysia",
+          "text": "Malaysia",
+          "imagePath": "images/countries_malaysia.webp",
+          "sourceTitle": "Flag of Malaysia.svg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Malaysia.svg",
+          "credit": "MapGrid (old version SKopp, Zscout370 and Ranking Update)"
+        },
+        {
+          "id": "countries_singapore",
+          "text": "Singapore",
+          "imagePath": "images/countries_singapore.webp",
+          "sourceTitle": "Flag of Singapore.svg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Singapore.svg",
+          "credit": "Original: Government of Singapore Vector: Zscout370"
+        },
+        {
+          "id": "countries_philippines",
+          "text": "Philippines",
+          "imagePath": "images/countries_philippines.webp",
+          "sourceTitle": "Flag of the Philippines.svg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_the_Philippines.svg",
+          "credit": "See File history below for details."
+        },
+        {
+          "id": "countries_kenya",
+          "text": "Kenya",
+          "imagePath": "images/countries_kenya.webp",
+          "sourceTitle": "Flag of Kenya.svg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Kenya.svg",
+          "credit": "User:Pumbaa80"
+        },
+        {
+          "id": "countries_nigeria",
+          "text": "Nigeria",
+          "imagePath": "images/countries_nigeria.webp",
+          "sourceTitle": "Flag of Nigeria.svg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Nigeria.svg",
+          "credit": "Jon Harald Søby."
+        },
+        {
+          "id": "countries_morocco",
+          "text": "Morocco",
+          "imagePath": "images/countries_morocco.webp",
+          "sourceTitle": "Flag of Morocco.svg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Flag_of_Morocco.svg",
+          "credit": "Denelson83, Zscout370"
         }
       ]
     },
     {
       "id": "household_objects",
       "title": "Household Objects",
-      "description": "Familiar things, found right at home.",
+      "description": "Everyday things and a few trickier finds from home.",
       "imagePath": "images/household_objects_chair.webp",
-      "accent": "#C98D65",
+      "accent": "#A9B8CF",
       "words": [
         {
           "id": "household_objects_chair",
@@ -621,6 +2132,326 @@
           "sourceTitle": "Steinway_Vienna_002.JPG",
           "sourceUrl": "https://commons.wikimedia.org/wiki/File:Steinway_Vienna_002.JPG",
           "credit": "Gryffindor"
+        },
+        {
+          "id": "household_objects_sofa",
+          "text": "Sofa",
+          "imagePath": "images/household_objects_sofa.webp",
+          "sourceTitle": "2009-05-16_Main_office_lobby_at_Hampton_Forest_Apartments.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:2009-05-16_Main_office_lobby_at_Hampton_Forest_Apartments.jpg",
+          "credit": "Ildar Sagdejev (Specious)"
+        },
+        {
+          "id": "household_objects_table",
+          "text": "Table",
+          "imagePath": "images/household_objects_table.webp",
+          "sourceTitle": "Kitchen table.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kitchen_table.jpg",
+          "credit": "Sundae2Sundae at English Wikipedia"
+        },
+        {
+          "id": "household_objects_bed",
+          "text": "Bed",
+          "imagePath": "images/household_objects_bed.webp",
+          "sourceTitle": "Bed in hotel room 5.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Bed_in_hotel_room_5.jpg",
+          "credit": "Kurt Kaiser"
+        },
+        {
+          "id": "household_objects_pillow",
+          "text": "Pillow",
+          "imagePath": "images/household_objects_pillow.webp",
+          "sourceTitle": "Pillows_on_a_hotel_bed.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Pillows_on_a_hotel_bed.jpg",
+          "credit": "Amin"
+        },
+        {
+          "id": "household_objects_blanket",
+          "text": "Blanket",
+          "imagePath": "images/household_objects_blanket.webp",
+          "sourceTitle": "Light-blanket-3 nat.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Light-blanket-3_nat.jpg",
+          "credit": "PureWool"
+        },
+        {
+          "id": "household_objects_curtains",
+          "text": "Curtains",
+          "imagePath": "images/household_objects_curtains.webp",
+          "sourceTitle": "Gordijnen_aan_venster.JPG",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Gordijnen_aan_venster.JPG",
+          "credit": "Nieuw~commonswiki"
+        },
+        {
+          "id": "household_objects_mirror",
+          "text": "Mirror",
+          "imagePath": "images/household_objects_mirror.webp",
+          "sourceTitle": "Mirror.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mirror.jpg",
+          "credit": "Cgs"
+        },
+        {
+          "id": "household_objects_lamp",
+          "text": "Lamp",
+          "imagePath": "images/household_objects_lamp.webp",
+          "sourceTitle": "Lamp and lampshade Tiffany.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Lamp_and_lampshade_Tiffany.jpg",
+          "credit": "New York, The Duffner and Kimberly Company"
+        },
+        {
+          "id": "household_objects_fan",
+          "text": "Fan",
+          "imagePath": "images/household_objects_fan.webp",
+          "sourceTitle": "Hatari_18_inch_fan.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hatari_18_inch_fan.jpg",
+          "credit": "Peachyo"
+        },
+        {
+          "id": "household_objects_television",
+          "text": "Television",
+          "imagePath": "images/household_objects_television.webp",
+          "sourceTitle": "LCD generic tv.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:LCD_generic_tv02.jpg",
+          "credit": "LCD generic tv.jpg — source file page"
+        },
+        {
+          "id": "household_objects_remote_control",
+          "text": "Remote control",
+          "imagePath": "images/household_objects_remote_control.webp",
+          "sourceTitle": "Nuon-N2000-Remote-Control.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Nuon-N2000-Remote-Control.jpg",
+          "credit": "Evan-Amos"
+        },
+        {
+          "id": "household_objects_refrigerator",
+          "text": "Refrigerator",
+          "imagePath": "images/household_objects_refrigerator.webp",
+          "sourceTitle": "A Samsung Refrigerator.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:A_Samsung_Refrigerator.jpg",
+          "credit": "Kskhh"
+        },
+        {
+          "id": "household_objects_microwave",
+          "text": "Microwave",
+          "imagePath": "images/household_objects_microwave.webp",
+          "sourceTitle": "Panasonic_NN-SD69LS_20220410.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Panasonic_NN-SD69LS_20220410.jpg",
+          "credit": "Mrbeastmodeallday"
+        },
+        {
+          "id": "household_objects_toaster",
+          "text": "Toaster",
+          "imagePath": "images/household_objects_toaster.webp",
+          "sourceTitle": "Consumer_Reports_-_Hamilton_Beach_Digital_toaster.tiff",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Consumer_Reports_-_Hamilton_Beach_Digital_toaster.tiff",
+          "credit": "Consumer Reports"
+        },
+        {
+          "id": "household_objects_kettle",
+          "text": "Kettle",
+          "imagePath": "images/household_objects_kettle.webp",
+          "sourceTitle": "Bernadotte_Wasserkessel.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Bernadotte_Wasserkessel.jpg",
+          "credit": "Holger Ellgaard"
+        },
+        {
+          "id": "household_objects_blender",
+          "text": "Blender",
+          "imagePath": "images/household_objects_blender.webp",
+          "sourceTitle": "Vitamix_Blender.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Vitamix_Blender.jpg",
+          "credit": "Didriks"
+        },
+        {
+          "id": "household_objects_washing_machine",
+          "text": "Washing machine",
+          "imagePath": "images/household_objects_washing_machine.webp",
+          "sourceTitle": "LG_드럼세탁기와_식기세척기,_영국서_물사용_효율_최우수_제품_수상.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:LG_%EB%93%9C%EB%9F%BC%EC%84%B8%ED%83%81%EA%B8%B0%EC%99%80_%EC%8B%9D%EA%B8%B0%EC%84%B8%EC%B2%99%EA%B8%B0,_%EC%98%81%EA%B5%AD%EC%84%9C_%EB%AC%BC%EC%82%AC%EC%9A%A9_%ED%9A%A8%EC%9C%A8_%EC%B5%9C%EC%9A%B0%EC%88%98_%EC%A0%9C%ED%92%88_%EC%88%98%EC%83%81.jpg",
+          "credit": "LG전자"
+        },
+        {
+          "id": "household_objects_vacuum_cleaner",
+          "text": "Vacuum cleaner",
+          "imagePath": "images/household_objects_vacuum_cleaner.webp",
+          "sourceTitle": "Numatic_Henry_vacuum_cleaner_(3308986870)_(cropped).jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Numatic_Henry_vacuum_cleaner_(3308986870)_(cropped).jpg",
+          "credit": "Tnarik Innael from London"
+        },
+        {
+          "id": "household_objects_iron",
+          "text": "Iron",
+          "imagePath": "images/household_objects_iron.webp",
+          "sourceTitle": "Teal_and_white_electric_steam_iron_-_side_view.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Teal_and_white_electric_steam_iron_-_side_view.jpg",
+          "credit": "Sokolikmawwer0"
+        },
+        {
+          "id": "household_objects_hair_dryer",
+          "text": "Hair dryer",
+          "imagePath": "images/household_objects_hair_dryer.webp",
+          "sourceTitle": "Hairdryer_20101109.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hairdryer_20101109.jpg",
+          "credit": "Batholith ()"
+        },
+        {
+          "id": "household_objects_comb",
+          "text": "Comb",
+          "imagePath": "images/household_objects_comb.webp",
+          "sourceTitle": "Plastic_comb,_2015-06-07.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Plastic_comb,_2015-06-07.jpg",
+          "credit": "Crisco 1492"
+        },
+        {
+          "id": "household_objects_towel",
+          "text": "Towel",
+          "imagePath": "images/household_objects_towel.webp",
+          "sourceTitle": "Zusammengelegte_Handtücher.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Zusammengelegte_Handt%C3%BCcher.jpg",
+          "credit": "User:Mattes"
+        },
+        {
+          "id": "household_objects_soap",
+          "text": "Soap",
+          "imagePath": "images/household_objects_soap.webp",
+          "sourceTitle": "Handmade_soap_cropped_and_simplified.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Handmade_soap_cropped_and_simplified.jpg",
+          "credit": "Malene Thyssen, simplified by HLHJ"
+        },
+        {
+          "id": "household_objects_broom",
+          "text": "Broom",
+          "imagePath": "images/household_objects_broom.webp",
+          "sourceTitle": "BroomsforSale.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:BroomsforSale.jpg",
+          "credit": "Edal Anton Lefterov"
+        },
+        {
+          "id": "household_objects_mop",
+          "text": "Mop",
+          "imagePath": "images/household_objects_mop.webp",
+          "sourceTitle": "Mop,_three_different_mop_handles.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mop,_three_different_mop_handles.jpg",
+          "credit": "Bjornwireen"
+        },
+        {
+          "id": "household_objects_bucket",
+          "text": "Bucket",
+          "imagePath": "images/household_objects_bucket.webp",
+          "sourceTitle": "Gotland-Bottarve_Museumshof_07.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Gotland-Bottarve_Museumshof_07.jpg",
+          "credit": "Wolfgang Sauber"
+        },
+        {
+          "id": "household_objects_dustpan",
+          "text": "Dustpan",
+          "imagePath": "images/household_objects_dustpan.webp",
+          "sourceTitle": "Stofferenblik.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Stofferenblik.jpg",
+          "credit": "M.Minderhoud"
+        },
+        {
+          "id": "household_objects_spoon",
+          "text": "Spoon",
+          "imagePath": "images/household_objects_spoon.webp",
+          "sourceTitle": "Soup_Spoon.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Soup_Spoon.jpg",
+          "credit": "Donovan Govan."
+        },
+        {
+          "id": "household_objects_fork",
+          "text": "Fork",
+          "imagePath": "images/household_objects_fork.webp",
+          "sourceTitle": "Assorted_forks.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Assorted_forks.jpg",
+          "credit": "Assorted_forks.jpg — source file page"
+        },
+        {
+          "id": "household_objects_plate",
+          "text": "Plate",
+          "imagePath": "images/household_objects_plate.webp",
+          "sourceTitle": "Botanical_plate_with_spray_of_fruiting_Indian_Bean_Tree_MET_DP-1687-038_(cropped).jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Botanical_plate_with_spray_of_fruiting_Indian_Bean_Tree_MET_DP-1687-038_(cropped).jpg",
+          "credit": "Chelsea porcelain factory"
+        },
+        {
+          "id": "household_objects_bowl",
+          "text": "Bowl",
+          "imagePath": "images/household_objects_bowl.webp",
+          "sourceTitle": "China,_Jiangxi_province,_Jingdezhen,_Ming_dynasty_(1368-1644),_Xuande_mark_-_Bowl_with_Decoration_of_the_\"Three_Friends\"_-_1953.631_-_Cleveland_Museum_of_Art.tif",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:China,_Jiangxi_province,_Jingdezhen,_Ming_dynasty_(1368-1644),_Xuande_mark_-_Bowl_with_Decoration_of_the_%22Three_Friends%22_-_1953.631_-_Cleveland_Museum_of_Art.tif",
+          "credit": "https://clevelandart.org/art/1953.631"
+        },
+        {
+          "id": "household_objects_frying_pan",
+          "text": "Frying pan",
+          "imagePath": "images/household_objects_frying_pan.webp",
+          "sourceTitle": "Pfanne_(Edelstahl).jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Pfanne_(Edelstahl).jpg",
+          "credit": "Pfanne_(Edelstahl).jpg — source file page"
+        },
+        {
+          "id": "household_objects_rolling_pin",
+          "text": "Rolling pin",
+          "imagePath": "images/household_objects_rolling_pin.webp",
+          "sourceTitle": "Chapaticooking.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Chapaticooking.jpg",
+          "credit": "Alena"
+        },
+        {
+          "id": "household_objects_colander",
+          "text": "Colander",
+          "imagePath": "images/household_objects_colander.webp",
+          "sourceTitle": "Geëmailleerd_vergiet_-_INDUS_V08877.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ge%C3%ABmailleerd_vergiet_-_INDUS_V08877.jpg",
+          "credit": "Source: Wikipedia file page; creator not identified"
+        },
+        {
+          "id": "household_objects_whisk",
+          "text": "Whisk",
+          "imagePath": "images/household_objects_whisk.webp",
+          "sourceTitle": "Schneebesen1.JPG",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Schneebesen1.JPG",
+          "credit": "No machine-readable author provided. Peng assumed (based on copyright claims)."
+        },
+        {
+          "id": "household_objects_corkscrew",
+          "text": "Corkscrew",
+          "imagePath": "images/household_objects_corkscrew.webp",
+          "sourceTitle": "Corkscrews_December_2014-1.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Corkscrews_December_2014-1.jpg",
+          "credit": "Alvesgaspar"
+        },
+        {
+          "id": "household_objects_can_opener",
+          "text": "Can opener",
+          "imagePath": "images/household_objects_can_opener.webp",
+          "sourceTitle": "Kitchen-Modern-Can-Opener.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kitchen-Modern-Can-Opener.jpg",
+          "credit": "Evan-Amos"
+        },
+        {
+          "id": "household_objects_stapler",
+          "text": "Stapler",
+          "imagePath": "images/household_objects_stapler.webp",
+          "sourceTitle": "2017_Zszywacz_biurowy.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:2017_Zszywacz_biurowy.jpg",
+          "credit": "Jacek Halicki"
+        },
+        {
+          "id": "household_objects_flashlight",
+          "text": "Flashlight",
+          "imagePath": "images/household_objects_flashlight.webp",
+          "sourceTitle": "LED_Flashlights.jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:LED_Flashlights.jpg",
+          "credit": "Brownse10"
+        },
+        {
+          "id": "household_objects_key",
+          "text": "Key",
+          "imagePath": "images/household_objects_key.webp",
+          "sourceTitle": "Solex_99_30_padlock_with_keys_(DSCF2659).jpg",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Solex_99_30_padlock_with_keys_(DSCF2659).jpg",
+          "credit": "Trougnouf"
         }
       ]
     }
