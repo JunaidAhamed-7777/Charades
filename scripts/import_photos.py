@@ -245,8 +245,8 @@ def fetch_word(category_id: str, label: str, article: str, cached: dict, refresh
     word_id = category_id + "_" + slug(label)
     local_path = f"images/{word_id}.webp"
     destination = ASSETS / local_path
-    override = FILE_OVERRIDES.get(word_id)
     direct = SCREEN_DIRECT_SOURCES.get(word_id)
+    override = None if direct else FILE_OVERRIDES.get(word_id)
     if not refresh and word_id in cached and max(cached[word_id]["width"], cached[word_id]["height"]) <= 720 and destination.is_file() and (not override or cached[word_id]["sourceTitle"] == override[1]) and (not direct or cached[word_id]["downloadUrl"] == direct["downloadUrl"]) and hashlib.sha256(destination.read_bytes()).hexdigest() == cached[word_id]["sha256"]:
         return cached[word_id]
 
@@ -303,7 +303,9 @@ def fetch_word(category_id: str, label: str, article: str, cached: dict, refresh
 def reencode(cached: dict) -> dict:
     """Re-encode only files already present; this path never contacts a source."""
     for photo in cached.values():
-        destination = ASSETS / photo["imagePath"]
+        destination = (ASSETS / photo["imagePath"]).resolve()
+        if not destination.is_relative_to((ASSETS / "images").resolve()):
+            raise RuntimeError(f"Picture path is outside the bundled image directory: {photo['imagePath']}")
         if not destination.is_file():
             raise RuntimeError(f"Missing bundled picture: {destination}")
         with Image.open(destination) as source:
@@ -318,9 +320,9 @@ def reencode(cached: dict) -> dict:
     return cached
 
 
-def write_manifest(results: dict, bundle: bool = True):
+def write_manifest(results: dict, bundle: bool = True, retrieved_on: str | None = None):
     MANIFEST.parent.mkdir(parents=True, exist_ok=True)
-    document = json.dumps({"version": 1, "retrievedOn": str(date.today()),
+    document = json.dumps({"version": 1, "retrievedOn": retrieved_on or str(date.today()),
                            "images": [results[key] for key in sorted(results)]},
                           indent=2, ensure_ascii=False) + "\n"
     MANIFEST.write_text(document, encoding="utf-8")
@@ -335,12 +337,17 @@ def main():
     parser.add_argument("--reencode-only", action="store_true", help="Offline: re-encode bundled pictures to WebP, max 720px, and update checksums")
     args = parser.parse_args()
     cached = {}
+    retrieved_on = None
     if MANIFEST.exists():
-        cached = {image["id"]: image for image in json.loads(MANIFEST.read_text(encoding="utf-8"))["images"]}
+        existing = json.loads(MANIFEST.read_text(encoding="utf-8"))
+        retrieved_on = existing.get("retrievedOn")
+        cached = {image["id"]: image for image in existing["images"]}
     if args.reencode_only:
         if args.refresh or args.prune:
             parser.error("--reencode-only cannot be combined with --refresh or --prune")
-        write_manifest(reencode(cached))
+        if not cached:
+            parser.error("--reencode-only requires an existing nonempty photo source manifest")
+        write_manifest(reencode(cached), retrieved_on=retrieved_on)
         print(f"Re-encoded {len(cached)} bundled pictures offline (maximum long edge: 720px)")
         return
     results = {}
