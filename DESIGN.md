@@ -1,29 +1,29 @@
 ---
 version: alpha
 colors:
-  primary: "#244BE8"
-  coral: "#FF806E"
-  background: "#10182D"
-  surface: "#1B2742"
-  foreground: "#F0F2FC"
-  muted: "#B6C1D7"
+  primary: "#8FA7E8"
+  background: "#0E0E10"
+  surface: "#19191D"
+  foreground: "#FFFFFF"
+  muted: "#9F9FA5"
 typography:
   display:
-    fontFamily: "Fredoka"
+    fontFamily: "Nunito Sans"
+  title:
+    fontFamily: "Nunito Sans"
   body:
     fontFamily: "Nunito Sans"
+  label:
+    fontFamily: "Nunito Sans"
 rounded:
-  card: "16px"
-  control: "14px"
+  card: "12px"
 spacing:
   page: "24px"
   group: "16px"
 components:
   primary-button:
-    backgroundColor: "{colors.primary}"
-    textColor: "#FFFFFF"
-  guess-count:
-    textColor: "{colors.coral}"
+    backgroundColor: "{colors.surface}"
+    textColor: "{colors.primary}"
   body-text:
     textColor: "{colors.foreground}"
   supporting-text:
@@ -33,25 +33,28 @@ components:
 # Charades visual identity
 
 ## Overview
-A box of picture cards brought to a shared phone: vivid blue, warm coral, rich midnight surfaces, tactile original artwork, and playful lettering. The user chose blue/coral and playful lettering, then explicitly freed the aesthetic from the stage-zero draft. The old grey/teal sample colors and exact layout are historical references, not requirements.
+An understated library of picture cards for a group gathered around one phone. The 3 November brief replaces the playful navy/coral identity and generated landing illustration with a quiet near-black interface. The signature is a consistent set of single-image deck covers, with restrained small-caps labels. This is a native game tool: recognition and a clear next action matter more than decoration.
 
 ## Colors
-Runtime ownership (Model B): `ui/theme/Color.kt` owns palette constants; `Theme.kt` maps semantic Material roles; shared components and screens consume those roles. This file mirrors the accepted values and rationale. Primary actions use cobalt with white. Coral carries playful accents and the manual count against navy. Body text is near white; secondary text is a legible pale blue-grey. The app currently uses one deliberate dark scheme; avoid introducing an automatic light theme as an incidental library default.
+Runtime ownership (Model B): `ui/theme/Theme.kt` defines the entire color scheme; components consume Material semantic roles. This document mirrors that source. Background is #0E0E10, card surfaces are one step above it, titles are pure white, and supporting text is approximately 60% white. One muted blue accent is reserved for actions and focus. Primary buttons use a dark surface rather than a bright fill. Keep the app dark, with no gradients, drop shadows, or extra deck-specific accent colors.
 
 ## Typography
-`Type.kt` owns the complete Material type scale. Bundled Fredoka expresses the brand in display/headline roles; Explicit variable font axes use 600/700 for Fredoka and 400/700 for Nunito Sans; defaults must not silently render at the minimum axis weight. Nunito Sans keeps body text, controls, and credits readable. All sizes are sp. Longer answers wrap; utility copy remains quieter. Fonts and licenses ship with the project; no runtime font service.
+`ui/theme/Typography.kt` owns four roles: display, title, body, and label, mapped into Material typography. Use bundled Nunito Sans at weights 400 and 600 only. No screen-local font sizes or weight overrides. Screen headings use the same title style and header position. Large clue names wrap and remain scrollable when required. Deck labels use uppercase text with the shared label style; accessibility preserves the ordinary deck name.
 
 ## Layout
-Portrait browsing and reading screens; landscape is reserved for the active clue. Phone-first library: 24dp margins, 14dp photo-grid gutters, adaptive columns with a 155dp minimum card width. Reading screens cap content width at 640–720dp. Game switches to landscape and gives the image the largest region; the answer anchors it below while a narrow rail carries the manual counter and Next. Gameplay uses Fit to preserve the entire clue, including portraits, posters, and flags; cover thumbnails may crop. On short landscape screens the counter buttons sit side by side. System bars and cutouts receive safe insets.
+`ui/theme/Spacing.kt` owns the 4/8/12/16/24/32dp spacing scale. Shared content columns use 24dp horizontal padding and a consistent maximum reading width; all screen headers share the same alignment. Decks form identical 4:3 cards with one accurate hero image. Images use the same fixed 4:3 Crop wrapper, placeholder surface, and corner radius. Reframing must preserve subject recognition. Famous People gameplay is name-only. Landscape gameplay retains the counter and Next controls; compact screens can scroll content. Apply system safe insets and support large text.
 
 ## Elevation & Depth
-Quiet flat native surfaces support the photographs. A bottom image scrim makes library titles readable. Material depth lives in the authored game-night illustration; avoid duplicating it through arbitrary UI shadows or ornamental glass.
+Flat surfaces only. A uniform dark scrim improves cover-title contrast without a gradient. Use separation through spacing and surface tone rather than shadows. No generated landing art, collage, glow, or ornamental texture.
 
 ## Shapes
-16dp photo cards, 14dp primary controls, 20dp hero artwork. The logo consists of two overlapping rounded picture cards and a white play triangle. Keep all targets at least 48dp. Material controls carry familiar Android interactions.
+`ui/theme/Shape.kt` owns one 12dp radius for cards, images, and controls. Buttons and icon actions retain at least 48dp touch targets. Icon geometry is separate from component corner radii.
 
 ## Components
-Canonical visual primitives: `BrandMark`, `AppIcon`, `ScreenHeader`, `PrimaryAction`, and `StatusContent` in `ui/components/BrandComponents.kt`. The icon system is authored, consistent rounded strokes; no emoji icons. Android launcher vectors and the reusable SVG mark use the same geometry. See `docs/branding/README.md` for artwork provenance.
+Shared primitives live in `ui/components/BrandComponents.kt`: the aligned screen/content shell, `ScreenHeader`, `AppCard`, `AppImage`, `PrimaryAction`, `SecondaryAction`, `AppIcon`, and `StatusContent`. Every image passes through `AppImage`; every card uses `AppCard`. Loading, errors, retries, and exhausted decks use these owners. Navigation and timing remain in their existing owners, outside the visual system.
+
+Token path: `Theme.kt` / `Typography.kt` / `Shape.kt` / `Spacing.kt` → Material theme and shared primitives → screens. Android XML startup/launcher colors mirror the dark background; no screen consumes raw palette literals. See [UX-CONTRACT.md](UX-CONTRACT.md) for interaction rules.
 
 ## Do's and Don'ts
-Show accurate sourced photos, clear game controls, and concise human instructions. Keep the deck library immediately usable offline. Do not introduce a paid/downloaded-state treatment, image placeholders as finished content, a timed score system, or marketing decoration around the secret picture. Treat gameplay background from the first draft as product context and verify durable changes against the current user instructions.
+Use truthful local media and short instructions. Keep all six decks immediately playable offline and preserve the existing game rules. Do not restore playful branding, collages, gradients, shadows, bright button fills, a second spacing scale, or duplicated controls. Keep 720px maximum-long-edge WebP assets and accurate provenance. Crop deliberately; do not use unrelated substitutes or fabricated likenesses.
+

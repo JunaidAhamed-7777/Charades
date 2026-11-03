@@ -1,84 +1,153 @@
 package com.yourdomain.freecharades.ui.components
 
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.geometry.CornerRadius
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.Path
 import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.graphics.drawscope.Stroke
-import androidx.compose.ui.graphics.drawscope.rotate
-import androidx.compose.ui.unit.dp
-import androidx.compose.ui.semantics.semantics
+import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.semantics.contentDescription
-import com.yourdomain.freecharades.ui.theme.PartyBlue
-import com.yourdomain.freecharades.ui.theme.PartyCoral
+import androidx.compose.ui.semantics.semantics
+import coil.compose.AsyncImage
+import com.yourdomain.freecharades.ui.theme.*
 
-enum class Glyph { BACK, CLOSE, INFO, ARROW, PLUS, MINUS, CHECK, CARDS, HEART }
+enum class Glyph { BACK, CLOSE, INFO, ARROW, PLUS, MINUS, CARDS }
 
 @Composable
 fun AppIcon(glyph: Glyph, modifier: Modifier = Modifier, tint: Color = LocalContentColor.current) {
-    Canvas(modifier.size(24.dp)) {
-        val w = size.width; val h = size.height; val stroke = 2.dp.toPx()
-        fun line(x1: Float,y1: Float,x2: Float,y2: Float) = drawLine(tint,Offset(w*x1,h*y1),Offset(w*x2,h*y2),stroke,StrokeCap.Round)
-        when(glyph) {
-            Glyph.BACK -> { line(.78f,.5f,.2f,.5f);line(.2f,.5f,.48f,.22f);line(.2f,.5f,.48f,.78f) }
-            Glyph.CLOSE -> {line(.25f,.25f,.75f,.75f);line(.25f,.75f,.75f,.25f)}
-            Glyph.ARROW -> {line(.2f,.5f,.8f,.5f);line(.8f,.5f,.52f,.22f);line(.8f,.5f,.52f,.78f)}
-            Glyph.PLUS -> {line(.2f,.5f,.8f,.5f);line(.5f,.2f,.5f,.8f)}
+    Canvas(modifier.size(AppSpacing.xl)) {
+        val w = size.width
+        val h = size.height
+        val stroke = w / 12f
+        fun line(x1: Float, y1: Float, x2: Float, y2: Float) =
+            drawLine(tint, Offset(w*x1, h*y1), Offset(w*x2, h*y2), stroke, StrokeCap.Round)
+        when (glyph) {
+            Glyph.BACK -> { line(.78f,.5f,.2f,.5f); line(.2f,.5f,.48f,.22f); line(.2f,.5f,.48f,.78f) }
+            Glyph.CLOSE -> { line(.25f,.25f,.75f,.75f); line(.25f,.75f,.75f,.25f) }
+            Glyph.ARROW -> { line(.2f,.5f,.8f,.5f); line(.8f,.5f,.52f,.22f); line(.8f,.5f,.52f,.78f) }
+            Glyph.PLUS -> { line(.2f,.5f,.8f,.5f); line(.5f,.2f,.5f,.8f) }
             Glyph.MINUS -> line(.2f,.5f,.8f,.5f)
-            Glyph.CHECK -> {line(.2f,.52f,.42f,.74f);line(.42f,.74f,.82f,.26f)}
-            Glyph.INFO -> {drawCircle(tint,w*.36f,style=Stroke(stroke));line(.5f,.46f,.5f,.7f);drawCircle(tint,stroke*.6f,Offset(w*.5f,h*.3f))}
-            Glyph.CARDS -> {rotate(-12f){drawRoundRect(tint,Offset(w*.15f,h*.14f),Size(w*.57f,h*.7f),CornerRadius(3.dp.toPx()),style=Stroke(stroke))};drawRoundRect(tint,Offset(w*.33f,h*.22f),Size(w*.5f,h*.65f),CornerRadius(3.dp.toPx()),style=Stroke(stroke))}
-            Glyph.HEART -> {val p=Path().apply {moveTo(w*.5f,h*.82f);cubicTo(0f,h*.52f,w*.08f,h*.06f,w*.5f,h*.31f);cubicTo(w*.92f,h*.06f,w,h*.52f,w*.5f,h*.82f)};drawPath(p,tint,style=Stroke(stroke))}
+            Glyph.INFO -> {
+                drawCircle(tint, w*.36f, style=Stroke(stroke))
+                line(.5f,.46f,.5f,.7f)
+                drawCircle(tint, stroke*.6f, Offset(w*.5f,h*.3f))
+            }
+            Glyph.CARDS -> {
+                drawRoundRect(tint, Offset(w*.12f,h*.12f), Size(w*.58f,h*.7f), CornerRadius(w*.12f), style=Stroke(stroke))
+                drawRoundRect(tint, Offset(w*.32f,h*.22f), Size(w*.56f,h*.66f), CornerRadius(w*.12f), style=Stroke(stroke))
+            }
+        }
+    }
+}
+
+/** One safe, centered content column and one horizontal inset on every route. */
+@Composable
+fun AppContent(modifier: Modifier = Modifier, content: @Composable ColumnScope.() -> Unit) {
+    Surface(Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background) {
+        Box(Modifier.fillMaxSize().safeDrawingPadding(), contentAlignment = Alignment.TopCenter) {
+            Column(modifier.fillMaxHeight().widthIn(max = AppGeometry.contentWidth)
+                .fillMaxWidth().padding(horizontal = AppSpacing.xl), content = content)
         }
     }
 }
 
 @Composable
-fun BrandMark(modifier: Modifier = Modifier) {
-    Canvas(modifier.size(42.dp)) {
-        val w=size.width;val h=size.height
-        rotate(-13f,Offset(w*.45f,h*.5f)) {drawRoundRect(PartyCoral,Offset(w*.12f,h*.14f),Size(w*.6f,h*.7f),CornerRadius(w*.13f))}
-        rotate(9f,Offset(w*.6f,h*.5f)) {
-            drawRoundRect(PartyBlue,Offset(w*.3f,h*.16f),Size(w*.6f,h*.7f),CornerRadius(w*.13f))
-            val p=Path().apply {moveTo(w*.48f,h*.34f);lineTo(w*.74f,h*.51f);lineTo(w*.48f,h*.68f);close()}
-            drawPath(p,Color.White)
+fun ScreenHeader(
+    title: String,
+    onBack: (() -> Unit)? = null,
+    close: Boolean = false,
+    trailing: @Composable RowScope.() -> Unit = {}
+) {
+    Row(Modifier.fillMaxWidth().padding(vertical = AppSpacing.sm)
+        .heightIn(min = AppGeometry.touchTarget), verticalAlignment = Alignment.CenterVertically) {
+        if (onBack != null) {
+            AppIconAction(if (close) Glyph.CLOSE else Glyph.BACK,
+                if (close) "Leave game" else "Back", onBack)
+        } else {
+            Box(Modifier.size(AppGeometry.touchTarget), contentAlignment = Alignment.Center) {
+                AppIcon(Glyph.CARDS, tint = MaterialTheme.colorScheme.primary)
+            }
         }
-    }
-}
-
-@Composable
-fun ScreenHeader(title: String, onBack: () -> Unit, trailing: @Composable RowScope.() -> Unit = {}) {
-    Row(Modifier.fillMaxWidth().padding(start=12.dp,end=20.dp,top=8.dp,bottom=8.dp),verticalAlignment=Alignment.CenterVertically) {
-        IconButton(onClick=onBack,modifier=Modifier.semantics {contentDescription="Back"}) {AppIcon(Glyph.BACK)}
-        Text(title,Modifier.weight(1f).padding(start=8.dp),style=MaterialTheme.typography.titleLarge)
+        Text(title, Modifier.weight(1f).padding(start = AppSpacing.sm), style = AppType.title)
         trailing()
     }
 }
 
+/** The single card surface; business variants provide their own content. */
 @Composable
-fun PrimaryAction(text: String, onClick: () -> Unit, modifier: Modifier = Modifier, enabled: Boolean = true) {
-    Button(onClick,modifier.heightIn(min=56.dp),enabled=enabled,shape=RoundedCornerShape(14.dp),
-        colors=ButtonDefaults.buttonColors(containerColor=PartyBlue,contentColor=Color.White),contentPadding=PaddingValues(horizontal=22.dp,vertical=14.dp)) {
-        Text(text,style=MaterialTheme.typography.labelLarge)
-        Spacer(Modifier.width(12.dp));AppIcon(Glyph.ARROW)
+fun AppCard(modifier: Modifier = Modifier, onClick: (() -> Unit)? = null,
+            content: @Composable BoxScope.() -> Unit) {
+    val action = if (onClick == null) Modifier else Modifier.clickable(role = Role.Button, onClick = onClick)
+    Box(modifier.clip(AppShape).background(MaterialTheme.colorScheme.surface).then(action), content = content)
+}
+
+/** No caller can accidentally render an unbounded or natural-size image. */
+@Composable
+fun AppImage(model: Any?, description: String?, modifier: Modifier = Modifier,
+             overlay: @Composable BoxScope.() -> Unit = {}) {
+    Box(modifier.aspectRatio(AppGeometry.imageAspectRatio).clip(AppShape)
+        .background(MaterialTheme.colorScheme.surfaceVariant)) {
+        AsyncImage(model, description, Modifier.matchParentSize(), contentScale = ContentScale.Crop)
+        overlay()
     }
 }
 
 @Composable
-fun StatusContent(message: String, isLoading: Boolean=false, onRetry: (() -> Unit)?=null) {
-    Column(Modifier.fillMaxSize().padding(32.dp),horizontalAlignment=Alignment.CenterHorizontally,verticalArrangement=Arrangement.Center) {
-        if(isLoading) {CircularProgressIndicator();Spacer(Modifier.height(20.dp))}
-        Text(message,style=MaterialTheme.typography.bodyLarge)
-        if(onRetry!=null) {Spacer(Modifier.height(20.dp));OutlinedButton(onRetry){Text("Try again")}}
+fun PrimaryAction(text: String, onClick: () -> Unit, modifier: Modifier = Modifier,
+                  enabled: Boolean = true) {
+    Button(onClick, modifier.heightIn(min = AppGeometry.touchTarget), enabled = enabled,
+        shape = AppShape, elevation = null,
+        colors = ButtonDefaults.buttonColors(containerColor = MaterialTheme.colorScheme.surfaceVariant,
+            contentColor = MaterialTheme.colorScheme.onSurface),
+        contentPadding = PaddingValues(horizontal = AppSpacing.lg, vertical = AppSpacing.md)) {
+        Text(text, style = AppType.body)
+        Spacer(Modifier.width(AppSpacing.md))
+        AppIcon(Glyph.ARROW, tint = MaterialTheme.colorScheme.primary)
+    }
+}
+
+@Composable
+fun SecondaryAction(text: String, onClick: () -> Unit, modifier: Modifier = Modifier,
+                    enabled: Boolean = true) {
+    OutlinedButton(onClick, modifier.heightIn(min = AppGeometry.touchTarget), enabled = enabled,
+        shape = AppShape, border = BorderStroke(AppGeometry.borderWidth, MaterialTheme.colorScheme.outline),
+        colors = ButtonDefaults.outlinedButtonColors(contentColor = MaterialTheme.colorScheme.onSurface),
+        contentPadding = PaddingValues(horizontal = AppSpacing.lg, vertical = AppSpacing.md)) {
+        Text(text, style = AppType.body)
+    }
+}
+
+@Composable
+fun AppIconAction(glyph: Glyph, description: String, onClick: () -> Unit,
+                  modifier: Modifier = Modifier, enabled: Boolean = true) {
+    IconButton(onClick, modifier.size(AppGeometry.touchTarget).clip(AppShape)
+        .semantics { contentDescription = description }, enabled = enabled) { AppIcon(glyph) }
+}
+
+@Composable
+fun StatusContent(message: String, isLoading: Boolean = false, onRetry: (() -> Unit)? = null) {
+    Column(Modifier.fillMaxSize().padding(vertical = AppSpacing.xxl),
+        horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.Center) {
+        if (isLoading) {
+            CircularProgressIndicator(color = MaterialTheme.colorScheme.primary)
+            Spacer(Modifier.height(AppSpacing.xl))
+        }
+        Text(message, style = AppType.body)
+        if (onRetry != null) {
+            Spacer(Modifier.height(AppSpacing.xl))
+            SecondaryAction("Try again", onRetry)
+        }
     }
 }
