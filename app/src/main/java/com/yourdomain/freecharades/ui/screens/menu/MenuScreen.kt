@@ -8,7 +8,9 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.semantics.heading
 import androidx.compose.ui.semantics.semantics
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.viewmodel.compose.viewModel
@@ -21,6 +23,7 @@ import java.util.Locale
 fun MenuScreen(onCategoryClick: (String) -> Unit, onSettingsClick: () -> Unit,
                onPrivacyClick: () -> Unit, vm: MenuViewModel = viewModel()) {
     val catalog by vm.catalog.collectAsStateWithLifecycle()
+    val readableCardWidth = AppGeometry.deckMinWidth * LocalDensity.current.fontScale.coerceAtLeast(1f)
     AppContent {
         ScreenHeader("Charades") {
             AppIconAction(Glyph.INFO, "How to play and app information", onSettingsClick)
@@ -29,24 +32,30 @@ fun MenuScreen(onCategoryClick: (String) -> Unit, onSettingsClick: () -> Unit,
             catalog.isLoading -> StatusContent("Opening your decks…", true)
             catalog.error != null -> StatusContent(catalog.error!!, onRetry = vm::retry)
             else -> LazyVerticalGrid(
-                columns = GridCells.Adaptive(AppGeometry.deckMinWidth),
+                columns = GridCells.Adaptive(readableCardWidth),
                 contentPadding = PaddingValues(bottom = AppSpacing.xl),
                 horizontalArrangement = Arrangement.spacedBy(AppSpacing.lg),
                 verticalArrangement = Arrangement.spacedBy(AppSpacing.lg)
             ) {
                 item(span = { GridItemSpan(maxLineSpan) }) {
                     Column(Modifier.padding(top = AppSpacing.lg, bottom = AppSpacing.sm)) {
-                        Text("The offline game of 20 Questions & Charades.", style = AppType.body,
+                        Text("Choose a deck", Modifier.semantics { heading() }, style = AppType.display)
+                        Text("The offline game of 20 Questions & Charades.",
+                            Modifier.padding(top = AppSpacing.sm), style = AppType.body,
                             color = MaterialTheme.colorScheme.onSurfaceVariant)
-                        Text("Choose a deck", Modifier.padding(top = AppSpacing.xxl), style = AppType.title)
                     }
                 }
                 items(catalog.categories, key = { it.id }) { category ->
                     DeckCard(category) { onCategoryClick(category.id) }
                 }
                 item(span = { GridItemSpan(maxLineSpan) }) {
-                    SecondaryAction("Privacy policy", onPrivacyClick,
-                        Modifier.fillMaxWidth().padding(top = AppSpacing.sm))
+                    Column(Modifier.fillMaxWidth().padding(top = AppSpacing.lg),
+                        horizontalAlignment = Alignment.CenterHorizontally,
+                        verticalArrangement = Arrangement.spacedBy(AppSpacing.md)) {
+                        Text("Made By Junaid", style = AppType.label,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant)
+                        SecondaryAction("Privacy policy", onPrivacyClick)
+                    }
                 }
             }
         }
