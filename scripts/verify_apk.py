@@ -28,7 +28,10 @@ def main() -> None:
         for category in catalog["categories"]:
             paths.add(category["imagePath"])
             for word in category["words"]:
-                paths.add(word["imagePath"])
+                if word["imagePath"]:
+                    paths.add(word["imagePath"])
+                elif category["id"] != "famous_people":
+                    raise SystemExit(f"FAIL: Missing clue image: {word['id']}")
                 prompts += 1
         for path in sorted(paths):
             if not path.startswith("images/") or ".." in Path(path).parts:

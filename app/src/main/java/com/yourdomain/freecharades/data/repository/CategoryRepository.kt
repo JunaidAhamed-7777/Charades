@@ -42,7 +42,10 @@ class CategoryRepository(context: Context) {
                         Word(
                             id = wordId,
                             text = word.getString("text").also { require(it.isNotBlank()) },
-                            imagePath = checkedImagePath(word.getString("imagePath")),
+                            imagePath = checkedImagePath(
+                                word.getString("imagePath"),
+                                allowTextOnly = id == "famous_people"
+                            ),
                             sourceTitle = word.optString("sourceTitle"),
                             sourceUrl = word.optString("sourceUrl"),
                             credit = word.optString("credit")
@@ -55,7 +58,9 @@ class CategoryRepository(context: Context) {
         }
     }
 
-    private fun checkedImagePath(path: String): String {
+    private fun checkedImagePath(path: String, allowTextOnly: Boolean = false): String {
+        // Famous People deliberately reveals names alone, within the existing catalog schema.
+        if (path.isEmpty() && allowTextOnly) return path
         require(path.startsWith("images/") && !path.contains("..") && !path.contains('\\')) {
             "Images must be bundled asset paths"
         }
