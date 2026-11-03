@@ -139,7 +139,7 @@ FILE_OVERRIDES = {
     **{"countries_" + re.sub(r"[^a-z0-9]+", "_", country.lower()).strip("_"):
        ("commons.wikimedia.org", "Flag of " + ("the " if country in {"United States", "United Kingdom", "United Arab Emirates", "Netherlands", "Philippines"} else "") + country + ".svg")
        for country in COUNTRIES},
-    "famous_people_cover": ("commons.wikimedia.org", "Shure SM58.jpg"),
+    "famous_people_cover": ("commons.wikimedia.org", "Astatic crystal mic.jpg"),
 }
 
 # Verified against the original file-description pages, not inferred authors.
