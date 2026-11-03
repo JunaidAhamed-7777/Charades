@@ -4,6 +4,7 @@ colors:
   primary: "#8FA7E8"
   background: "#0E0E10"
   surface: "#19191D"
+  raised: "#232328"
   foreground: "#FFFFFF"
   muted: "#9F9FA5"
 typography:
@@ -18,12 +19,18 @@ typography:
 rounded:
   card: "12px"
 spacing:
+  xs: "4px"
+  sm: "8px"
+  md: "12px"
+  lg: "16px"
+  xl: "24px"
+  xxl: "32px"
   page: "24px"
   group: "16px"
 components:
   primary-button:
-    backgroundColor: "{colors.surface}"
-    textColor: "{colors.primary}"
+    backgroundColor: "{colors.raised}"
+    textColor: "{colors.foreground}"
   body-text:
     textColor: "{colors.foreground}"
   supporting-text:

@@ -38,7 +38,7 @@ On macOS/Linux, use `./gradlew assembleDebug` and `adb install -r app/build/outp
 
 <img src="docs/screenshots/library.png" alt="Charades picture-deck library on Android" width="280" />
 
-<img src="docs/screenshots/game.png" alt="Landscape gameplay showing a complete picture, manual guess counter, and Next" width="640" />
+<img src="docs/screenshots/game.png" alt="Landscape gameplay showing a clue, manual guess counter, and Next" width="640" />
 
 ## How to play
 

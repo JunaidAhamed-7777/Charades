@@ -22,6 +22,9 @@ def main() -> None:
         source_assets = root / "app/src/main/assets"
         if catalog_bytes != (source_assets / "categories/bundled_categories.json").read_bytes():
             raise SystemExit("FAIL: APK catalog differs from the current source catalog. Rebuild it.")
+        source_manifest = (root / "docs/photo_sources.json").read_bytes()
+        if apk.read("assets/photo_sources.json") != source_manifest:
+            raise SystemExit("FAIL: Bundled photo provenance is missing or stale. Rebuild it.")
         catalog = json.loads(catalog_bytes)
         paths = set()
         prompts = 0
