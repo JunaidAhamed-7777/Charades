@@ -59,6 +59,8 @@ Flat surfaces only. A uniform dark scrim improves cover-title contrast without a
 ## Shapes
 `ui/theme/Shape.kt` owns one 12dp radius for cards, images, and controls. Buttons and icon actions retain at least 48dp touch targets. Icon geometry is separate from component corner radii.
 
+The launcher mark is one upright clue-card outline with a geometric white C, centered on near-black. Its soft blue stroke is the only accent; no fanned cards or play triangle. Legacy, adaptive, round, and Android themed icons reuse the same native foreground geometry. `docs/branding/charades-mark.svg` mirrors that mark for reuse and review.
+
 ## Components
 Shared primitives live in `ui/components/BrandComponents.kt`: the aligned screen/content shell, `ScreenHeader`, `AppCard`, `AppImage`, `PrimaryAction`, `SecondaryAction`, `AppIcon`, and `StatusContent`. Every image passes through `AppImage`; every card uses `AppCard`. Loading, errors, retries, and exhausted decks use these owners. Navigation and timing remain in their existing owners, outside the visual system.
 
