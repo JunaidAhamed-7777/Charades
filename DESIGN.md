@@ -9,13 +9,13 @@ colors:
   muted: "#9F9FA5"
 typography:
   display:
-    fontFamily: "Nunito Sans"
+    fontFamily: "Space Grotesk"
   title:
-    fontFamily: "Nunito Sans"
+    fontFamily: "Space Grotesk"
   body:
-    fontFamily: "Nunito Sans"
+    fontFamily: "Manrope"
   label:
-    fontFamily: "Nunito Sans"
+    fontFamily: "Manrope"
 rounded:
   card: "12px"
 spacing:
@@ -46,10 +46,12 @@ An understated library of picture cards for a group gathered around one phone. T
 Runtime ownership (Model B): `ui/theme/Theme.kt` defines the entire color scheme; components consume Material semantic roles. This document mirrors that source. Background is #0E0E10, card surfaces are one step above it, titles are pure white, and supporting text is approximately 60% white. One muted blue accent is reserved for actions and focus. Primary buttons use a dark surface rather than a bright fill. Keep the app dark, with no gradients, drop shadows, or extra deck-specific accent colors.
 
 ## Typography
-`ui/theme/Typography.kt` owns four roles: display, title, body, and label, mapped into Material typography. Use bundled Nunito Sans at weights 400 and 600 only. No screen-local font sizes or weight overrides. Screen headings use the same title style and header position. Large clue names wrap and remain scrollable when required. Deck labels use uppercase text with the shared label style; accessibility preserves the ordinary deck name.
+`ui/theme/Typography.kt` owns four roles: display, title, body, and label, mapped into Material typography. Bundled Space Grotesk at weight 600 gives display/title roles a sharper identity; Manrope at weights 400/600 keeps body/label roles readable and quiet. The complete scale remains 40/48sp, 24/32sp, 16/24sp, and 12/16sp respectively, with only two weights. No screen-local font sizes or weight overrides. Screen headings use the same title style and header position. Large clue names wrap and remain scrollable when required. Deck labels use uppercase text with the shared label style; accessibility preserves the ordinary deck name.
+
+The landing page leads with the display-style “Choose a deck” and groups the marketing line directly below it. A quiet, centered “Made By Junaid” credit and compact Privacy policy action close the scrolling library. Avoid decorative hero copy or oversized footer controls competing with the playable decks.
 
 ## Layout
-`ui/theme/Spacing.kt` owns the 4/8/12/16/24/32dp spacing scale. Shared content columns use 24dp horizontal padding and a consistent maximum reading width; all screen headers share the same alignment. Decks form identical 4:3 cards with one accurate hero image. Images use the same fixed 4:3 Crop wrapper, placeholder surface, and corner radius. Reframing must preserve subject recognition. Famous People gameplay is name-only. Landscape gameplay retains the counter and Next controls; compact screens can scroll content. Apply system safe insets and support large text.
+`ui/theme/Spacing.kt` owns the 4/8/12/16/24/32dp spacing scale. Shared content columns use 24dp horizontal padding and a consistent maximum reading width; all screen headers share the same alignment. Decks form identical 4:3 cards with one accurate hero image. The grid's minimum width grows with system font scale so larger text can switch to fewer, wider columns. Images use the same fixed 4:3 Crop wrapper, placeholder surface, and corner radius. Reframing must preserve subject recognition. Famous People gameplay is name-only. Landscape gameplay retains the counter and Next controls; compact screens can scroll content. Apply system safe insets and support large text.
 
 ## Elevation & Depth
 Flat surfaces only. A uniform dark scrim improves cover-title contrast without a gradient. Use separation through spacing and surface tone rather than shadows. No generated landing art, collage, glow, or ornamental texture.

@@ -8,6 +8,8 @@ This combines the original game brief with the latest installation and visual-di
 
 **Charades** is a free, personal, nonprofit Android party game. **Free Charades** is its working name. Marketing line: **“The offline game of 20 Questions & Charades.”**
 
+The landing page includes the creator credit **“Made By Junaid”**. Typography pairs Space Grotesk headings with Manrope body text within the minimal dark visual system.
+
 People lead their own game. The app supplies clues, a manual guess counter, and simple navigation. It does not judge answers or run competitive timed rounds.
 
 The visual priority is dark, minimal, and premium: near-black #0E0E10, flat surfaces, pure white titles, muted grey secondary text, and one sparingly used accent. Use two font weights, one corner radius, shared spacing and typography, and consistent content alignment. No gradients, shadows, bright fills, image collages, or generated landing artwork. This supersedes the earlier navy/coral and playful-lettering direction.
