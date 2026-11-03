@@ -100,6 +100,8 @@ fun GameScreen(categoryId: String, sessionId: String, onBack: () -> Unit,
             }
                 .padding(bottom = AppSpacing.md), horizontalArrangement = Arrangement.spacedBy(AppSpacing.xl)) {
                 BoxWithConstraints(Modifier.weight(1f).fillMaxHeight()) {
+                    val clueWidth = maxWidth
+                    val clueHeight = maxHeight
                     val measurer = rememberTextMeasurer()
                     val density = LocalDensity.current
                     val answer = state.word?.text.orEmpty()
@@ -114,11 +116,11 @@ fun GameScreen(categoryId: String, sessionId: String, onBack: () -> Unit,
                     val clueScroll = if (needsScroll) Modifier.verticalScroll(rememberScrollState()) else Modifier
                     Column(Modifier.fillMaxSize().then(clueScroll)) {
                     if (state.word?.imagePath?.isNotBlank() == true) {
-                        val boundedHeight = if (needsScroll) maxHeight else imageHeight
+                        val boundedHeight = if (needsScroll) clueHeight else imageHeight
                         Box(Modifier.fillMaxWidth(), contentAlignment = Alignment.Center) {
                             // Both bounds participate: a fixed-ratio image never pushes controls off-screen.
                             AppImage(state.word?.imageUri, state.word?.text,
-                                Modifier.width(minOf(maxWidth, boundedHeight * AppGeometry.imageAspectRatio)))
+                                Modifier.width(minOf(clueWidth, boundedHeight * AppGeometry.imageAspectRatio)))
                         }
                         Text(answer, Modifier.padding(top = AppSpacing.sm), style = AppType.title)
                     } else {
