@@ -1367,9 +1367,9 @@
           "id": "animes_sailor_moon",
           "text": "Sailor Moon",
           "imagePath": "images/animes_sailor_moon.webp",
-          "sourceTitle": "Sailormoonseason1.gif",
-          "sourceUrl": "https://en.wikipedia.org/wiki/File:Sailormoonseason1.gif",
-          "credit": "Amazon.com"
+          "sourceTitle": "Sailor Moon — official Crystal anime key visual",
+          "sourceUrl": "https://sailormoon-official.com/animation/news/crystal_226.php",
+          "credit": "Naoko Takeuchi / PNP / Kodansha / Toei Animation"
         },
         {
           "id": "animes_doraemon",
@@ -1487,9 +1487,9 @@
           "id": "animes_neon_genesis_evangelion",
           "text": "Neon Genesis Evangelion",
           "imagePath": "images/animes_neon_genesis_evangelion.webp",
-          "sourceTitle": "Evangelion_retouched.png",
-          "sourceUrl": "https://en.wikipedia.org/wiki/File:Evangelion_retouched.png",
-          "credit": "Neon Genesis Evangelion, opening credits for each episode"
+          "sourceTitle": "Neon Genesis Evangelion — official volume-one artwork",
+          "sourceUrl": "https://www.evangelion.jp/ng.html",
+          "credit": "Khara / Project Eva."
         },
         {
           "id": "animes_code_geass",
@@ -1519,9 +1519,9 @@
           "id": "animes_jojo_s_bizarre_adventure",
           "text": "JoJo's Bizarre Adventure",
           "imagePath": "images/animes_jojo_s_bizarre_adventure.webp",
-          "sourceTitle": "JoJo's_Bizarre_Adventure_logo.png",
-          "sourceUrl": "https://commons.wikimedia.org/wiki/File:JoJo%27s_Bizarre_Adventure_logo.png",
-          "credit": "Hirohiko Araki"
+          "sourceTitle": "JoJo's Bizarre Adventure — official Battle Tendency key visual",
+          "sourceUrl": "https://jojo-animation.com/fb_bt/",
+          "credit": "Hirohiko Araki / Shueisha / JoJo's Bizarre Adventure Production Committee"
         },
         {
           "id": "animes_fruits_basket",
@@ -1583,9 +1583,9 @@
           "id": "animes_yu_yu_hakusho",
           "text": "Yu Yu Hakusho",
           "imagePath": "images/animes_yu_yu_hakusho.webp",
-          "sourceTitle": "YuYu Hakusho DVD season 1.gif",
-          "sourceUrl": "https://en.wikipedia.org/wiki/File:YuYu_Hakusho_DVD_season_1.gif",
-          "credit": "[1]"
+          "sourceTitle": "Yu Yu Hakusho — official anime anniversary illustration",
+          "sourceUrl": "https://pierrot.jp/yuhaku25/",
+          "credit": "Yoshihiro Togashi 1990–1994 / Pierrot / Shueisha"
         },
         {
           "id": "animes_my_neighbor_totoro",
